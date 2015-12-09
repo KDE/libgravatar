@@ -20,17 +20,17 @@ include(ECMAddTests)
 
 
 set(KF5_VERSION "5.16.0")
-set(KDEPIM_LIB_VERSION "5.1.42")
 set(QT_REQUIRED_VERSION "5.4.0")
-
+set(PIMCOMMON_LIB_VERSION "5.1.42")
+set(LIBGRAVATAR_LIB_VERSION "5.1.42")
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test Network)
 find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Config ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5WidgetsAddons ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5PimCommon ${KDEPIM_LIB_VERSION} CONFIG REQUIRED)
+find_package(KF5PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 
 
-ecm_setup_version(${KDEPIM_LIB_VERSION} VARIABLE_PREFIX GRAVATAR
+ecm_setup_version(${LIBGRAVATAR_LIB_VERSION} VARIABLE_PREFIX GRAVATAR
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/gravatar_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5GravatarConfigVersion.cmake"
                         SOVERSION 5
