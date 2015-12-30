@@ -76,7 +76,6 @@ ecm_generate_pri_file(BASE_NAME Gravatar
     DEPS "" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/Gravatar
 )
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${gravatar_SOURCE_DIR})
 install(FILES
     ${Gravatar_Camelcase_widgets_HEADERS}
     ${Gravatar_Camelcase_job_HEADERS}
@@ -97,5 +96,3 @@ install(FILES
 install(FILES
     ${PRI_FILENAME}
     DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
-
-endif()
