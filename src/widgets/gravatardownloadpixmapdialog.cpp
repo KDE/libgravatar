@@ -17,9 +17,8 @@
 
 #include "gravatardownloadpixmapdialog.h"
 #include "gravatardownloadpixmapwidget.h"
-#include <QHBoxLayout>
 #include <QDialogButtonBox>
-#include <KLocalizedString>
+#include <QVBoxLayout>
 
 using namespace Gravatar;
 

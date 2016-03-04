@@ -23,12 +23,12 @@
 #include <KLocalizedString>
 #include <KPluralHandlingSpinBox>
 #include <KSeparator>
-#include <QBoxLayout>
 #include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
-
+#include <QHBoxLayout>
+#include <QVBoxLayout>
 using namespace Gravatar;
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 

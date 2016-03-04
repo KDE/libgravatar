@@ -23,7 +23,6 @@
 
 #include <QCoreApplication>
 #include <QCryptographicHash>
-#include <QStringList>
 #include <QPixmap>
 #include <QUrlQuery>
 #include <QNetworkConfigurationManager>

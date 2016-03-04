@@ -18,11 +18,11 @@
 #include "gravatarconfigwidget.h"
 #include "misc/gravatarcache.h"
 #include "gravatarconfiguresettingsdialog.h"
-#include <QVBoxLayout>
 #include <KLocalizedString>
 #include <QCheckBox>
 #include <QPushButton>
 #include <QPointer>
+#include <QHBoxLayout>
 #include "gravatarsettings.h"
 #include "PimCommon/ConfigureImmutableWidgetUtils"
 

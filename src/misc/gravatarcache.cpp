@@ -20,7 +20,6 @@
 #include "gravatar_debug.h"
 
 #include <QCache>
-#include <QDebug>
 #include <QFile>
 #include <QFileInfo>
 #include <QStandardPaths>
