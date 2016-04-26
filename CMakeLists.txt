@@ -17,11 +17,11 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
-
+set(PIM_VERSION "5.2.40")
 
 set(KF5_VERSION "5.19.0")
 set(QT_REQUIRED_VERSION "5.4.0")
-set(LIBGRAVATAR_LIB_VERSION "5.2.40")
+set(LIBGRAVATAR_LIB_VERSION ${PIM_VERSION})
 set(PIMCOMMON_LIB_VERSION "5.2.40")
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test Network)
 find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
