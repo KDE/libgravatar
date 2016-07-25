@@ -1,0 +1,14 @@
+maintainer: mlaurent
+description: Gravatar Support Library 
+tier: 3
+type: functional
+platforms:
+    - name: All
+portingAid: false
+deprecated: false
+release: false
+libraries:
+ - qmake: Gravatar 
+   cmake: "KF5::Gravatar"
+cmakename: KF5Gravatar
+
