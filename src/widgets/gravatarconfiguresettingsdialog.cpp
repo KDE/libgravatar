@@ -38,30 +38,28 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
     : QDialog(parent)
 {
     setWindowTitle(i18n("Configure Gravatar"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults);
-    QVBoxLayout *topLayout = new QVBoxLayout;
-    setLayout(topLayout);
+    QVBoxLayout *topLayout = new QVBoxLayout(this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
-    okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &GravatarConfigureSettingsDialog::save);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &GravatarConfigureSettingsDialog::reject);
     connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &GravatarConfigureSettingsDialog::slotRestoreDefault);
     okButton->setDefault(true);
 
-    mUseDefaultPixmap = new QCheckBox(i18n("Use Default Image"));
+    mUseDefaultPixmap = new QCheckBox(i18n("Use Default Image"), this);
     mUseDefaultPixmap->setObjectName(QStringLiteral("usedefaultimage"));
     topLayout->addWidget(mUseDefaultPixmap);
 
-    mUseHttps = new QCheckBox(i18n("Use HTTPS"));
+    mUseHttps = new QCheckBox(i18n("Use HTTPS"), this);
     mUseHttps->setObjectName(QStringLiteral("usehttps"));
     topLayout->addWidget(mUseHttps);
 
-    mUseLibravatar = new QCheckBox(i18n("Use Libravatar"));
+    mUseLibravatar = new QCheckBox(i18n("Use Libravatar"), this);
     mUseLibravatar->setObjectName(QStringLiteral("uselibravatarcheckbox"));
     topLayout->addWidget(mUseLibravatar);
 
-    mFallbackGravatar = new QCheckBox(i18n("Fallback to Gravatar"));
+    mFallbackGravatar = new QCheckBox(i18n("Fallback to Gravatar"), this);
     mFallbackGravatar->setObjectName(QStringLiteral("fallbackgravatar"));
     topLayout->addWidget(mFallbackGravatar);
     connect(mUseLibravatar, &QCheckBox::toggled, mFallbackGravatar, &QCheckBox::setEnabled);
@@ -69,11 +67,11 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
 
     QHBoxLayout *cacheSizeLayout = new QHBoxLayout;
     topLayout->addLayout(cacheSizeLayout);
-    QLabel *lab = new QLabel(i18n("Gravatar Cache Size:"));
+    QLabel *lab = new QLabel(i18n("Gravatar Cache Size:"), this);
     lab->setObjectName(QStringLiteral("gravatarcachesizelabel"));
     cacheSizeLayout->addWidget(lab);
 
-    mGravatarCacheSize = new KPluralHandlingSpinBox;
+    mGravatarCacheSize = new KPluralHandlingSpinBox(this);
     mGravatarCacheSize->setMinimum(1);
     mGravatarCacheSize->setMaximum(9999);
     mGravatarCacheSize->setSuffix(ki18ncp("add space before image", " image", " images"));
@@ -87,7 +85,7 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
 
     QHBoxLayout *buttonLayout = new QHBoxLayout;
     topLayout->addLayout(buttonLayout);
-    mClearGravatarCache = new QPushButton(i18n("Clear Gravatar Cache"));
+    mClearGravatarCache = new QPushButton(i18n("Clear Gravatar Cache"), this);
     mClearGravatarCache->setObjectName(QStringLiteral("cleargravatarcachebutton"));
     buttonLayout->addWidget(mClearGravatarCache);
     buttonLayout->addStretch();
