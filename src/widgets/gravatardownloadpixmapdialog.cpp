@@ -27,8 +27,7 @@ using namespace Gravatar;
 GravatarDownloadPixmapDialog::GravatarDownloadPixmapDialog(QWidget *parent)
     : QDialog(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mGravatarDownloadPixmapWidget = new Gravatar::GravatarDownloadPixmapWidget(this);
     mGravatarDownloadPixmapWidget->setObjectName(QStringLiteral("gravatarwidget"));
     mainLayout->addWidget(mGravatarDownloadPixmapWidget);

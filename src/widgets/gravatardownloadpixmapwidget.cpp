@@ -31,8 +31,7 @@ using namespace Gravatar;
 GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QHBoxLayout *hbox = new QHBoxLayout;
     mainLayout->addLayout(hbox);
     QLabel *lab = new QLabel(i18n("Email:"));
