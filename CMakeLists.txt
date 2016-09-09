@@ -18,7 +18,7 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
-set(PIM_VERSION "5.3.1")
+set(PIM_VERSION "5.3.2")
 
 set(QT_REQUIRED_VERSION "5.5.0")
 set(LIBGRAVATAR_LIB_VERSION ${PIM_VERSION})
