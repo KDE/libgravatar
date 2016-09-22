@@ -20,7 +20,7 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
 set(PIM_VERSION "5.3.40")
 
-set(QT_REQUIRED_VERSION "5.5.0")
+set(QT_REQUIRED_VERSION "5.6.0")
 set(LIBGRAVATAR_LIB_VERSION ${PIM_VERSION})
 set(PIMCOMMON_LIB_VERSION "5.3.40")
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test Network)
