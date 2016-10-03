@@ -60,8 +60,10 @@ void GravatarConfigureSettingsDialogTest::shouldHaveDefaultValue()
     QVERIFY(fallbackGravatar);
     QVERIFY(!fallbackGravatar->isEnabled());
 
+#if 0
     QCheckBox *useHttps = dlg.findChild<QCheckBox *>(QStringLiteral("usehttps"));
     QVERIFY(useHttps);
+#endif
 
     KSeparator *separator = dlg.findChild<KSeparator *>(QStringLiteral("separator"));
     QVERIFY(separator);
