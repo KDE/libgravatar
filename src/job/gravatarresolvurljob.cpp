@@ -34,7 +34,7 @@ class Gravatar::GravatarResolvUrlJobPrivate
 {
 public:
     GravatarResolvUrlJobPrivate()
-        : mNetworkAccessManager(Q_NULLPTR),
+        : mNetworkAccessManager(nullptr),
           mSize(80),
           mHasGravatar(false),
           mUseDefaultPixmap(false),

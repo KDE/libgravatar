@@ -26,7 +26,7 @@ class GravatarResolvUrlJobTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit GravatarResolvUrlJobTest(QObject *parent = Q_NULLPTR);
+    explicit GravatarResolvUrlJobTest(QObject *parent = nullptr);
     ~GravatarResolvUrlJobTest();
 
 private Q_SLOTS:

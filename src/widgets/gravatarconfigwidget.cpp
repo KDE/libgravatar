@@ -35,8 +35,8 @@ class Gravatar::GravatarConfigWidgetPrivate
 {
 public:
     GravatarConfigWidgetPrivate()
-        : mEnableGravatarSupport(Q_NULLPTR),
-          mConfigureGravatarSetting(Q_NULLPTR)
+        : mEnableGravatarSupport(nullptr),
+          mConfigureGravatarSetting(nullptr)
     {
 
     }
