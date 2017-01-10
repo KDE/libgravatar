@@ -29,7 +29,7 @@ class GRAVATAR_EXPORT GravatarConfigWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit GravatarConfigWidget(QWidget *parent = Q_NULLPTR);
+    explicit GravatarConfigWidget(QWidget *parent = nullptr);
     ~GravatarConfigWidget();
 
     void save();

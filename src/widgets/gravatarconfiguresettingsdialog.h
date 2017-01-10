@@ -31,7 +31,7 @@ class GRAVATAR_EXPORT GravatarConfigureSettingsDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit GravatarConfigureSettingsDialog(QWidget *parent = Q_NULLPTR);
+    explicit GravatarConfigureSettingsDialog(QWidget *parent = nullptr);
     ~GravatarConfigureSettingsDialog();
 
 private Q_SLOTS:

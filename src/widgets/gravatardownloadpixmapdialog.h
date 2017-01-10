@@ -30,7 +30,7 @@ class GRAVATAR_EXPORT GravatarDownloadPixmapDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit GravatarDownloadPixmapDialog(QWidget *parent = Q_NULLPTR);
+    explicit GravatarDownloadPixmapDialog(QWidget *parent = nullptr);
     ~GravatarDownloadPixmapDialog();
 
     QPixmap gravatarPixmap() const;

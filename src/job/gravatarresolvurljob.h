@@ -32,7 +32,7 @@ class GRAVATAR_EXPORT GravatarResolvUrlJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit GravatarResolvUrlJob(QObject *parent = Q_NULLPTR);
+    explicit GravatarResolvUrlJob(QObject *parent = nullptr);
     ~GravatarResolvUrlJob();
 
     bool canStart() const;
