@@ -51,11 +51,6 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
     mUseDefaultPixmap->setObjectName(QStringLiteral("usedefaultimage"));
     topLayout->addWidget(mUseDefaultPixmap);
 
-#if 0
-    mUseHttps = new QCheckBox(i18n("Use HTTPS"), this);
-    mUseHttps->setObjectName(QStringLiteral("usehttps"));
-    topLayout->addWidget(mUseHttps);
-#endif
     mUseLibravatar = new QCheckBox(i18n("Use Libravatar"), this);
     mUseLibravatar->setObjectName(QStringLiteral("uselibravatarcheckbox"));
     topLayout->addWidget(mUseLibravatar);
