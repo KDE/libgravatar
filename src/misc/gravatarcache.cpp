@@ -86,8 +86,7 @@ QPixmap GravatarCache::loadGravatarPixmap(const QString &hashStr, bool &gravatar
             return *(d->mCachePixmap.object(hashStr));
         } else {
             const QString path = d->mGravatarPath + hashStr + QLatin1String(".png");
-            QFileInfo fi(path);
-            if (fi.exists()) {
+            if (QFileInfo::exists(path)) {
                 QPixmap pix;
                 if (pix.load(path)) {
                     qCDebug(GRAVATAR_LOG) << " add to cache " << hashStr << path;
