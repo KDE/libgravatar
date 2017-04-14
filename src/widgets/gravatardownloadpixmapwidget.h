@@ -26,8 +26,7 @@ class QLabel;
 class QLineEdit;
 class QPushButton;
 class QCheckBox;
-namespace Gravatar
-{
+namespace Gravatar {
 class GravatarResolvUrlJob;
 class GRAVATAR_EXPORT GravatarDownloadPixmapWidget : public QWidget
 {

@@ -25,12 +25,10 @@
 GravatarCacheTest::GravatarCacheTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GravatarCacheTest::~GravatarCacheTest()
 {
-
 }
 
 void GravatarCacheTest::shouldHaveDefaultValue()

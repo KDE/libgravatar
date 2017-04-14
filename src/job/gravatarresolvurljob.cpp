@@ -34,17 +34,16 @@ class Gravatar::GravatarResolvUrlJobPrivate
 {
 public:
     GravatarResolvUrlJobPrivate()
-        : mNetworkAccessManager(nullptr),
-          mSize(80),
-          mHasGravatar(false),
-          mUseDefaultPixmap(false),
-          mUseCache(false),
-          mUseLibravatar(false),
-          mFallbackGravatar(true),
-          mFallbackDone(false),
-          mUseHttps(false)
+        : mNetworkAccessManager(nullptr)
+        , mSize(80)
+        , mHasGravatar(false)
+        , mUseDefaultPixmap(false)
+        , mUseCache(false)
+        , mUseLibravatar(false)
+        , mFallbackGravatar(true)
+        , mFallbackDone(false)
+        , mUseHttps(false)
     {
-
     }
 
     QPixmap mPixmap;
@@ -62,8 +61,8 @@ public:
 };
 
 GravatarResolvUrlJob::GravatarResolvUrlJob(QObject *parent)
-    : QObject(parent),
-      d(new Gravatar::GravatarResolvUrlJobPrivate)
+    : QObject(parent)
+    , d(new Gravatar::GravatarResolvUrlJobPrivate)
 {
 }
 

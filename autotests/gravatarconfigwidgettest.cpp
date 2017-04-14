@@ -32,12 +32,10 @@
 GravatarConfigWidgetTest::GravatarConfigWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GravatarConfigWidgetTest::~GravatarConfigWidgetTest()
 {
-
 }
 
 void GravatarConfigWidgetTest::shouldHaveDefaultValue()

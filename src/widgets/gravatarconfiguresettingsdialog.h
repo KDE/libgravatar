@@ -25,8 +25,7 @@
 class QCheckBox;
 class QPushButton;
 class KPluralHandlingSpinBox;
-namespace Gravatar
-{
+namespace Gravatar {
 class GRAVATAR_EXPORT GravatarConfigureSettingsDialog : public QDialog
 {
     Q_OBJECT

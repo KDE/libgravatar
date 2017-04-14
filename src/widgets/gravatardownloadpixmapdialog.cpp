@@ -40,7 +40,6 @@ GravatarDownloadPixmapDialog::GravatarDownloadPixmapDialog(QWidget *parent)
 
 GravatarDownloadPixmapDialog::~GravatarDownloadPixmapDialog()
 {
-
 }
 
 void GravatarDownloadPixmapDialog::slotAccepted()

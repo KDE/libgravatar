@@ -23,8 +23,7 @@
 #include <QDialog>
 #include "gravatar_export.h"
 
-namespace Gravatar
-{
+namespace Gravatar {
 class GravatarDownloadPixmapWidget;
 class GRAVATAR_EXPORT GravatarDownloadPixmapDialog : public QDialog
 {

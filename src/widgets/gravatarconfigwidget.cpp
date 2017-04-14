@@ -35,10 +35,9 @@ class Gravatar::GravatarConfigWidgetPrivate
 {
 public:
     GravatarConfigWidgetPrivate()
-        : mEnableGravatarSupport(nullptr),
-          mConfigureGravatarSetting(nullptr)
+        : mEnableGravatarSupport(nullptr)
+        , mConfigureGravatarSetting(nullptr)
     {
-
     }
 
     QCheckBox *mEnableGravatarSupport;
@@ -46,8 +45,8 @@ public:
 };
 
 GravatarConfigWidget::GravatarConfigWidget(QWidget *parent)
-    : QWidget(parent),
-      d(new Gravatar::GravatarConfigWidgetPrivate)
+    : QWidget(parent)
+    , d(new Gravatar::GravatarConfigWidgetPrivate)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout;
     setLayout(mainLayout);
@@ -111,4 +110,3 @@ void GravatarConfigWidget::doResetToDefaultsOther()
     doLoadFromGlobalSettings();
     Gravatar::GravatarSettings::self()->useDefaults(bUseDefaults);
 }
-

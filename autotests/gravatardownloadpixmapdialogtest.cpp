@@ -28,12 +28,10 @@
 GravatarDownloadPixmapDialogTest::GravatarDownloadPixmapDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GravatarDownloadPixmapDialogTest::~GravatarDownloadPixmapDialogTest()
 {
-
 }
 
 void GravatarDownloadPixmapDialogTest::initTestCase()

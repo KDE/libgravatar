@@ -24,8 +24,7 @@
 
 #include <QPixmap>
 
-namespace Gravatar
-{
+namespace Gravatar {
 class GravatarCachePrivate;
 class GRAVATAR_EXPORT GravatarCache : public QObject
 {

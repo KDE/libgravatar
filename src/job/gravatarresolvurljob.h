@@ -25,8 +25,7 @@
 #include <QUrl>
 #include <QPixmap>
 #include <QNetworkReply>
-namespace Gravatar
-{
+namespace Gravatar {
 class GravatarResolvUrlJobPrivate;
 class GRAVATAR_EXPORT GravatarResolvUrlJob : public QObject
 {

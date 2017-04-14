@@ -22,8 +22,7 @@
 
 #include <QWidget>
 #include "gravatar_export.h"
-namespace Gravatar
-{
+namespace Gravatar {
 class GravatarConfigWidgetPrivate;
 class GRAVATAR_EXPORT GravatarConfigWidget : public QWidget
 {

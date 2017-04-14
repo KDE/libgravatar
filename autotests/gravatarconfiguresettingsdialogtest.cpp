@@ -29,12 +29,10 @@
 GravatarConfigureSettingsDialogTest::GravatarConfigureSettingsDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GravatarConfigureSettingsDialogTest::~GravatarConfigureSettingsDialogTest()
 {
-
 }
 
 void GravatarConfigureSettingsDialogTest::shouldHaveDefaultValue()

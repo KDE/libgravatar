@@ -35,8 +35,8 @@ public:
     GravatarCachePrivate()
         : mMaximumSize(20)
     {
-
     }
+
     QCache<QString, QPixmap> mCachePixmap;
     QString mGravatarPath;
     int mMaximumSize;
@@ -134,4 +134,3 @@ void GravatarCache::clearAllCache()
     }
     clear();
 }
-

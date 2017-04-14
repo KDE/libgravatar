@@ -28,12 +28,10 @@
 GravatarDownloadPixmapWidgetTest::GravatarDownloadPixmapWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GravatarDownloadPixmapWidgetTest::~GravatarDownloadPixmapWidgetTest()
 {
-
 }
 
 void GravatarDownloadPixmapWidgetTest::shouldHaveDefaultValue()

@@ -70,7 +70,6 @@ GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
 
 GravatarDownloadPixmapWidget::~GravatarDownloadPixmapWidget()
 {
-
 }
 
 QPixmap GravatarDownloadPixmapWidget::gravatarPixmap() const

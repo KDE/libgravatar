@@ -97,7 +97,6 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
 
 GravatarConfigureSettingsDialog::~GravatarConfigureSettingsDialog()
 {
-
 }
 
 void GravatarConfigureSettingsDialog::slotRestoreDefault()
