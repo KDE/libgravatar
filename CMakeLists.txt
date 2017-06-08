@@ -36,10 +36,10 @@ find_package(KF5PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX GRAVATAR
-                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/gravatar_version.h"
-                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5GravatarConfigVersion.cmake"
-                        SOVERSION 5
-)
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/gravatar_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5GravatarConfigVersion.cmake"
+    SOVERSION 5
+    )
 
 
 ########### Targets ###########
@@ -51,30 +51,30 @@ add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5Gravatar")
 
 configure_package_config_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/KF5GravatarConfig.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5GravatarConfig.cmake"
-  INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-)
+    "${CMAKE_CURRENT_SOURCE_DIR}/KF5GravatarConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5GravatarConfig.cmake"
+    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    )
 
 install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5GravatarConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5GravatarConfigVersion.cmake"
-  DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-  COMPONENT Devel
-)
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5GravatarConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5GravatarConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+    )
 
 install(EXPORT KF5GravatarTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5GravatarTargets.cmake NAMESPACE KF5::)
 
 install(FILES
-   ${CMAKE_CURRENT_BINARY_DIR}/gravatar_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
-)
+    ${CMAKE_CURRENT_BINARY_DIR}/gravatar_version.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+    )
 
 
 add_subdirectory(src)
 if (BUILD_TESTING)
-   add_subdirectory(autotests)
-   add_subdirectory(tests)
+    add_subdirectory(autotests)
+    add_subdirectory(tests)
 endif()
 
 install( FILES libgravatar.renamecategories libgravatar.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
