@@ -79,6 +79,7 @@ private:
     void startNetworkManager(const QUrl &url);
     QUrl createUrl(bool useLibravatar);
     QString calculateHash(bool useLibravator);
+    bool cacheLookup(const QString &hash);
     GravatarResolvUrlJobPrivate *const d;
 };
 }

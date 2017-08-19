@@ -114,16 +114,8 @@ void GravatarResolvUrlJob::start()
         d->mCalculatedHash.clear();
         const QUrl url = createUrl(d->mUseLibravatar);
         Q_EMIT resolvUrl(url);
-        bool haveStoredPixmap = false;
-        const QPixmap pix = GravatarCache::self()->loadGravatarPixmap(d->mCalculatedHash, haveStoredPixmap);
-        if (haveStoredPixmap && !pix.isNull()) {
-            d->mPixmap = pix;
-            d->mHasGravatar = true;
-            Q_EMIT finished(this);
-            deleteLater();
-        } else {
+        if (!cacheLookup(d->mCalculatedHash))
             startNetworkManager(url);
-        }
     } else {
         qCDebug(GRAVATAR_LOG) << "Gravatar can not start";
         deleteLater();
@@ -144,7 +136,8 @@ void GravatarResolvUrlJob::slotFinishLoadPixmap(QNetworkReply *reply)
         d->mCalculatedHash.clear();
         const QUrl url = createUrl(false);
         Q_EMIT resolvUrl(url);
-        startNetworkManager(url);
+        if (!cacheLookup(d->mCalculatedHash))
+            startNetworkManager(url);
         return;
     }
     reply->deleteLater();
@@ -277,4 +270,18 @@ QUrl GravatarResolvUrlJob::createUrl(bool useLibravatar)
     url.setPath(QLatin1String("/avatar/") + d->mCalculatedHash);
     url.setQuery(query);
     return url;
+}
+
+bool GravatarResolvUrlJob::cacheLookup(const QString &hash)
+{
+    bool haveStoredPixmap = false;
+    const QPixmap pix = GravatarCache::self()->loadGravatarPixmap(hash, haveStoredPixmap);
+    if (haveStoredPixmap && !pix.isNull()) {
+        d->mPixmap = pix;
+        d->mHasGravatar = true;
+        Q_EMIT finished(this);
+        deleteLater();
+        return true;
+    }
+    return false;
 }
