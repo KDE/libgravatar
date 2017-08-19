@@ -38,7 +38,6 @@ public:
         , mSize(80)
         , mHasGravatar(false)
         , mUseDefaultPixmap(false)
-        , mUseCache(false)
         , mUseLibravatar(false)
         , mFallbackGravatar(true)
         , mFallbackDone(false)
@@ -52,7 +51,6 @@ public:
     int mSize;
     bool mHasGravatar;
     bool mUseDefaultPixmap;
-    bool mUseCache;
     bool mUseLibravatar;
     bool mFallbackGravatar;
     bool mFallbackDone;
@@ -185,16 +183,6 @@ bool GravatarResolvUrlJob::useLibravatar() const
 void GravatarResolvUrlJob::setUseLibravatar(bool useLibravatar)
 {
     d->mUseLibravatar = useLibravatar;
-}
-
-bool GravatarResolvUrlJob::useCache() const
-{
-    return d->mUseCache;
-}
-
-void GravatarResolvUrlJob::setUseCache(bool useCache)
-{
-    d->mUseCache = useCache;
 }
 
 bool GravatarResolvUrlJob::useDefaultPixmap() const

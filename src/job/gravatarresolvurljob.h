@@ -55,9 +55,6 @@ public:
     bool useDefaultPixmap() const;
     void setUseDefaultPixmap(bool useDefaultPixmap);
 
-    bool useCache() const;
-    void setUseCache(bool useCache);
-
     bool useLibravatar() const;
     void setUseLibravatar(bool useLibravatar);
 

@@ -38,7 +38,6 @@ void GravatarResolvUrlJobTest::shouldHaveDefaultValue()
     QCOMPARE(job.hasGravatar(), false);
     QCOMPARE(job.pixmap().isNull(), true);
     QCOMPARE(job.useDefaultPixmap(), false);
-    QCOMPARE(job.useCache(), false);
     QCOMPARE(job.useLibravatar(), false);
     QCOMPARE(job.fallbackGravatar(), true);
 }
@@ -46,13 +45,6 @@ void GravatarResolvUrlJobTest::shouldHaveDefaultValue()
 void GravatarResolvUrlJobTest::shouldChangeValue()
 {
     Gravatar::GravatarResolvUrlJob job;
-    bool useCache = true;
-    job.setUseCache(useCache);
-    QCOMPARE(job.useCache(), useCache);
-    useCache = false;
-    job.setUseCache(useCache);
-    QCOMPARE(job.useCache(), useCache);
-
     bool useDefaultPixmap = true;
     job.setUseDefaultPixmap(useDefaultPixmap);
     QCOMPARE(job.useDefaultPixmap(), useDefaultPixmap);
