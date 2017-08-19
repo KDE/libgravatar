@@ -41,7 +41,6 @@ void GravatarResolvUrlJobTest::shouldHaveDefaultValue()
     QCOMPARE(job.useCache(), false);
     QCOMPARE(job.useLibravatar(), false);
     QCOMPARE(job.fallbackGravatar(), true);
-    QVERIFY(!job.useHttps());
 }
 
 void GravatarResolvUrlJobTest::shouldChangeValue()
@@ -76,13 +75,6 @@ void GravatarResolvUrlJobTest::shouldChangeValue()
     fallBackGravatar = true;
     job.setFallbackGravatar(fallBackGravatar);
     QCOMPARE(job.fallbackGravatar(), fallBackGravatar);
-
-    bool useHttps = false;
-    job.setUseHttps(useHttps);
-    QCOMPARE(job.useHttps(), useHttps);
-    useHttps = true;
-    job.setUseHttps(useHttps);
-    QCOMPARE(job.useHttps(), useHttps);
 }
 
 void GravatarResolvUrlJobTest::shouldChangeSize()
@@ -115,10 +107,10 @@ void GravatarResolvUrlJobTest::shouldAddSizeInUrl()
     job.setSize(1024);
     job.setUseLibravatar(false);
     QUrl url = job.generateGravatarUrl(job.useLibravatar());
-    QCOMPARE(url, QUrl(QStringLiteral("http://www.gravatar.com:80/avatar/89b4e14cf2fc6d426275c019c6dc9de6?d=404&s=1024")));
+    QCOMPARE(url, QUrl(QStringLiteral("https://secure.gravatar.com:443/avatar/89b4e14cf2fc6d426275c019c6dc9de6?d=404&s=1024")));
     job.setUseLibravatar(true);
     url = job.generateGravatarUrl(job.useLibravatar());
-    QCOMPARE(url, QUrl(QStringLiteral("http://cdn.libravatar.org:80/avatar/2726400c3a33ce56c0ff632cbc0474f766d3b36e68819c601fb02954c1681d85?d=404&s=1024")));
+    QCOMPARE(url, QUrl(QStringLiteral("https://seccdn.libravatar.org:443/avatar/2726400c3a33ce56c0ff632cbc0474f766d3b36e68819c601fb02954c1681d85?d=404&s=1024")));
 }
 
 void GravatarResolvUrlJobTest::shouldUseDefaultPixmap()
@@ -128,7 +120,7 @@ void GravatarResolvUrlJobTest::shouldUseDefaultPixmap()
     job.setSize(1024);
     job.setUseDefaultPixmap(true);
     QUrl url = job.generateGravatarUrl(job.useLibravatar());
-    QCOMPARE(url, QUrl(QStringLiteral("http://www.gravatar.com:80/avatar/89b4e14cf2fc6d426275c019c6dc9de6?s=1024")));
+    QCOMPARE(url, QUrl(QStringLiteral("https://secure.gravatar.com:443/avatar/89b4e14cf2fc6d426275c019c6dc9de6?s=1024")));
 }
 
 void GravatarResolvUrlJobTest::shouldUseHttps()
@@ -137,7 +129,6 @@ void GravatarResolvUrlJobTest::shouldUseHttps()
     job.setEmail(QStringLiteral("foo@kde.org"));
     job.setSize(1024);
     job.setUseLibravatar(false);
-    job.setUseHttps(true);
     QUrl url = job.generateGravatarUrl(job.useLibravatar());
     QCOMPARE(url, QUrl(QStringLiteral("https://secure.gravatar.com:443/avatar/89b4e14cf2fc6d426275c019c6dc9de6?d=404&s=1024")));
     job.setUseLibravatar(true);
@@ -169,9 +160,9 @@ void GravatarResolvUrlJobTest::shouldGenerateGravatarUrl_data()
     QTest::newRow("empty") << QString() << QString() << QUrl() << false;
     QTest::newRow("no domain") << QStringLiteral("foo") << QString() << QUrl() << false;
     QTest::newRow("validemail") << QStringLiteral("foo@kde.org") << QStringLiteral("89b4e14cf2fc6d426275c019c6dc9de6")
-                                << QUrl(QStringLiteral("http://www.gravatar.com:80/avatar/89b4e14cf2fc6d426275c019c6dc9de6?d=404")) << false;
+                                << QUrl(QStringLiteral("https://secure.gravatar.com:443/avatar/89b4e14cf2fc6d426275c019c6dc9de6?d=404")) << false;
     QTest::newRow("validemaillibravatar") << QStringLiteral("foo@kde.org") << QStringLiteral("2726400c3a33ce56c0ff632cbc0474f766d3b36e68819c601fb02954c1681d85")
-                                          << QUrl(QStringLiteral("http://cdn.libravatar.org:80/avatar/2726400c3a33ce56c0ff632cbc0474f766d3b36e68819c601fb02954c1681d85?d=404")) << true;
+                                          << QUrl(QStringLiteral("https://seccdn.libravatar.org:443/avatar/2726400c3a33ce56c0ff632cbc0474f766d3b36e68819c601fb02954c1681d85?d=404")) << true;
 }
 
 void GravatarResolvUrlJobTest::shouldGenerateGravatarUrl()

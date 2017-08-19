@@ -112,7 +112,6 @@ void GravatarConfigureSettingsDialog::save()
     saveSpinBox(mGravatarCacheSize, Gravatar::GravatarSettings::self()->gravatarCacheSizeItem());
     saveCheckBox(mFallbackGravatar, Gravatar::GravatarSettings::self()->fallbackToGravatarItem());
     saveCheckBox(mUseLibravatar, Gravatar::GravatarSettings::self()->libravatarSupportEnabledItem());
-    //saveCheckBox(mUseHttps, Gravatar::GravatarSettings::self()->gravatarHttpsSupportItem());
     accept();
 }
 
@@ -122,7 +121,6 @@ void GravatarConfigureSettingsDialog::load()
     loadWidget(mGravatarCacheSize, Gravatar::GravatarSettings::self()->gravatarCacheSizeItem());
     loadWidget(mFallbackGravatar, Gravatar::GravatarSettings::self()->fallbackToGravatarItem());
     loadWidget(mUseLibravatar, Gravatar::GravatarSettings::self()->libravatarSupportEnabledItem());
-    //loadWidget(mUseHttps, Gravatar::GravatarSettings::self()->gravatarHttpsSupportItem());
 }
 
 void GravatarConfigureSettingsDialog::slotClearGravatarCache()
