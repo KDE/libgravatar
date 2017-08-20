@@ -33,19 +33,17 @@ class Gravatar::GravatarCachePrivate
 {
 public:
     GravatarCachePrivate()
-        : mMaximumSize(20)
     {
     }
 
     QCache<QString, QPixmap> mCachePixmap;
     QString mGravatarPath;
-    int mMaximumSize;
 };
 
 GravatarCache::GravatarCache()
     : d(new Gravatar::GravatarCachePrivate)
 {
-    d->mCachePixmap.setMaxCost(d->mMaximumSize);
+    d->mCachePixmap.setMaxCost(20);
     //Make sure that this folder is created. Otherwise we can't store gravatar
     d->mGravatarPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/gravatar/");
     QDir().mkpath(d->mGravatarPath);
@@ -104,14 +102,13 @@ QPixmap GravatarCache::loadGravatarPixmap(const QString &hashStr, bool &gravatar
 
 int GravatarCache::maximumSize() const
 {
-    return d->mMaximumSize;
+    return d->mCachePixmap.maxCost();
 }
 
 void GravatarCache::setMaximumSize(int maximumSize)
 {
-    if (d->mMaximumSize != maximumSize) {
-        d->mMaximumSize = maximumSize;
-        d->mCachePixmap.setMaxCost(d->mMaximumSize);
+    if (d->mCachePixmap.maxCost() != maximumSize) {
+        d->mCachePixmap.setMaxCost(maximumSize);
     }
 }
 

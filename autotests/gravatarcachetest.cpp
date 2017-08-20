@@ -20,7 +20,11 @@
 #include "gravatarcachetest.h"
 #include "../src/misc/gravatarcache.h"
 
+#include <QPixmap>
+#include <QStandardPaths>
 #include <qtest.h>
+
+using namespace Gravatar;
 
 GravatarCacheTest::GravatarCacheTest(QObject *parent)
     : QObject(parent)
@@ -29,6 +33,11 @@ GravatarCacheTest::GravatarCacheTest(QObject *parent)
 
 GravatarCacheTest::~GravatarCacheTest()
 {
+}
+
+void GravatarCacheTest::initTestCase()
+{
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void GravatarCacheTest::shouldHaveDefaultValue()
@@ -48,6 +57,43 @@ void GravatarCacheTest::shouldChangeCacheValue()
     gravatarCache.setMaximumSize(val);
 
     QCOMPARE(gravatarCache.maximumSize(), val);
+}
+
+void GravatarCacheTest::testLookup()
+{
+    {
+        GravatarCache cache;
+        cache.clearAllCache();
+        bool found = false;
+        const auto result = cache.loadGravatarPixmap(QStringLiteral("fa1afe1"), found);
+        QVERIFY(!found);
+        QVERIFY(result.isNull());
+    }
+
+    QPixmap px(42, 42);
+    px.fill(Qt::blue);
+
+    {
+        GravatarCache cache;
+        cache.saveGravatarPixmap(QStringLiteral("fa1afe1"), px);
+
+        // in-memory cache lookup
+        bool found = false;
+        const auto result = cache.loadGravatarPixmap(QStringLiteral("fa1afe1"), found);
+        QVERIFY(found);
+        QVERIFY(!result.isNull());
+        QCOMPARE(result.size(), QSize(42, 42));
+    }
+
+    {
+        // disk lookup
+        GravatarCache cache;
+        bool found = false;
+        const auto result = cache.loadGravatarPixmap(QStringLiteral("fa1afe1"), found);
+        QVERIFY(found);
+        QVERIFY(!result.isNull());
+        QCOMPARE(result.size(), QSize(42, 42));
+    }
 }
 
 QTEST_MAIN(GravatarCacheTest)

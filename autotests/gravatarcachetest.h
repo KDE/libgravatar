@@ -29,8 +29,10 @@ public:
     explicit GravatarCacheTest(QObject *parent = nullptr);
     ~GravatarCacheTest();
 private Q_SLOTS:
+    void initTestCase();
     void shouldHaveDefaultValue();
     void shouldChangeCacheValue();
+    void testLookup();
 };
 
 #endif // GRAVATARCACHETEST_H

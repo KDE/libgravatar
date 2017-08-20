@@ -26,9 +26,8 @@
 
 namespace Gravatar {
 class GravatarCachePrivate;
-class GRAVATAR_EXPORT GravatarCache : public QObject
+class GRAVATAR_EXPORT GravatarCache
 {
-    Q_OBJECT
 public:
     static GravatarCache *self();
 
@@ -46,6 +45,7 @@ public:
     void clearAllCache();
 
 private:
+    Q_DISABLE_COPY(GravatarCache)
     GravatarCachePrivate *const d;
 };
 }
