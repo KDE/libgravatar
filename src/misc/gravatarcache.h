@@ -26,6 +26,8 @@
 
 namespace Gravatar {
 class GravatarCachePrivate;
+class Hash;
+
 class GRAVATAR_EXPORT GravatarCache
 {
 public:
@@ -34,9 +36,10 @@ public:
     GravatarCache();
     ~GravatarCache();
 
-    void saveGravatarPixmap(const QString &hashStr, const QPixmap &pixmap);
+    void saveGravatarPixmap(const Hash &hash, const QPixmap &pixmap);
+    void saveMissingGravatar(const Hash &hash);
 
-    QPixmap loadGravatarPixmap(const QString &hashStr, bool &gravatarStored);
+    QPixmap loadGravatarPixmap(const Hash &hash, bool &gravatarStored);
 
     int maximumSize() const;
     void setMaximumSize(int maximumSize);

@@ -19,6 +19,7 @@
 
 #include "gravatarresolvurljobtest.h"
 #include "../src/job/gravatarresolvurljob.h"
+#include "../src/misc/hash.h"
 #include <qtest.h>
 
 GravatarResolvUrlJobTest::GravatarResolvUrlJobTest(QObject *parent)
@@ -167,7 +168,7 @@ void GravatarResolvUrlJobTest::shouldGenerateGravatarUrl()
     job.setEmail(input);
     job.setUseLibravatar(uselibravatar);
     QUrl url = job.generateGravatarUrl(job.useLibravatar());
-    QCOMPARE(calculedhash, job.calculatedHash());
+    QCOMPARE(calculedhash, job.calculatedHash().hexString());
     QCOMPARE(url, output);
 }
 

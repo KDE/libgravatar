@@ -4,6 +4,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"libgravatar\")
 
 set(gravatarlib_SRCS
     misc/gravatarcache.cpp
+    misc/hash.cpp
     widgets/gravatardownloadpixmapwidget.cpp
     widgets/gravatardownloadpixmapdialog.cpp
     widgets/gravatarconfigwidget.cpp

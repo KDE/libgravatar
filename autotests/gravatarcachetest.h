@@ -33,6 +33,8 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldChangeCacheValue();
     void testLookup();
+    void testMissing();
+    void testMissing_data();
 };
 
 #endif // GRAVATARCACHETEST_H

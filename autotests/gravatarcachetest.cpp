@@ -19,12 +19,16 @@
 
 #include "gravatarcachetest.h"
 #include "../src/misc/gravatarcache.h"
+#include "../src/misc/hash.h"
 
+#include <QCryptographicHash>
 #include <QPixmap>
 #include <QStandardPaths>
 #include <qtest.h>
 
 using namespace Gravatar;
+
+Q_DECLARE_METATYPE(Gravatar::Hash)
 
 GravatarCacheTest::GravatarCacheTest(QObject *parent)
     : QObject(parent)
@@ -61,11 +65,12 @@ void GravatarCacheTest::shouldChangeCacheValue()
 
 void GravatarCacheTest::testLookup()
 {
+    Hash hash(QCryptographicHash::hash(QByteArray("test@example.com"), QCryptographicHash::Md5), Hash::Md5);
     {
         GravatarCache cache;
         cache.clearAllCache();
         bool found = false;
-        const auto result = cache.loadGravatarPixmap(QStringLiteral("fa1afe1"), found);
+        const auto result = cache.loadGravatarPixmap(hash, found);
         QVERIFY(!found);
         QVERIFY(result.isNull());
     }
@@ -75,11 +80,11 @@ void GravatarCacheTest::testLookup()
 
     {
         GravatarCache cache;
-        cache.saveGravatarPixmap(QStringLiteral("fa1afe1"), px);
+        cache.saveGravatarPixmap(hash, px);
 
         // in-memory cache lookup
         bool found = false;
-        const auto result = cache.loadGravatarPixmap(QStringLiteral("fa1afe1"), found);
+        const auto result = cache.loadGravatarPixmap(hash, found);
         QVERIFY(found);
         QVERIFY(!result.isNull());
         QCOMPARE(result.size(), QSize(42, 42));
@@ -89,10 +94,49 @@ void GravatarCacheTest::testLookup()
         // disk lookup
         GravatarCache cache;
         bool found = false;
-        const auto result = cache.loadGravatarPixmap(QStringLiteral("fa1afe1"), found);
+        const auto result = cache.loadGravatarPixmap(hash, found);
         QVERIFY(found);
         QVERIFY(!result.isNull());
         QCOMPARE(result.size(), QSize(42, 42));
+    }
+}
+
+void GravatarCacheTest::testMissing_data()
+{
+    QTest::addColumn<Hash>("hash");
+    QTest::newRow("md5") << Hash(QCryptographicHash::hash(QByteArray("testMD5@example.com"), QCryptographicHash::Md5), Hash::Md5);
+    QTest::newRow("Sha256") << Hash(QCryptographicHash::hash(QByteArray("testSHA256@example.com"), QCryptographicHash::Sha256), Hash::Sha256);
+}
+
+void GravatarCacheTest::testMissing()
+{
+    QFETCH(Hash, hash);
+    {
+        GravatarCache cache;
+        cache.clearAllCache();
+        bool found = false;
+        const auto result = cache.loadGravatarPixmap(hash, found);
+        QVERIFY(!found);
+        QVERIFY(result.isNull());
+    }
+
+    {
+        // store miss and verify in memory
+        GravatarCache cache;
+        cache.saveMissingGravatar(hash);
+        bool found = false;
+        const auto result = cache.loadGravatarPixmap(hash, found);
+        QVERIFY(found);
+        QVERIFY(result.isNull());
+    }
+
+    {
+        // verify miss in disk storage
+        GravatarCache cache;
+        bool found = false;
+        const auto result = cache.loadGravatarPixmap(hash, found);
+        QVERIFY(found);
+        QVERIFY(result.isNull());
     }
 }
 

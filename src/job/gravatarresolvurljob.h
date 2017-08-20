@@ -25,8 +25,12 @@
 #include <QUrl>
 #include <QPixmap>
 #include <QNetworkReply>
+
+class GravatarResolvUrlJobTest;
 namespace Gravatar {
 class GravatarResolvUrlJobPrivate;
+class Hash;
+
 class GRAVATAR_EXPORT GravatarResolvUrlJob : public QObject
 {
     Q_OBJECT
@@ -40,14 +44,9 @@ public:
     QString email() const;
     void setEmail(const QString &email);
 
-    QUrl generateGravatarUrl(bool useLibravatar);
-
     bool hasGravatar() const;
 
-    QString calculatedHash() const;
-
     void setSize(int size);
-
     int size() const;
 
     QPixmap pixmap() const;
@@ -67,13 +66,17 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void slotFinishLoadPixmap(QNetworkReply *reply);
-    void slotError(QNetworkReply::NetworkError error);
 
 private:
+    friend class ::GravatarResolvUrlJobTest;
+
+    QUrl generateGravatarUrl(bool useLibravatar);
+    Hash calculatedHash() const;
+    void processNextBackend();
     void startNetworkManager(const QUrl &url);
     QUrl createUrl(bool useLibravatar);
-    QString calculateHash(bool useLibravator);
-    bool cacheLookup(const QString &hash);
+    Hash calculateHash(bool useLibravator);
+    bool cacheLookup(const Hash &hash);
     GravatarResolvUrlJobPrivate *const d;
 };
 }
