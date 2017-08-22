@@ -20,7 +20,7 @@
 #ifndef GRAVATAR_HASH_H
 #define GRAVATAR_HASH_H
 
-#include "gravatar_export.h"
+#include "gravatar_private_export.h"
 
 #include <cstdint>
 #include <cstring>
@@ -51,7 +51,7 @@ class Hash;
 unsigned int qHash(const Hash &h, unsigned int seed = 0);
 
 // exported for unit tests only
-class GRAVATAR_EXPORT Hash
+class GRAVATAR_TESTS_EXPORT Hash
 {
 public:
     enum Type { Invalid, Md5, Sha256 };

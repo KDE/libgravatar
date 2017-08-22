@@ -76,7 +76,9 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/gravatar_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
     )
-
+if(BUILD_TESTING)
+   add_definitions(-DBUILD_TESTING)
+endif(BUILD_TESTING)
 
 add_subdirectory(src)
 if (BUILD_TESTING)
