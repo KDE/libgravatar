@@ -40,11 +40,11 @@ private Q_SLOTS:
 
 private:
     void load();
-    QCheckBox *mUseDefaultPixmap;
-    QCheckBox *mUseLibravatar;
-    QCheckBox *mFallbackGravatar;
-    QPushButton *mClearGravatarCache;
-    KPluralHandlingSpinBox *mGravatarCacheSize;
+    QCheckBox *mUseDefaultPixmap = nullptr;
+    QCheckBox *mUseLibravatar = nullptr;
+    QCheckBox *mFallbackGravatar = nullptr;
+    QPushButton *mClearGravatarCache = nullptr;
+    KPluralHandlingSpinBox *mGravatarCacheSize = nullptr;
 };
 }
 

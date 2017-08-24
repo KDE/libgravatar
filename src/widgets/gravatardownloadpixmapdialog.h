@@ -38,7 +38,7 @@ private Q_SLOTS:
     void slotAccepted();
 
 private:
-    Gravatar::GravatarDownloadPixmapWidget *mGravatarDownloadPixmapWidget;
+    Gravatar::GravatarDownloadPixmapWidget *mGravatarDownloadPixmapWidget = nullptr;
 };
 }
 

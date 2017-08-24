@@ -44,11 +44,11 @@ private Q_SLOTS:
     void slotResolvUrlFinish(Gravatar::GravatarResolvUrlJob *job);
 private:
     QPixmap mGravatarPixmap;
-    QLabel *mResultLabel;
-    QLineEdit *mLineEdit;
-    QPushButton *mGetPixmapButton;
-    QCheckBox *mUseLibravatar;
-    QCheckBox *mFallbackGravatar;
+    QLabel *mResultLabel = nullptr;
+    QLineEdit *mLineEdit = nullptr;
+    QPushButton *mGetPixmapButton = nullptr;
+    QCheckBox *mUseLibravatar = nullptr;
+    QCheckBox *mFallbackGravatar = nullptr;
 };
 }
 
