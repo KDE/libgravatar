@@ -48,8 +48,7 @@ GravatarConfigWidget::GravatarConfigWidget(QWidget *parent)
     : QWidget(parent)
     , d(new Gravatar::GravatarConfigWidgetPrivate)
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout;
-    setLayout(mainLayout);
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setMargin(0);
 
     d->mEnableGravatarSupport = new QCheckBox(i18n("Enable Gravatar Support"));
