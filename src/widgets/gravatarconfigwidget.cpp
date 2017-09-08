@@ -35,13 +35,11 @@ class Gravatar::GravatarConfigWidgetPrivate
 {
 public:
     GravatarConfigWidgetPrivate()
-        : mEnableGravatarSupport(nullptr)
-        , mConfigureGravatarSetting(nullptr)
     {
     }
 
-    QCheckBox *mEnableGravatarSupport;
-    QPushButton *mConfigureGravatarSetting;
+    QCheckBox *mEnableGravatarSupport = nullptr;
+    QPushButton *mConfigureGravatarSetting = nullptr;
 };
 
 GravatarConfigWidget::GravatarConfigWidget(QWidget *parent)

@@ -35,29 +35,24 @@ class Gravatar::GravatarResolvUrlJobPrivate
 {
 public:
     GravatarResolvUrlJobPrivate()
-        : mNetworkAccessManager(nullptr)
-        , mSize(80)
-        , mBackends(Gravatar)
-        , mHasGravatar(false)
-        , mUseDefaultPixmap(false)
     {
     }
 
     QPixmap mPixmap;
     QString mEmail;
     Hash mCalculatedHash;
-    QNetworkAccessManager *mNetworkAccessManager;
-    int mSize;
+    QNetworkAccessManager *mNetworkAccessManager = nullptr;
+    int mSize = 80;
 
     enum Backend {
         None = 0x0,
         Libravatar = 0x1,
         Gravatar = 0x2
     };
-    int mBackends;
+    int mBackends = Gravatar;
 
-    bool mHasGravatar;
-    bool mUseDefaultPixmap;
+    bool mHasGravatar = false;
+    bool mUseDefaultPixmap = false;
 };
 
 GravatarResolvUrlJob::GravatarResolvUrlJob(QObject *parent)
