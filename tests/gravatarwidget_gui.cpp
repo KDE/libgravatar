@@ -17,9 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include <KLocalizedString>
 #include <QApplication>
-#include <KAboutData>
 #include <QCommandLineParser>
 #include "../src/widgets/gravatardownloadpixmapwidget.h"
 #include <QStandardPaths>
@@ -28,15 +26,10 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
-    KAboutData aboutData(QStringLiteral("gravatar_gui"), i18n("GravatarTest_Gui"), QStringLiteral("1.0"));
-    aboutData.setShortDescription(i18n("Test for gravatar widget"));
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
-    aboutData.setupCommandLine(&parser);
     parser.process(app);
-    aboutData.processCommandLine(&parser);
 
     Gravatar::GravatarDownloadPixmapWidget *w = new Gravatar::GravatarDownloadPixmapWidget;
     w->show();
