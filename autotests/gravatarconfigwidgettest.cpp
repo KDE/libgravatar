@@ -19,15 +19,11 @@
 
 #include "gravatarconfigwidgettest.h"
 #include "../src/widgets/gravatarconfigwidget.h"
-#include <QSpinBox>
 #include <QCheckBox>
 #include <qtest.h>
-#include <QLabel>
 #include <QPushButton>
 #include <qtestmouse.h>
 #include <QSignalSpy>
-#include <QGroupBox>
-#include <QStyleOption>
 
 GravatarConfigWidgetTest::GravatarConfigWidgetTest(QObject *parent)
     : QObject(parent)

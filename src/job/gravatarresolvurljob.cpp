@@ -23,7 +23,6 @@
 #include "gravatar_debug.h"
 #include <PimCommon/NetworkManager>
 
-#include <QCoreApplication>
 #include <QCryptographicHash>
 #include <QPixmap>
 #include <QUrlQuery>
