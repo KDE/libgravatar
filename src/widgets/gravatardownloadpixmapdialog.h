@@ -34,10 +34,8 @@ public:
 
     QPixmap gravatarPixmap() const;
 
-private Q_SLOTS:
-    void slotAccepted();
-
 private:
+    void slotAccepted();
     Gravatar::GravatarDownloadPixmapWidget *mGravatarDownloadPixmapWidget = nullptr;
 };
 }

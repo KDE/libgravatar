@@ -37,12 +37,11 @@ public:
 
     QPixmap gravatarPixmap() const;
 
-private Q_SLOTS:
+private:
     void slotSearchButton();
 
     void slotTextChanged(const QString &text);
     void slotResolvUrlFinish(Gravatar::GravatarResolvUrlJob *job);
-private:
     QPixmap mGravatarPixmap;
     QLabel *mResultLabel = nullptr;
     QLineEdit *mLineEdit = nullptr;

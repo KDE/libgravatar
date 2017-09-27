@@ -38,11 +38,9 @@ public:
 Q_SIGNALS:
     void configChanged(bool);
 
-private Q_SLOTS:
+private:
     void slotGravatarEnableChanged(bool state);
     void slotConfigureSettings();
-
-private:
     void updateWidgetState(bool state);
     GravatarConfigWidgetPrivate *const d;
 };

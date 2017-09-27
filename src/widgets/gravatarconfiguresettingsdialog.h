@@ -33,12 +33,10 @@ public:
     explicit GravatarConfigureSettingsDialog(QWidget *parent = nullptr);
     ~GravatarConfigureSettingsDialog();
 
-private Q_SLOTS:
+private:
     void slotRestoreDefault();
     void slotClearGravatarCache();
     void save();
-
-private:
     void load();
     QCheckBox *mUseDefaultPixmap = nullptr;
     QCheckBox *mUseLibravatar = nullptr;

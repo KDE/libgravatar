@@ -64,12 +64,10 @@ Q_SIGNALS:
     void finished(Gravatar::GravatarResolvUrlJob *);
     void resolvUrl(const QUrl &url);
 
-private Q_SLOTS:
-    void slotFinishLoadPixmap(QNetworkReply *reply);
-
 private:
     friend class ::GravatarResolvUrlJobTest;
 
+    void slotFinishLoadPixmap(QNetworkReply *reply);
     QUrl generateGravatarUrl(bool useLibravatar);
     Hash calculatedHash() const;
     void processNextBackend();
