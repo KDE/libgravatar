@@ -71,7 +71,7 @@ install(FILES
     )
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
-endif(BUILD_TESTING)
+endif()
 
 add_subdirectory(src)
 if (BUILD_TESTING)
