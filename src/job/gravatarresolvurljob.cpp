@@ -95,8 +95,9 @@ void GravatarResolvUrlJob::startNetworkManager(const QUrl &url)
 
 void GravatarResolvUrlJob::start()
 {
-    if (d->mBackends == GravatarResolvUrlJobPrivate::None)
+    if (d->mBackends == GravatarResolvUrlJobPrivate::None) {
         d->mBackends = GravatarResolvUrlJobPrivate::Gravatar; // default is Gravatar if nothing else is selected
+    }
 
     d->mHasGravatar = false;
     if (canStart()) {
