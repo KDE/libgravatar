@@ -39,8 +39,6 @@ private:
     void save();
     void load();
     QCheckBox *mUseDefaultPixmap = nullptr;
-    QCheckBox *mUseLibravatar = nullptr;
-    QCheckBox *mFallbackGravatar = nullptr;
     QPushButton *mClearGravatarCache = nullptr;
     KPluralHandlingSpinBox *mGravatarCacheSize = nullptr;
 };

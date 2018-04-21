@@ -46,8 +46,6 @@ private:
     QLabel *mResultLabel = nullptr;
     QLineEdit *mLineEdit = nullptr;
     QPushButton *mGetPixmapButton = nullptr;
-    QCheckBox *mUseLibravatar = nullptr;
-    QCheckBox *mFallbackGravatar = nullptr;
 };
 }
 

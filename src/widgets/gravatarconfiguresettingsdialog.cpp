@@ -51,15 +51,9 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
     mUseDefaultPixmap->setObjectName(QStringLiteral("usedefaultimage"));
     topLayout->addWidget(mUseDefaultPixmap);
 
-    mUseLibravatar = new QCheckBox(i18n("Use Libravatar"), this);
-    mUseLibravatar->setObjectName(QStringLiteral("uselibravatarcheckbox"));
-    topLayout->addWidget(mUseLibravatar);
-
-    mFallbackGravatar = new QCheckBox(i18n("Fallback to Gravatar"), this);
-    mFallbackGravatar->setObjectName(QStringLiteral("fallbackgravatar"));
-    topLayout->addWidget(mFallbackGravatar);
-    connect(mUseLibravatar, &QCheckBox::toggled, mFallbackGravatar, &QCheckBox::setEnabled);
-    mFallbackGravatar->setEnabled(false);
+    QLabel *label = new QLabel(i18n("Libravatar will be shutdown the 1st september 2018"), this);
+    label->setObjectName(QStringLiteral("labelwarning"));
+    topLayout->addWidget(label);
 
     QHBoxLayout *cacheSizeLayout = new QHBoxLayout;
     topLayout->addLayout(cacheSizeLayout);
@@ -110,8 +104,6 @@ void GravatarConfigureSettingsDialog::save()
 {
     saveCheckBox(mUseDefaultPixmap, Gravatar::GravatarSettings::self()->gravatarUseDefaultImageItem());
     saveSpinBox(mGravatarCacheSize, Gravatar::GravatarSettings::self()->gravatarCacheSizeItem());
-    saveCheckBox(mFallbackGravatar, Gravatar::GravatarSettings::self()->fallbackToGravatarItem());
-    saveCheckBox(mUseLibravatar, Gravatar::GravatarSettings::self()->libravatarSupportEnabledItem());
     accept();
 }
 
@@ -119,8 +111,6 @@ void GravatarConfigureSettingsDialog::load()
 {
     loadWidget(mUseDefaultPixmap, Gravatar::GravatarSettings::self()->gravatarUseDefaultImageItem());
     loadWidget(mGravatarCacheSize, Gravatar::GravatarSettings::self()->gravatarCacheSizeItem());
-    loadWidget(mFallbackGravatar, Gravatar::GravatarSettings::self()->fallbackToGravatarItem());
-    loadWidget(mUseLibravatar, Gravatar::GravatarSettings::self()->libravatarSupportEnabledItem());
 }
 
 void GravatarConfigureSettingsDialog::slotClearGravatarCache()

@@ -50,13 +50,10 @@ void GravatarConfigureSettingsDialogTest::shouldHaveDefaultValue()
     KPluralHandlingSpinBox *gravatarCacheSize = dlg.findChild<KPluralHandlingSpinBox *>(QStringLiteral("gravatarcachesize"));
     QVERIFY(gravatarCacheSize);
 
-    QCheckBox *useLibravatar = dlg.findChild<QCheckBox *>(QStringLiteral("uselibravatarcheckbox"));
-    QVERIFY(useLibravatar);
-    QVERIFY(useLibravatar->isEnabled());
 
-    QCheckBox *fallbackGravatar = dlg.findChild<QCheckBox *>(QStringLiteral("fallbackgravatar"));
-    QVERIFY(fallbackGravatar);
-    QVERIFY(!fallbackGravatar->isEnabled());
+    QLabel *label = dlg.findChild<QLabel *>(QStringLiteral("labelwarning"));
+    QVERIFY(label);
+    QVERIFY(!label->text().isEmpty());
 
     KSeparator *separator = dlg.findChild<KSeparator *>(QStringLiteral("separator"));
     QVERIFY(separator);
