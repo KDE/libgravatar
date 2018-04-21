@@ -96,7 +96,6 @@ void GravatarDownloadPixmapWidget::slotSearchButton()
     //job->setUseDefaultPixmap(true);
     job->setUseLibravatar(mUseLibravatar->isChecked());
     job->setFallbackGravatar(mFallbackGravatar->isChecked());
-    //qDebug() << job->generateGravatarUrl(false);
     if (job->canStart()) {
         connect(job, &GravatarResolvUrlJob::finished, this, &GravatarDownloadPixmapWidget::slotResolvUrlFinish);
         job->start();
