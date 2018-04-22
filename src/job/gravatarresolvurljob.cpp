@@ -30,7 +30,7 @@
 
 using namespace Gravatar;
 
-class Gravatar::GravatarResolvUrlJobPrivate
+class Q_DECL_HIDDEN Gravatar::GravatarResolvUrlJobPrivate
 {
 public:
     GravatarResolvUrlJobPrivate()

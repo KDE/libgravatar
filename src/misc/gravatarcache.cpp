@@ -35,7 +35,7 @@ using namespace Gravatar;
 
 Q_GLOBAL_STATIC(GravatarCache, s_gravatarCache)
 
-class Gravatar::GravatarCachePrivate
+class Q_DECL_HIDDEN Gravatar::GravatarCachePrivate
 {
 public:
     template <typename T>
