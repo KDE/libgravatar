@@ -127,7 +127,7 @@ void GravatarResolvUrlJobTest::shouldGenerateGravatarUrl_data()
     QTest::newRow("empty") << QString() << QString() << QUrl();
     QTest::newRow("no domain") << QStringLiteral("foo") << QString() << QUrl();
     QTest::newRow("validemail") << QStringLiteral("foo@kde.org") << QStringLiteral("89b4e14cf2fc6d426275c019c6dc9de6")
-                                << QUrl(QStringLiteral("https://secure.gravatar.com:443/avatar/89b4e14cf2fc6d426275c019c6dc9de6?d=404"));;
+                                << QUrl(QStringLiteral("https://secure.gravatar.com:443/avatar/89b4e14cf2fc6d426275c019c6dc9de6?d=404"));
 }
 
 void GravatarResolvUrlJobTest::shouldGenerateGravatarUrl()

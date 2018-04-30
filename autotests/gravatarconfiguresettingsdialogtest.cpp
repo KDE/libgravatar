@@ -50,7 +50,6 @@ void GravatarConfigureSettingsDialogTest::shouldHaveDefaultValue()
     KPluralHandlingSpinBox *gravatarCacheSize = dlg.findChild<KPluralHandlingSpinBox *>(QStringLiteral("gravatarcachesize"));
     QVERIFY(gravatarCacheSize);
 
-
     QLabel *label = dlg.findChild<QLabel *>(QStringLiteral("labelwarning"));
     QVERIFY(label);
     QVERIFY(!label->text().isEmpty());

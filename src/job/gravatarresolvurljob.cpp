@@ -122,10 +122,11 @@ void GravatarResolvUrlJob::processNextBackend()
     }
 
     Q_EMIT resolvUrl(url);
-    if (!cacheLookup(d->mCalculatedHash))
+    if (!cacheLookup(d->mCalculatedHash)) {
         startNetworkManager(url);
-    else
+    } else {
         processNextBackend();
+    }
 }
 
 void GravatarResolvUrlJob::slotFinishLoadPixmap(QNetworkReply *reply)
@@ -138,10 +139,11 @@ void GravatarResolvUrlJob::slotFinishLoadPixmap(QNetworkReply *reply)
             GravatarCache::self()->saveGravatarPixmap(d->mCalculatedHash, d->mPixmap);
         }
     } else {
-        if (reply->error() == QNetworkReply::ContentNotFoundError)
+        if (reply->error() == QNetworkReply::ContentNotFoundError) {
             GravatarCache::self()->saveMissingGravatar(d->mCalculatedHash);
-        else
+        } else {
             qCDebug(GRAVATAR_LOG) << "Network error:" << reply->request().url() << reply->errorString();
+        }
     }
 
     processNextBackend();
