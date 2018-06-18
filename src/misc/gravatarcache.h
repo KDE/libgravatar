@@ -39,9 +39,9 @@ public:
     void saveGravatarPixmap(const Hash &hash, const QPixmap &pixmap);
     void saveMissingGravatar(const Hash &hash);
 
-    QPixmap loadGravatarPixmap(const Hash &hash, bool &gravatarStored);
+    Q_REQUIRED_RESULT QPixmap loadGravatarPixmap(const Hash &hash, bool &gravatarStored);
 
-    int maximumSize() const;
+    Q_REQUIRED_RESULT int maximumSize() const;
     void setMaximumSize(int maximumSize);
 
     void clear();

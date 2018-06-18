@@ -35,7 +35,7 @@ public:
     explicit GravatarDownloadPixmapWidget(QWidget *parent = nullptr);
     ~GravatarDownloadPixmapWidget();
 
-    QPixmap gravatarPixmap() const;
+    Q_REQUIRED_RESULT QPixmap gravatarPixmap() const;
 
 private:
     void slotSearchButton();

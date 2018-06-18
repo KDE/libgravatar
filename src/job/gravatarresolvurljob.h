@@ -38,20 +38,20 @@ public:
     explicit GravatarResolvUrlJob(QObject *parent = nullptr);
     ~GravatarResolvUrlJob();
 
-    bool canStart() const;
+    Q_REQUIRED_RESULT bool canStart() const;
     void start();
 
-    QString email() const;
+    Q_REQUIRED_RESULT QString email() const;
     void setEmail(const QString &email);
 
-    bool hasGravatar() const;
+    Q_REQUIRED_RESULT bool hasGravatar() const;
 
     void setSize(int size);
-    int size() const;
+    Q_REQUIRED_RESULT int size() const;
 
-    QPixmap pixmap() const;
+    Q_REQUIRED_RESULT QPixmap pixmap() const;
 
-    bool useDefaultPixmap() const;
+    Q_REQUIRED_RESULT bool useDefaultPixmap() const;
     void setUseDefaultPixmap(bool useDefaultPixmap);
 
 Q_SIGNALS:
