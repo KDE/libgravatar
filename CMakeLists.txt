@@ -43,7 +43,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX GRAVATAR
 
 ########### Targets ###########
 
-add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
+
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 ########### CMake Config Files ###########
