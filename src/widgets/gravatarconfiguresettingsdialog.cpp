@@ -51,10 +51,6 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
     mUseDefaultPixmap->setObjectName(QStringLiteral("usedefaultimage"));
     topLayout->addWidget(mUseDefaultPixmap);
 
-    QLabel *label = new QLabel(i18n("Libravatar will be shutdown the 1st september 2018"), this);
-    label->setObjectName(QStringLiteral("labelwarning"));
-    topLayout->addWidget(label);
-
     QHBoxLayout *cacheSizeLayout = new QHBoxLayout;
     topLayout->addLayout(cacheSizeLayout);
     QLabel *lab = new QLabel(i18n("Gravatar Cache Size:"), this);
