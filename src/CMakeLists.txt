@@ -8,6 +8,7 @@ set(gravatarlib_SRCS
     widgets/gravatardownloadpixmapwidget.cpp
     widgets/gravatardownloadpixmapdialog.cpp
     widgets/gravatarconfigwidget.cpp
+    widgets/gravatarconfiguresettingswidget.cpp
     widgets/gravatarconfiguresettingsdialog.cpp
     job/gravatarresolvurljob.cpp
 )

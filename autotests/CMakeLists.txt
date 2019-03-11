@@ -11,4 +11,5 @@ add_gravatar_unittest( gravatarconfigwidgettest.cpp )
 add_gravatar_unittest( gravatardownloadpixmapdialogtest.cpp )
 add_gravatar_unittest( gravatardownloadpixmapwidgettest.cpp )
 add_gravatar_unittest( gravatarresolvurljobtest.cpp )
+add_gravatar_unittest( gravatarconfiguresettingswidgettest.cpp )
 

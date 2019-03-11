@@ -19,12 +19,10 @@
 
 #include "gravatarconfiguresettingsdialogtest.h"
 #include "../src/widgets/gravatarconfiguresettingsdialog.h"
-#include <QCheckBox>
-#include <QLabel>
-#include <QPushButton>
-#include <KPluralHandlingSpinBox>
+#include "../src/widgets/gravatarconfiguresettingswidget.h"
+#include <QDialogButtonBox>
 #include <QTest>
-#include <KSeparator>
+#include <QVBoxLayout>
 
 GravatarConfigureSettingsDialogTest::GravatarConfigureSettingsDialogTest(QObject *parent)
     : QObject(parent)
@@ -38,23 +36,14 @@ GravatarConfigureSettingsDialogTest::~GravatarConfigureSettingsDialogTest()
 void GravatarConfigureSettingsDialogTest::shouldHaveDefaultValue()
 {
     Gravatar::GravatarConfigureSettingsDialog dlg;
-    QCheckBox *useDefaultImage = dlg.findChild<QCheckBox *>(QStringLiteral("usedefaultimage"));
-    QVERIFY(useDefaultImage);
+    Gravatar::GravatarConfigureSettingsWidget *configurewidget = dlg.findChild<Gravatar::GravatarConfigureSettingsWidget *>(QStringLiteral("gravatarconfiguresettings"));
+    QVERIFY(configurewidget);
 
-    QPushButton *clearGravatarCache = dlg.findChild<QPushButton *>(QStringLiteral("cleargravatarcachebutton"));
-    QVERIFY(clearGravatarCache);
+    QVBoxLayout *topLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("toplayout"));
+    QVERIFY(topLayout);
 
-    QLabel *lab = dlg.findChild<QLabel *>(QStringLiteral("gravatarcachesizelabel"));
-    QVERIFY(lab);
-
-    KPluralHandlingSpinBox *gravatarCacheSize = dlg.findChild<KPluralHandlingSpinBox *>(QStringLiteral("gravatarcachesize"));
-    QVERIFY(gravatarCacheSize);
-
-    KSeparator *separator = dlg.findChild<KSeparator *>(QStringLiteral("separator"));
-    QVERIFY(separator);
-
-    KSeparator *separator2 = dlg.findChild<KSeparator *>(QStringLiteral("separator2"));
-    QVERIFY(separator2);
+    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QVERIFY(buttonBox);
 }
 
 QTEST_MAIN(GravatarConfigureSettingsDialogTest)

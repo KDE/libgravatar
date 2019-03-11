@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2015-2019 Laurent Montel <montel@kde.org>
+   Copyright (C) 2019 Laurent Montel <montel@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -17,26 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef GRAVATARCONFIGURESETTINGSDIALOG_H
-#define GRAVATARCONFIGURESETTINGSDIALOG_H
+#ifndef GRAVATARCONFIGURESETTINGSWIDGETTEST_H
+#define GRAVATARCONFIGURESETTINGSWIDGETTEST_H
 
-#include <QDialog>
-#include "gravatar_export.h"
-namespace Gravatar {
-class GravatarConfigureSettingsWidget;
-class GRAVATAR_EXPORT GravatarConfigureSettingsDialog : public QDialog
+#include <QObject>
+
+class GravatarConfigureSettingsWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit GravatarConfigureSettingsDialog(QWidget *parent = nullptr);
-    ~GravatarConfigureSettingsDialog();
-
-private:
-    void slotRestoreDefault();
-    void save();
-    void load();
-    GravatarConfigureSettingsWidget *mGravatarConfigureSettings;
+    explicit GravatarConfigureSettingsWidgetTest(QObject *parent = nullptr);
+    ~GravatarConfigureSettingsWidgetTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
-}
 
-#endif // GRAVATARCONFIGURESETTINGSDIALOG_H
+#endif // GRAVATARCONFIGURESETTINGSWIDGETTEST_H
