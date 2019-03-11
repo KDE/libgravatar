@@ -68,6 +68,7 @@ ecm_generate_headers(Gravatar_Camelcase_widgets_HEADERS
   GravatarConfigureSettingsDialog
   GravatarConfigWidget
   GravatarDownloadPixmapWidget
+  GravatarConfigureSettingsWidget
   REQUIRED_HEADERS Gravatar_widgets_HEADERS
   PREFIX Gravatar
   RELATIVE widgets
