@@ -145,6 +145,7 @@ void GravatarResolvUrlJob::slotFinishLoadPixmap(QNetworkReply *reply)
             qCDebug(GRAVATAR_LOG) << "Network error:" << reply->request().url() << reply->errorString();
         }
     }
+    reply->deleteLater();
 
     processNextBackend();
 }
