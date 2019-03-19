@@ -46,6 +46,11 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX GRAVATAR
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
+if (${KF5Config_VERSION} STRGREATER "5.56.0")
+        add_definitions(-DQT_NO_FOREACH)
+        MESSAGE(STATUS "compile without foreach")
+endif()
+
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5Gravatar")
 
