@@ -20,7 +20,7 @@
 #include "gravatarresolvurljobtest.h"
 #include "../src/job/gravatarresolvurljob.h"
 #include "../src/misc/hash.h"
-#include <qtest.h>
+#include <QTest>
 
 GravatarResolvUrlJobTest::GravatarResolvUrlJobTest(QObject *parent)
     : QObject(parent)

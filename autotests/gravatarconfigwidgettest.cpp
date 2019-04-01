@@ -20,7 +20,7 @@
 #include "gravatarconfigwidgettest.h"
 #include "../src/widgets/gravatarconfigwidget.h"
 #include <QCheckBox>
-#include <qtest.h>
+#include <QTest>
 #include <QPushButton>
 #include <qtestmouse.h>
 #include <QSignalSpy>

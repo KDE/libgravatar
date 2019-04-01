@@ -23,7 +23,7 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
-#include <qtest.h>
+#include <QTest>
 
 GravatarDownloadPixmapWidgetTest::GravatarDownloadPixmapWidgetTest(QObject *parent)
     : QObject(parent)

@@ -24,7 +24,7 @@
 #include <QCryptographicHash>
 #include <QPixmap>
 #include <QStandardPaths>
-#include <qtest.h>
+#include <QTest>
 
 using namespace Gravatar;
 

@@ -19,7 +19,7 @@
 
 #include "gravatardownloadpixmapdialogtest.h"
 #include "../src/widgets/gravatardownloadpixmapdialog.h"
-#include <qtest.h>
+#include <QTest>
 
 #include <QDialogButtonBox>
 #include <QStandardPaths>
