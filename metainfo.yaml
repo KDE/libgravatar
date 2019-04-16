@@ -11,4 +11,4 @@ libraries:
  - qmake: Gravatar 
    cmake: "KF5::Gravatar"
 cmakename: KF5Gravatar
-
+group: kdepim
