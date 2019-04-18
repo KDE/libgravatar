@@ -12,3 +12,4 @@ libraries:
    cmake: "KF5::Gravatar"
 cmakename: KF5Gravatar
 group: kdepim
+public_lib: true
