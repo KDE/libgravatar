@@ -23,13 +23,9 @@
 #include "PimCommon/ConfigureImmutableWidgetUtils"
 
 #include <KLocalizedString>
-#include <KPluralHandlingSpinBox>
-#include <KSeparator>
 #include <QCheckBox>
 #include <QDialogButtonBox>
-#include <QLabel>
 #include <QPushButton>
-#include <QHBoxLayout>
 #include <QVBoxLayout>
 #include "gravatarsettings.h"
 using namespace Gravatar;

@@ -25,7 +25,6 @@
 #include <KPluralHandlingSpinBox>
 #include <KSeparator>
 #include <QCheckBox>
-#include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
 #include <QHBoxLayout>
