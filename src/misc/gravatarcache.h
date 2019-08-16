@@ -28,6 +28,7 @@ namespace Gravatar {
 class GravatarCachePrivate;
 class Hash;
 
+/** Cache for both positive and negative avatar lookups. */
 class GRAVATAR_EXPORT GravatarCache
 {
 public:

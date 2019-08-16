@@ -27,6 +27,8 @@ class QLineEdit;
 class QPushButton;
 namespace Gravatar {
 class GravatarResolvUrlJob;
+
+/** Avatar download widget. */
 class GRAVATAR_EXPORT GravatarDownloadPixmapWidget : public QWidget
 {
     Q_OBJECT

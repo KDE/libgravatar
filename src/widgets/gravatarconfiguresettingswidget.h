@@ -27,6 +27,8 @@ class QCheckBox;
 class QPushButton;
 class KPluralHandlingSpinBox;
 namespace Gravatar {
+
+/** Gravatar settings widget. */
 class GRAVATAR_EXPORT GravatarConfigureSettingsWidget : public QWidget
 {
     Q_OBJECT

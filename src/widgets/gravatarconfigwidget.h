@@ -24,6 +24,8 @@
 #include "gravatar_export.h"
 namespace Gravatar {
 class GravatarConfigWidgetPrivate;
+
+/** Gravatar configuration widget. */
 class GRAVATAR_EXPORT GravatarConfigWidget : public QWidget
 {
     Q_OBJECT

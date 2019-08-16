@@ -24,6 +24,8 @@
 #include "gravatar_export.h"
 namespace Gravatar {
 class GravatarConfigureSettingsWidget;
+
+/** Gravatar settings dialog. */
 class GRAVATAR_EXPORT GravatarConfigureSettingsDialog : public QDialog
 {
     Q_OBJECT
