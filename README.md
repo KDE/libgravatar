@@ -9,5 +9,5 @@ for this.
 ## Backends
 
 This supports:
-* https://gravator.com
+* https://gravatar.com
 * https://www.libravatar.org/
