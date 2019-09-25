@@ -18,7 +18,6 @@
 */
 
 #include "gravatarconfiguresettingswidgettest.h"
-#include "kdepimtest_layout.h"
 #include "../src/widgets/gravatarconfiguresettingswidget.h"
 #include <KPluralHandlingSpinBox>
 #include <KSeparator>
@@ -41,7 +40,8 @@ void GravatarConfigureSettingsWidgetTest::shouldHaveDefaultValues()
     Gravatar::GravatarConfigureSettingsWidget w;
 
     QVBoxLayout *topLayout = w.findChild<QVBoxLayout* >(QStringLiteral("mainlayout"));
-    KdepimTestLayout::checkContentsMargins(0, topLayout);
+    QVERIFY(topLayout);
+    QCOMPARE(topLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
     QCheckBox *useDefaultImage = w.findChild<QCheckBox *>(QStringLiteral("usedefaultimage"));
     QVERIFY(useDefaultImage);
