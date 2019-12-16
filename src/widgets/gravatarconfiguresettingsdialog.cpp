@@ -34,7 +34,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Configure Gravatar"));
+    setWindowTitle(i18nc("@title:window", "Configure Gravatar"));
     QVBoxLayout *topLayout = new QVBoxLayout(this);
     topLayout->setObjectName(QStringLiteral("toplayout"));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
