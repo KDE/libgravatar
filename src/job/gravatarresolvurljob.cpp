@@ -87,6 +87,9 @@ void GravatarResolvUrlJob::startNetworkManager(const QUrl &url)
 {
     if (!d->mNetworkAccessManager) {
         d->mNetworkAccessManager = new QNetworkAccessManager(this);
+        d->mNetworkAccessManager->setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
+        d->mNetworkAccessManager->setStrictTransportSecurityEnabled(true);
+        d->mNetworkAccessManager->enableStrictTransportSecurityStore(true);
         connect(d->mNetworkAccessManager, &QNetworkAccessManager::finished, this, &GravatarResolvUrlJob::slotFinishLoadPixmap);
     }
     d->mNetworkAccessManager->get(QNetworkRequest(url));
