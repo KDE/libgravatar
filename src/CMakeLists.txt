@@ -13,7 +13,13 @@ set(gravatarlib_SRCS
     job/gravatarresolvurljob.cpp
 )
 
-ecm_qt_declare_logging_category(gravatarlib_SRCS HEADER gravatar_debug.h IDENTIFIER GRAVATAR_LOG CATEGORY_NAME org.kde.pim.gravatar)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(gravatarlib_SRCS HEADER gravatar_debug.h IDENTIFIER GRAVATAR_LOG CATEGORY_NAME org.kde.pim.gravatar)
+else()
+    ecm_qt_declare_logging_category(gravatarlib_SRCS HEADER gravatar_debug.h IDENTIFIER GRAVATAR_LOG CATEGORY_NAME org.kde.pim.gravatar
+        OLD_CATEGORY_NAMES log_gravatar
+        DESCRIPTION "libgravatar (libgravatar)" EXPORT GRAVATAR)
+endif()
 
 kconfig_add_kcfg_files(gravatarlib_SRCS
     settings/gravatarsettings.kcfgc
@@ -100,3 +106,7 @@ install(FILES
 install(FILES
     ${PRI_FILENAME}
     DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
+
+if (NOT ECM_VERSION VERSION_LESS "5.68.0")
+   ecm_qt_install_logging_categories(EXPORT GRAVATAR FILE libgravatar.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+endif()
