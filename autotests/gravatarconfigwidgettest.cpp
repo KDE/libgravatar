@@ -62,7 +62,7 @@ void GravatarConfigWidgetTest::shoulEmitConfigChangedSignal()
     w.show();
     QCheckBox *enableGravatar = w.findChild<QCheckBox *>(QStringLiteral("gravatarcheckbox"));
 
-    QSignalSpy spy(&w, SIGNAL(configChanged(bool)));
+    QSignalSpy spy(&w, &Gravatar::GravatarConfigWidget::configChanged);
     QTest::mouseClick(enableGravatar, Qt::LeftButton);
     QCOMPARE(spy.count(), 1);
 }
