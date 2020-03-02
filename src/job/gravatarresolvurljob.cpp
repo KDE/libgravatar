@@ -134,11 +134,7 @@ void GravatarResolvUrlJob::processNextBackend()
 
 void GravatarResolvUrlJob::slotFinishLoadPixmap(QNetworkReply *reply)
 {
-#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     if (reply->error() != QNetworkReply::NoError) {
-#else
-    if (reply->networkError() != QNetworkReply::NoError) {
-#endif
         d->mPixmap.loadFromData(reply->readAll());
         d->mHasGravatar = true;
         //For the moment don't use cache other we will store a lot of pixmap
@@ -146,11 +142,7 @@ void GravatarResolvUrlJob::slotFinishLoadPixmap(QNetworkReply *reply)
             GravatarCache::self()->saveGravatarPixmap(d->mCalculatedHash, d->mPixmap);
         }
     } else {
-#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
         if (reply->error() != QNetworkReply::ContentNotFoundError) {
-#else
-        if (reply->networkError() != QNetworkReply::ContentNotFoundError) {
-#endif
             GravatarCache::self()->saveMissingGravatar(d->mCalculatedHash);
         } else {
             qCDebug(GRAVATAR_LOG) << "Network error:" << reply->request().url() << reply->errorString();
