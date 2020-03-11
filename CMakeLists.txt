@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
-set(PIM_VERSION "5.13.40")
+set(PIM_VERSION "5.13.80")
 
 project(gravatar VERSION ${PIM_VERSION})
 
-set(KF5_MIN_VERSION "5.67.0")
+set(KF5_MIN_VERSION "5.68.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -83,10 +83,6 @@ add_subdirectory(src)
 if (BUILD_TESTING)
     add_subdirectory(autotests)
     add_subdirectory(tests)
-endif()
-
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    install(FILES libgravatar.renamecategories libgravatar.categories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 endif()
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
