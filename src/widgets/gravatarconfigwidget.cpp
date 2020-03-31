@@ -26,7 +26,7 @@
 #include <QPointer>
 #include <QHBoxLayout>
 #include "gravatarsettings.h"
-#include "PimCommon/ConfigureImmutableWidgetUtils"
+#include <PimCommon/ConfigureImmutableWidgetUtils>
 
 using namespace Gravatar;
 using namespace PimCommon::ConfigureImmutableWidgetUtils;

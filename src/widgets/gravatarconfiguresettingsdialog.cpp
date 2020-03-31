@@ -20,7 +20,7 @@
 #include "gravatarconfiguresettingsdialog.h"
 #include "gravatarconfiguresettingswidget.h"
 #include "misc/gravatarcache.h"
-#include "PimCommon/ConfigureImmutableWidgetUtils"
+#include <PimCommon/ConfigureImmutableWidgetUtils>
 
 #include <KLocalizedString>
 #include <QCheckBox>
