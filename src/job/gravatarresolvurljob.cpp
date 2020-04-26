@@ -45,6 +45,7 @@ public:
 
     enum Backend {
         None = 0x0,
+        Libravatar = 0x1,
         Gravatar = 0x2
     };
     int mBackends = Gravatar;
@@ -73,9 +74,9 @@ bool GravatarResolvUrlJob::canStart() const
     }
 }
 
-QUrl GravatarResolvUrlJob::generateGravatarUrl()
+QUrl GravatarResolvUrlJob::generateGravatarUrl(bool useLibravatar)
 {
-    return createUrl();
+    return createUrl(useLibravatar);
 }
 
 bool GravatarResolvUrlJob::hasGravatar() const
@@ -119,9 +120,12 @@ void GravatarResolvUrlJob::processNextBackend()
     }
 
     QUrl url;
-    if (d->mBackends & GravatarResolvUrlJobPrivate::Gravatar) {
+    if (d->mBackends & GravatarResolvUrlJobPrivate::Libravatar) {
+        d->mBackends &= ~GravatarResolvUrlJobPrivate::Libravatar;
+        url = createUrl(true);
+    } else if (d->mBackends & GravatarResolvUrlJobPrivate::Gravatar) {
         d->mBackends &= ~GravatarResolvUrlJobPrivate::Gravatar;
-        url = createUrl();
+        url = createUrl(false);
     }
 
     Q_EMIT resolvUrl(url);
@@ -163,10 +167,38 @@ void GravatarResolvUrlJob::setEmail(const QString &email)
     d->mEmail = email;
 }
 
-Hash GravatarResolvUrlJob::calculateHash()
+Hash GravatarResolvUrlJob::calculateHash(bool useLibravator)
 {
     const auto email = d->mEmail.toLower().toUtf8();
+    if (useLibravator)
+        return Hash(QCryptographicHash::hash(email, QCryptographicHash::Sha256), Hash::Sha256);
     return Hash(QCryptographicHash::hash(email, QCryptographicHash::Md5), Hash::Md5);
+}
+
+bool GravatarResolvUrlJob::fallbackGravatar() const
+{
+    return d->mBackends & GravatarResolvUrlJobPrivate::Gravatar;
+}
+
+void GravatarResolvUrlJob::setFallbackGravatar(bool fallbackGravatar)
+{
+    if (fallbackGravatar)
+        d->mBackends |= GravatarResolvUrlJobPrivate::Gravatar;
+    else
+        d->mBackends &= ~GravatarResolvUrlJobPrivate::Gravatar;
+}
+
+bool GravatarResolvUrlJob::useLibravatar() const
+{
+    return d->mBackends & GravatarResolvUrlJobPrivate::Libravatar;
+}
+
+void GravatarResolvUrlJob::setUseLibravatar(bool useLibravatar)
+{
+    if (useLibravatar)
+        d->mBackends |= GravatarResolvUrlJobPrivate::Libravatar;
+    else
+        d->mBackends &= ~GravatarResolvUrlJobPrivate::Libravatar;
 }
 
 bool GravatarResolvUrlJob::useDefaultPixmap() const
@@ -204,7 +236,7 @@ Hash GravatarResolvUrlJob::calculatedHash() const
     return d->mCalculatedHash;
 }
 
-QUrl GravatarResolvUrlJob::createUrl()
+QUrl GravatarResolvUrlJob::createUrl(bool useLibravatar)
 {
     QUrl url;
     d->mCalculatedHash = Hash();
@@ -220,9 +252,13 @@ QUrl GravatarResolvUrlJob::createUrl()
         query.addQueryItem(QStringLiteral("s"), QString::number(d->mSize));
     }
     url.setScheme(QStringLiteral("https"));
-    url.setHost(QStringLiteral("secure.gravatar.com"));
+    if (useLibravatar) {
+        url.setHost(QStringLiteral("seccdn.libravatar.org"));
+    } else {
+        url.setHost(QStringLiteral("secure.gravatar.com"));
+    }
     url.setPort(443);
-    d->mCalculatedHash = calculateHash();
+    d->mCalculatedHash = calculateHash(useLibravatar);
     url.setPath(QLatin1String("/avatar/") + d->mCalculatedHash.hexString());
     url.setQuery(query);
     return url;

@@ -55,6 +55,12 @@ public:
     Q_REQUIRED_RESULT bool useDefaultPixmap() const;
     void setUseDefaultPixmap(bool useDefaultPixmap);
 
+    bool useLibravatar() const;
+    void setUseLibravatar(bool useLibravatar);
+
+    bool fallbackGravatar() const;
+    void setFallbackGravatar(bool fallbackGravatar);
+
 Q_SIGNALS:
     void finished(Gravatar::GravatarResolvUrlJob *);
     void resolvUrl(const QUrl &url);
@@ -63,12 +69,12 @@ private:
     friend class ::GravatarResolvUrlJobTest;
 
     void slotFinishLoadPixmap(QNetworkReply *reply);
-    QUrl generateGravatarUrl();
+    QUrl generateGravatarUrl(bool useLibravatar);
     Hash calculatedHash() const;
     void processNextBackend();
     void startNetworkManager(const QUrl &url);
-    QUrl createUrl();
-    Hash calculateHash();
+    QUrl createUrl(bool useLibravatar);
+    Hash calculateHash(bool useLibravator);
     bool cacheLookup(const Hash &hash);
     GravatarResolvUrlJobPrivate *const d;
 };
