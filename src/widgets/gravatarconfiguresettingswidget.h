@@ -43,6 +43,8 @@ private:
     QCheckBox *mUseDefaultPixmap = nullptr;
     QPushButton *mClearGravatarCache = nullptr;
     KPluralHandlingSpinBox *mGravatarCacheSize = nullptr;
+    QCheckBox *mUseLibravatar = nullptr;
+    QCheckBox *mFallbackGravatar = nullptr;
 };
 }
 

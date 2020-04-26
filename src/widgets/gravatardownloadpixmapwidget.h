@@ -25,6 +25,7 @@
 class QLabel;
 class QLineEdit;
 class QPushButton;
+class QCheckBox;
 namespace Gravatar {
 class GravatarResolvUrlJob;
 
