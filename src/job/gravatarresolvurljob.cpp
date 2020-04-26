@@ -88,12 +88,21 @@ void GravatarResolvUrlJob::startNetworkManager(const QUrl &url)
 {
     if (!d->mNetworkAccessManager) {
         d->mNetworkAccessManager = new QNetworkAccessManager(this);
-        //d->mNetworkAccessManager->setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
+        d->mNetworkAccessManager->setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
         d->mNetworkAccessManager->setStrictTransportSecurityEnabled(true);
         d->mNetworkAccessManager->enableStrictTransportSecurityStore(true);
         connect(d->mNetworkAccessManager, &QNetworkAccessManager::finished, this, &GravatarResolvUrlJob::slotFinishLoadPixmap);
+
     }
-    d->mNetworkAccessManager->get(QNetworkRequest(url));
+
+    QNetworkRequest req(url);
+    req.setAttribute(QNetworkRequest::HttpPipeliningAllowedAttribute, true);
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+    req.setAttribute(QNetworkRequest::HTTP2AllowedAttribute, true);
+#else
+    req.setAttribute(QNetworkRequest::Http2AllowedAttribute, true);
+#endif
+    d->mNetworkAccessManager->get(req);
 }
 
 void GravatarResolvUrlJob::start()
@@ -140,9 +149,8 @@ void GravatarResolvUrlJob::processNextBackend()
 void GravatarResolvUrlJob::slotFinishLoadPixmap(QNetworkReply *reply)
 {
     if (reply->error() == QNetworkReply::NoError) {
-        d->mPixmap.loadFromData(reply->readAll());
-        //qDebug() << "reply->readAll()  " << reply->readAll();
-        //qDebug() << "url " << reply->url();
+        const QByteArray data = reply->readAll();
+        d->mPixmap.loadFromData(data);
         d->mHasGravatar = true;
         //For the moment don't use cache other we will store a lot of pixmap
         if (!d->mUseDefaultPixmap) {
