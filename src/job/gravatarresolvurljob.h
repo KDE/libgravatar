@@ -69,13 +69,13 @@ private:
     friend class ::GravatarResolvUrlJobTest;
 
     void slotFinishLoadPixmap(QNetworkReply *reply);
-    QUrl generateGravatarUrl(bool useLibravatar);
-    Hash calculatedHash() const;
+    Q_REQUIRED_RESULT QUrl generateGravatarUrl(bool useLibravatar);
+    Q_REQUIRED_RESULT Hash calculatedHash() const;
     void processNextBackend();
     void startNetworkManager(const QUrl &url);
-    QUrl createUrl(bool useLibravatar);
-    Hash calculateHash(bool useLibravator);
-    bool cacheLookup(const Hash &hash);
+    Q_REQUIRED_RESULT QUrl createUrl(bool useLibravatar);
+    Q_REQUIRED_RESULT Hash calculateHash();
+    Q_REQUIRED_RESULT bool cacheLookup(const Hash &hash);
     GravatarResolvUrlJobPrivate *const d;
 };
 }

@@ -88,7 +88,7 @@ void GravatarResolvUrlJob::startNetworkManager(const QUrl &url)
 {
     if (!d->mNetworkAccessManager) {
         d->mNetworkAccessManager = new QNetworkAccessManager(this);
-        d->mNetworkAccessManager->setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
+        //d->mNetworkAccessManager->setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
         d->mNetworkAccessManager->setStrictTransportSecurityEnabled(true);
         d->mNetworkAccessManager->enableStrictTransportSecurityStore(true);
         connect(d->mNetworkAccessManager, &QNetworkAccessManager::finished, this, &GravatarResolvUrlJob::slotFinishLoadPixmap);
@@ -128,6 +128,7 @@ void GravatarResolvUrlJob::processNextBackend()
         url = createUrl(false);
     }
 
+    //qDebug() << " url " << url;
     Q_EMIT resolvUrl(url);
     if (!cacheLookup(d->mCalculatedHash)) {
         startNetworkManager(url);
@@ -138,8 +139,10 @@ void GravatarResolvUrlJob::processNextBackend()
 
 void GravatarResolvUrlJob::slotFinishLoadPixmap(QNetworkReply *reply)
 {
-    if (reply->error() != QNetworkReply::NoError) {
+    if (reply->error() == QNetworkReply::NoError) {
         d->mPixmap.loadFromData(reply->readAll());
+        //qDebug() << "reply->readAll()  " << reply->readAll();
+        //qDebug() << "url " << reply->url();
         d->mHasGravatar = true;
         //For the moment don't use cache other we will store a lot of pixmap
         if (!d->mUseDefaultPixmap) {
@@ -167,11 +170,9 @@ void GravatarResolvUrlJob::setEmail(const QString &email)
     d->mEmail = email;
 }
 
-Hash GravatarResolvUrlJob::calculateHash(bool useLibravator)
+Hash GravatarResolvUrlJob::calculateHash()
 {
     const auto email = d->mEmail.toLower().toUtf8();
-    if (useLibravator)
-        return Hash(QCryptographicHash::hash(email, QCryptographicHash::Sha256), Hash::Sha256);
     return Hash(QCryptographicHash::hash(email, QCryptographicHash::Md5), Hash::Md5);
 }
 
@@ -257,8 +258,7 @@ QUrl GravatarResolvUrlJob::createUrl(bool useLibravatar)
     } else {
         url.setHost(QStringLiteral("secure.gravatar.com"));
     }
-    url.setPort(443);
-    d->mCalculatedHash = calculateHash(useLibravatar);
+    d->mCalculatedHash = calculateHash();
     url.setPath(QLatin1String("/avatar/") + d->mCalculatedHash.hexString());
     url.setQuery(query);
     return url;
