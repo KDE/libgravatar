@@ -46,9 +46,50 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
     connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &GravatarConfigureSettingsDialog::slotRestoreDefault);
     okButton->setDefault(true);
 
-    mGravatarConfigureSettings = new GravatarConfigureSettingsWidget(this);
-    mGravatarConfigureSettings->setObjectName(QStringLiteral("gravatarconfiguresettings"));
-    topLayout->addWidget(mGravatarConfigureSettings);
+    mUseDefaultPixmap = new QCheckBox(i18n("Use Default Image"), this);
+    mUseDefaultPixmap->setObjectName(QStringLiteral("usedefaultimage"));
+    topLayout->addWidget(mUseDefaultPixmap);
+
+    mUseLibravatar = new QCheckBox(i18n("Use Libravatar"), this);
+    mUseLibravatar->setObjectName(QStringLiteral("uselibravatarcheckbox"));
+    topLayout->addWidget(mUseLibravatar);
+
+    mFallbackGravatar = new QCheckBox(i18n("Fallback to Gravatar"), this);
+    mFallbackGravatar->setObjectName(QStringLiteral("fallbackgravatar"));
+    topLayout->addWidget(mFallbackGravatar);
+    connect(mUseLibravatar, &QCheckBox::toggled, mFallbackGravatar, &QCheckBox::setEnabled);
+    mFallbackGravatar->setEnabled(false);
+
+    QHBoxLayout *cacheSizeLayout = new QHBoxLayout;
+    topLayout->addLayout(cacheSizeLayout);
+    QLabel *lab = new QLabel(i18n("Gravatar Cache Size:"), this);
+    lab->setObjectName(QStringLiteral("gravatarcachesizelabel"));
+    cacheSizeLayout->addWidget(lab);
+
+    mGravatarCacheSize = new KPluralHandlingSpinBox(this);
+    mGravatarCacheSize->setMinimum(1);
+    mGravatarCacheSize->setMaximum(9999);
+    mGravatarCacheSize->setSuffix(ki18ncp("add space before image", " image", " images"));
+    mGravatarCacheSize->setObjectName(QStringLiteral("gravatarcachesize"));
+    cacheSizeLayout->addWidget(mGravatarCacheSize);
+    cacheSizeLayout->addStretch();
+
+    KSeparator *separator = new KSeparator(this);
+    separator->setObjectName(QStringLiteral("separator"));
+    topLayout->addWidget(separator);
+
+    QHBoxLayout *buttonLayout = new QHBoxLayout;
+    topLayout->addLayout(buttonLayout);
+    mClearGravatarCache = new QPushButton(i18n("Clear Gravatar Cache"), this);
+    mClearGravatarCache->setObjectName(QStringLiteral("cleargravatarcachebutton"));
+    buttonLayout->addWidget(mClearGravatarCache);
+    buttonLayout->addStretch();
+
+    separator = new KSeparator(this);
+    separator->setObjectName(QStringLiteral("separator2"));
+    topLayout->addWidget(separator);
+
+    connect(mClearGravatarCache, &QAbstractButton::clicked, this, &GravatarConfigureSettingsDialog::slotClearGravatarCache);
     topLayout->addWidget(buttonBox);
     load();
 }
