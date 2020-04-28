@@ -139,7 +139,7 @@ void GravatarCache::saveMissingGravatar(const Hash &hash)
 QPixmap GravatarCache::loadGravatarPixmap(const Hash &hash, bool &gravatarStored)
 {
     gravatarStored = false;
-    qCDebug(GRAVATAR_LOG) << " hashStr" << hash.hexString();
+    //qCDebug(GRAVATAR_LOG) << " hashStr" << hash.hexString();
     if (!hash.isValid()) {
         return QPixmap();
     }

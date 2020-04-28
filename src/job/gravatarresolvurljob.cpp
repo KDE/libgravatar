@@ -68,6 +68,7 @@ GravatarResolvUrlJob::~GravatarResolvUrlJob()
 bool GravatarResolvUrlJob::canStart() const
 {
     if (PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
+        //qCDebug(GRAVATAR_LOG) << "email " << d->mEmail;
         return !d->mEmail.trimmed().isEmpty() && (d->mEmail.contains(QLatin1Char('@')));
     } else {
         return false;
