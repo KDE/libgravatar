@@ -11,7 +11,6 @@
 #include <PimCommon/NetworkManager>
 
 #include <QCryptographicHash>
-#include <QPixmap>
 #include <QUrlQuery>
 #include <QNetworkConfigurationManager>
 
