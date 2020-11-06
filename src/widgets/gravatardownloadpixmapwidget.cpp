@@ -18,8 +18,8 @@ using namespace Gravatar;
 GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    QHBoxLayout *hbox = new QHBoxLayout;
+    auto *mainLayout = new QVBoxLayout(this);
+    auto *hbox = new QHBoxLayout;
     mainLayout->addLayout(hbox);
     QLabel *lab = new QLabel(i18n("Email:"));
     lab->setObjectName(QStringLiteral("labemail"));
@@ -77,7 +77,7 @@ void GravatarDownloadPixmapWidget::slotResolvUrlFinish(Gravatar::GravatarResolvU
 void GravatarDownloadPixmapWidget::slotSearchButton()
 {
     mResultLabel->setText(QString());
-    Gravatar::GravatarResolvUrlJob *job = new Gravatar::GravatarResolvUrlJob(this);
+    auto *job = new Gravatar::GravatarResolvUrlJob(this);
     job->setEmail(mLineEdit->text());
     //For testing
     //job->setUseDefaultPixmap(true);

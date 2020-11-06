@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    Gravatar::GravatarDownloadPixmapWidget *w = new Gravatar::GravatarDownloadPixmapWidget;
+    auto *w = new Gravatar::GravatarDownloadPixmapWidget;
     w->show();
     int ret = app.exec();
     delete w;

@@ -24,10 +24,10 @@ GravatarConfigWidgetTest::~GravatarConfigWidgetTest()
 void GravatarConfigWidgetTest::shouldHaveDefaultValue()
 {
     Gravatar::GravatarConfigWidget w;
-    QCheckBox *enableGravatar = w.findChild<QCheckBox *>(QStringLiteral("gravatarcheckbox"));
+    auto *enableGravatar = w.findChild<QCheckBox *>(QStringLiteral("gravatarcheckbox"));
     QVERIFY(enableGravatar);
 
-    QPushButton *configure = w.findChild<QPushButton *>(QStringLiteral("configure"));
+    auto *configure = w.findChild<QPushButton *>(QStringLiteral("configure"));
     QVERIFY(configure);
 }
 
@@ -35,9 +35,9 @@ void GravatarConfigWidgetTest::shouldChangeState()
 {
     Gravatar::GravatarConfigWidget w;
     w.show();
-    QCheckBox *enableGravatar = w.findChild<QCheckBox *>(QStringLiteral("gravatarcheckbox"));
+    auto *enableGravatar = w.findChild<QCheckBox *>(QStringLiteral("gravatarcheckbox"));
 
-    QPushButton *configure = w.findChild<QPushButton *>(QStringLiteral("configure"));
+    auto *configure = w.findChild<QPushButton *>(QStringLiteral("configure"));
     QVERIFY(!configure->isEnabled());
     enableGravatar->toggle();
     QVERIFY(configure->isEnabled());
@@ -47,7 +47,7 @@ void GravatarConfigWidgetTest::shoulEmitConfigChangedSignal()
 {
     Gravatar::GravatarConfigWidget w;
     w.show();
-    QCheckBox *enableGravatar = w.findChild<QCheckBox *>(QStringLiteral("gravatarcheckbox"));
+    auto *enableGravatar = w.findChild<QCheckBox *>(QStringLiteral("gravatarcheckbox"));
 
     QSignalSpy spy(&w, &Gravatar::GravatarConfigWidget::configChanged);
     QTest::mouseClick(enableGravatar, Qt::LeftButton);

@@ -23,7 +23,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *topLayout = new QVBoxLayout(this);
+    auto *topLayout = new QVBoxLayout(this);
     topLayout->setObjectName(QStringLiteral("mainlayout"));
     topLayout->setContentsMargins(0, 0, 0, 0);
     mUseDefaultPixmap = new QCheckBox(i18n("Use Default Image"), this);
@@ -41,7 +41,7 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     mFallbackGravatar->setEnabled(false);
 
 
-    QHBoxLayout *cacheSizeLayout = new QHBoxLayout;
+    auto *cacheSizeLayout = new QHBoxLayout;
     topLayout->addLayout(cacheSizeLayout);
     QLabel *lab = new QLabel(i18n("Gravatar Cache Size:"), this);
     lab->setObjectName(QStringLiteral("gravatarcachesizelabel"));
@@ -59,7 +59,7 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     separator->setObjectName(QStringLiteral("separator"));
     topLayout->addWidget(separator);
 
-    QHBoxLayout *buttonLayout = new QHBoxLayout;
+    auto *buttonLayout = new QHBoxLayout;
     topLayout->addLayout(buttonLayout);
     mClearGravatarCache = new QPushButton(i18n("Clear Gravatar Cache"), this);
     mClearGravatarCache->setObjectName(QStringLiteral("cleargravatarcachebutton"));

@@ -24,7 +24,7 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure Gravatar"));
-    QVBoxLayout *topLayout = new QVBoxLayout(this);
+    auto *topLayout = new QVBoxLayout(this);
     topLayout->setObjectName(QStringLiteral("toplayout"));
 
     mGravatarConfigureSettings = new GravatarConfigureSettingsWidget(this);

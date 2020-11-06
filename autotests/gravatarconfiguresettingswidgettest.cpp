@@ -26,25 +26,25 @@ void GravatarConfigureSettingsWidgetTest::shouldHaveDefaultValues()
 {
     Gravatar::GravatarConfigureSettingsWidget w;
 
-    QVBoxLayout *topLayout = w.findChild<QVBoxLayout* >(QStringLiteral("mainlayout"));
+    auto *topLayout = w.findChild<QVBoxLayout* >(QStringLiteral("mainlayout"));
     QVERIFY(topLayout);
     QCOMPARE(topLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    QCheckBox *useDefaultImage = w.findChild<QCheckBox *>(QStringLiteral("usedefaultimage"));
+    auto *useDefaultImage = w.findChild<QCheckBox *>(QStringLiteral("usedefaultimage"));
     QVERIFY(useDefaultImage);
 
-    QPushButton *clearGravatarCache = w.findChild<QPushButton *>(QStringLiteral("cleargravatarcachebutton"));
+    auto *clearGravatarCache = w.findChild<QPushButton *>(QStringLiteral("cleargravatarcachebutton"));
     QVERIFY(clearGravatarCache);
 
-    QLabel *lab = w.findChild<QLabel *>(QStringLiteral("gravatarcachesizelabel"));
+    auto *lab = w.findChild<QLabel *>(QStringLiteral("gravatarcachesizelabel"));
     QVERIFY(lab);
 
-    KPluralHandlingSpinBox *gravatarCacheSize = w.findChild<KPluralHandlingSpinBox *>(QStringLiteral("gravatarcachesize"));
+    auto *gravatarCacheSize = w.findChild<KPluralHandlingSpinBox *>(QStringLiteral("gravatarcachesize"));
     QVERIFY(gravatarCacheSize);
 
-    KSeparator *separator = w.findChild<KSeparator *>(QStringLiteral("separator"));
+    auto *separator = w.findChild<KSeparator *>(QStringLiteral("separator"));
     QVERIFY(separator);
 
-    KSeparator *separator2 = w.findChild<KSeparator *>(QStringLiteral("separator2"));
+    auto *separator2 = w.findChild<KSeparator *>(QStringLiteral("separator2"));
     QVERIFY(separator2);
 }

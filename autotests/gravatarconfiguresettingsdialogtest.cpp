@@ -23,10 +23,10 @@ GravatarConfigureSettingsDialogTest::~GravatarConfigureSettingsDialogTest()
 void GravatarConfigureSettingsDialogTest::shouldHaveDefaultValue()
 {
     Gravatar::GravatarConfigureSettingsDialog dlg;
-    Gravatar::GravatarConfigureSettingsWidget *configurewidget = dlg.findChild<Gravatar::GravatarConfigureSettingsWidget *>(QStringLiteral("gravatarconfiguresettings"));
+    auto *configurewidget = dlg.findChild<Gravatar::GravatarConfigureSettingsWidget *>(QStringLiteral("gravatarconfiguresettings"));
     QVERIFY(configurewidget);
 
-    QVBoxLayout *topLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("toplayout"));
+    auto *topLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("toplayout"));
     QVERIFY(topLayout);
 }
 
