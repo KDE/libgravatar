@@ -7,7 +7,6 @@
 #include "gravatarconfiguresettingsdialogtest.h"
 #include "../src/widgets/gravatarconfiguresettingsdialog.h"
 #include "../src/widgets/gravatarconfiguresettingswidget.h"
-#include <QDialogButtonBox>
 #include <QTest>
 #include <QVBoxLayout>
 

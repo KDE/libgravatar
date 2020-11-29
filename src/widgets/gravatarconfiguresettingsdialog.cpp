@@ -10,8 +10,6 @@
 #include <PimCommon/ConfigureImmutableWidgetUtils>
 
 #include <KLocalizedString>
-#include <KPluralHandlingSpinBox>
-#include <KSeparator>
 #include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QPushButton>
