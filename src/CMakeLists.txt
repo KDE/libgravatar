@@ -22,7 +22,7 @@ kconfig_add_kcfg_files(gravatarlib_SRCS
 )
 
 add_library( KF5Gravatar ${gravatarlib_SRCS} )
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5Gravatar PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(KF5Gravatar BASE_NAME gravatar)
