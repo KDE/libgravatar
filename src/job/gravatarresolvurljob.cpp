@@ -84,11 +84,7 @@ void GravatarResolvUrlJob::startNetworkManager(const QUrl &url)
 
     QNetworkRequest req(url);
     req.setAttribute(QNetworkRequest::HttpPipeliningAllowedAttribute, true);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    req.setAttribute(QNetworkRequest::HTTP2AllowedAttribute, true);
-#else
     req.setAttribute(QNetworkRequest::Http2AllowedAttribute, true);
-#endif
     d->mNetworkAccessManager->get(req);
 }
 
