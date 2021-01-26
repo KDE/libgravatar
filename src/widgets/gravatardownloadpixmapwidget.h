@@ -7,13 +7,14 @@
 #ifndef GRAVATARDOWNLOADPIXMAPWIDGET_H
 #define GRAVATARDOWNLOADPIXMAPWIDGET_H
 
-#include <QWidget>
 #include "gravatar_export.h"
+#include <QWidget>
 class QLabel;
 class QLineEdit;
 class QPushButton;
 class QCheckBox;
-namespace Gravatar {
+namespace Gravatar
+{
 class GravatarResolvUrlJob;
 
 /** Avatar download widget. */

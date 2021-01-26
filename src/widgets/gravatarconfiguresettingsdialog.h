@@ -7,9 +7,10 @@
 #ifndef GRAVATARCONFIGURESETTINGSDIALOG_H
 #define GRAVATARCONFIGURESETTINGSDIALOG_H
 
-#include <QDialog>
 #include "gravatar_export.h"
-namespace Gravatar {
+#include <QDialog>
+namespace Gravatar
+{
 class GravatarConfigureSettingsWidget;
 
 /** Gravatar settings dialog. */

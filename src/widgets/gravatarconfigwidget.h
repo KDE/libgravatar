@@ -7,9 +7,10 @@
 #ifndef GRAVATARCONFIGWIDGET_H
 #define GRAVATARCONFIGWIDGET_H
 
-#include <QWidget>
 #include "gravatar_export.h"
-namespace Gravatar {
+#include <QWidget>
+namespace Gravatar
+{
 class GravatarConfigWidgetPrivate;
 
 /** Gravatar configuration widget. */

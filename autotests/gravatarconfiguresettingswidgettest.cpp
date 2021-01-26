@@ -19,14 +19,13 @@ QTEST_MAIN(GravatarConfigureSettingsWidgetTest)
 GravatarConfigureSettingsWidgetTest::GravatarConfigureSettingsWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void GravatarConfigureSettingsWidgetTest::shouldHaveDefaultValues()
 {
     Gravatar::GravatarConfigureSettingsWidget w;
 
-    auto *topLayout = w.findChild<QVBoxLayout* >(QStringLiteral("mainlayout"));
+    auto *topLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(topLayout);
     QCOMPARE(topLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 

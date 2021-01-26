@@ -11,7 +11,8 @@
 
 #include <QPixmap>
 
-namespace Gravatar {
+namespace Gravatar
+{
 class GravatarCachePrivate;
 class Hash;
 

@@ -15,9 +15,9 @@
 class QByteArray;
 class QString;
 
-namespace Gravatar {
-template<int Size> struct UnsignedInt
+namespace Gravatar
 {
+template<int Size> struct UnsignedInt {
     bool operator<(const UnsignedInt<Size> &other) const
     {
         return memcmp(data, other.data, Size) < 0;
@@ -30,8 +30,10 @@ template<int Size> struct UnsignedInt
 
     uint8_t data[Size];
 };
-struct Hash128 : public UnsignedInt<16> {};
-struct Hash256 : public UnsignedInt<32> {};
+struct Hash128 : public UnsignedInt<16> {
+};
+struct Hash256 : public UnsignedInt<32> {
+};
 
 class Hash;
 unsigned int qHash(const Hash &h, unsigned int seed = 0);
@@ -40,9 +42,7 @@ unsigned int qHash(const Hash &h, unsigned int seed = 0);
 class GRAVATAR_TESTS_EXPORT Hash
 {
 public:
-    enum Type {
-        Invalid, Md5, Sha256
-    };
+    enum Type { Invalid, Md5, Sha256 };
     Hash();
     explicit Hash(const QByteArray &data, Type type);
 

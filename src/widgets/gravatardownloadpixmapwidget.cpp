@@ -7,12 +7,12 @@
 #include "gravatardownloadpixmapwidget.h"
 #include "gravatar/gravatarresolvurljob.h"
 #include "gravatar_debug.h"
-#include <QLabel>
 #include <KLocalizedString>
-#include <QVBoxLayout>
+#include <QCheckBox>
+#include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
-#include <QCheckBox>
+#include <QVBoxLayout>
 
 using namespace Gravatar;
 GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
@@ -79,8 +79,8 @@ void GravatarDownloadPixmapWidget::slotSearchButton()
     mResultLabel->setText(QString());
     auto *job = new Gravatar::GravatarResolvUrlJob(this);
     job->setEmail(mLineEdit->text());
-    //For testing
-    //job->setUseDefaultPixmap(true);
+    // For testing
+    // job->setUseDefaultPixmap(true);
     job->setUseLibravatar(mUseLibravatar->isChecked());
     job->setFallbackGravatar(mFallbackGravatar->isChecked());
     if (job->canStart()) {

@@ -9,12 +9,12 @@
 #include "misc/gravatarcache.h"
 #include <PimCommon/ConfigureImmutableWidgetUtils>
 
+#include "gravatarsettings.h"
 #include <KLocalizedString>
 #include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include "gravatarsettings.h"
 using namespace Gravatar;
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
@@ -61,4 +61,3 @@ void GravatarConfigureSettingsDialog::load()
 {
     mGravatarConfigureSettings->load();
 }
-

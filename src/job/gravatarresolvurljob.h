@@ -8,13 +8,14 @@
 #define GRAVATARRESOLVURLJOB_H
 
 #include "gravatar_export.h"
-#include <QObject>
-#include <QUrl>
-#include <QPixmap>
 #include <QNetworkReply>
+#include <QObject>
+#include <QPixmap>
+#include <QUrl>
 
 class GravatarResolvUrlJobTest;
-namespace Gravatar {
+namespace Gravatar
+{
 class GravatarResolvUrlJobPrivate;
 class Hash;
 

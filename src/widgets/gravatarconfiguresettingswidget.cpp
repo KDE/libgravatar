@@ -4,19 +4,18 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-
 #include "gravatarconfiguresettingswidget.h"
+#include "gravatarsettings.h"
 #include <Gravatar/GravatarCache>
-#include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <KLocalizedString>
 #include <KPluralHandlingSpinBox>
 #include <KSeparator>
+#include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <QCheckBox>
+#include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
-#include <QHBoxLayout>
 #include <QVBoxLayout>
-#include "gravatarsettings.h"
 
 using namespace Gravatar;
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
@@ -39,7 +38,6 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     topLayout->addWidget(mFallbackGravatar);
     connect(mUseLibravatar, &QCheckBox::toggled, mFallbackGravatar, &QCheckBox::setEnabled);
     mFallbackGravatar->setEnabled(false);
-
 
     auto *cacheSizeLayout = new QHBoxLayout;
     topLayout->addLayout(cacheSizeLayout);
@@ -75,7 +73,6 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
 
 GravatarConfigureSettingsWidget::~GravatarConfigureSettingsWidget()
 {
-
 }
 
 void GravatarConfigureSettingsWidget::slotClearGravatarCache()

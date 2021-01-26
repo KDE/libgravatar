@@ -5,14 +5,14 @@
 */
 
 #include "gravatarresolvurljob.h"
+#include "gravatar_debug.h"
 #include "misc/gravatarcache.h"
 #include "misc/hash.h"
-#include "gravatar_debug.h"
 #include <PimCommon/NetworkManager>
 
 #include <QCryptographicHash>
-#include <QUrlQuery>
 #include <QNetworkConfigurationManager>
+#include <QUrlQuery>
 
 using namespace Gravatar;
 
@@ -29,11 +29,7 @@ public:
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
     int mSize = 80;
 
-    enum Backend {
-        None = 0x0,
-        Libravatar = 0x1,
-        Gravatar = 0x2
-    };
+    enum Backend { None = 0x0, Libravatar = 0x1, Gravatar = 0x2 };
     int mBackends = Gravatar;
 
     bool mHasGravatar = false;
@@ -54,7 +50,7 @@ GravatarResolvUrlJob::~GravatarResolvUrlJob()
 bool GravatarResolvUrlJob::canStart() const
 {
     if (PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
-        //qCDebug(GRAVATAR_LOG) << "email " << d->mEmail;
+        // qCDebug(GRAVATAR_LOG) << "email " << d->mEmail;
         return !d->mEmail.trimmed().isEmpty() && (d->mEmail.contains(QLatin1Char('@')));
     } else {
         return false;
@@ -79,7 +75,6 @@ void GravatarResolvUrlJob::startNetworkManager(const QUrl &url)
         d->mNetworkAccessManager->setStrictTransportSecurityEnabled(true);
         d->mNetworkAccessManager->enableStrictTransportSecurityStore(true);
         connect(d->mNetworkAccessManager, &QNetworkAccessManager::finished, this, &GravatarResolvUrlJob::slotFinishLoadPixmap);
-
     }
 
     QNetworkRequest req(url);
@@ -120,7 +115,7 @@ void GravatarResolvUrlJob::processNextBackend()
         url = createUrl(false);
     }
 
-    //qDebug() << " url " << url;
+    // qDebug() << " url " << url;
     Q_EMIT resolvUrl(url);
     if (!cacheLookup(d->mCalculatedHash)) {
         startNetworkManager(url);
@@ -135,7 +130,7 @@ void GravatarResolvUrlJob::slotFinishLoadPixmap(QNetworkReply *reply)
         const QByteArray data = reply->readAll();
         d->mPixmap.loadFromData(data);
         d->mHasGravatar = true;
-        //For the moment don't use cache other we will store a lot of pixmap
+        // For the moment don't use cache other we will store a lot of pixmap
         if (!d->mUseDefaultPixmap) {
             GravatarCache::self()->saveGravatarPixmap(d->mCalculatedHash, d->mPixmap);
         }
@@ -237,7 +232,7 @@ QUrl GravatarResolvUrlJob::createUrl(bool useLibravatar)
     }
     QUrlQuery query;
     if (!d->mUseDefaultPixmap) {
-        //Add ?d=404
+        // Add ?d=404
         query.addQueryItem(QStringLiteral("d"), QStringLiteral("404"));
     }
     if (d->mSize != 80) {

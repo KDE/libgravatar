@@ -4,17 +4,16 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-
 #ifndef GRAVATARCONFIGURESETTINGSWIDGET_H
 #define GRAVATARCONFIGURESETTINGSWIDGET_H
 
-#include <QWidget>
 #include "gravatar_export.h"
+#include <QWidget>
 class QCheckBox;
 class QPushButton;
 class KPluralHandlingSpinBox;
-namespace Gravatar {
-
+namespace Gravatar
+{
 /** Gravatar settings widget. */
 class GRAVATAR_EXPORT GravatarConfigureSettingsWidget : public QWidget
 {
@@ -25,6 +24,7 @@ public:
     void slotRestoreDefault();
     void save();
     void load();
+
 private:
     void slotClearGravatarCache();
     QCheckBox *mUseDefaultPixmap = nullptr;

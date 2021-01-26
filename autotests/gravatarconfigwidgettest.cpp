@@ -7,10 +7,10 @@
 #include "gravatarconfigwidgettest.h"
 #include "../src/widgets/gravatarconfigwidget.h"
 #include <QCheckBox>
-#include <QTest>
 #include <QPushButton>
-#include <qtestmouse.h>
 #include <QSignalSpy>
+#include <QTest>
+#include <qtestmouse.h>
 
 GravatarConfigWidgetTest::GravatarConfigWidgetTest(QObject *parent)
     : QObject(parent)

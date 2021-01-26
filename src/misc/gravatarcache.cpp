@@ -25,8 +25,7 @@ Q_GLOBAL_STATIC(GravatarCache, s_gravatarCache)
 class Q_DECL_HIDDEN Gravatar::GravatarCachePrivate
 {
 public:
-    template<typename T>
-    inline void insertMissingHash(std::vector<T> &vec, const T &hash)
+    template<typename T> inline void insertMissingHash(std::vector<T> &vec, const T &hash)
     {
         auto it = std::lower_bound(vec.begin(), vec.end(), hash);
         if (it != vec.end() && *it == hash) {
@@ -35,8 +34,7 @@ public:
         vec.insert(it, hash);
     }
 
-    template<typename T>
-    inline void saveVector(const std::vector<T> &vec, const QString &fileName)
+    template<typename T> inline void saveVector(const std::vector<T> &vec, const QString &fileName)
     {
         QSaveFile f(mGravatarPath + fileName);
         if (!f.open(QFile::WriteOnly)) {
@@ -49,8 +47,7 @@ public:
         f.commit();
     }
 
-    template<typename T>
-    inline void loadVector(std::vector<T> &vec, const QString &fileName)
+    template<typename T> inline void loadVector(std::vector<T> &vec, const QString &fileName)
     {
         if (!vec.empty()) { // already loaded
             return;
@@ -78,7 +75,7 @@ GravatarCache::GravatarCache()
     : d(new Gravatar::GravatarCachePrivate)
 {
     d->mCachePixmap.setMaxCost(20);
-    //Make sure that this folder is created. Otherwise we can't store gravatar
+    // Make sure that this folder is created. Otherwise we can't store gravatar
     d->mGravatarPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/gravatar/");
     QDir().mkpath(d->mGravatarPath);
 }
@@ -126,7 +123,7 @@ void GravatarCache::saveMissingGravatar(const Hash &hash)
 QPixmap GravatarCache::loadGravatarPixmap(const Hash &hash, bool &gravatarStored)
 {
     gravatarStored = false;
-    //qCDebug(GRAVATAR_LOG) << " hashStr" << hash.hexString();
+    // qCDebug(GRAVATAR_LOG) << " hashStr" << hash.hexString();
     if (!hash.isValid()) {
         return QPixmap();
     }
@@ -190,7 +187,7 @@ void GravatarCache::clearAllCache()
     if (!path.isEmpty()) {
         QDir dir(path);
         if (dir.exists()) {
-            const QFileInfoList list = dir.entryInfoList();  // get list of matching files and delete all
+            const QFileInfoList list = dir.entryInfoList(); // get list of matching files and delete all
             for (const QFileInfo &it : list) {
                 dir.remove(it.fileName());
             }

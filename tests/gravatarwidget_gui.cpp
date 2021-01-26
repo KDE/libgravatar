@@ -4,9 +4,9 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include "../src/widgets/gravatardownloadpixmapwidget.h"
 #include <QApplication>
 #include <QCommandLineParser>
-#include "../src/widgets/gravatardownloadpixmapwidget.h"
 #include <QStandardPaths>
 
 int main(int argc, char **argv)

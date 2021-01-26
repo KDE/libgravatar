@@ -5,15 +5,15 @@
 */
 
 #include "gravatarconfigwidget.h"
-#include "misc/gravatarcache.h"
 #include "gravatarconfiguresettingsdialog.h"
-#include <KLocalizedString>
-#include <QCheckBox>
-#include <QPushButton>
-#include <QPointer>
-#include <QHBoxLayout>
 #include "gravatarsettings.h"
+#include "misc/gravatarcache.h"
+#include <KLocalizedString>
 #include <PimCommon/ConfigureImmutableWidgetUtils>
+#include <QCheckBox>
+#include <QHBoxLayout>
+#include <QPointer>
+#include <QPushButton>
 
 using namespace Gravatar;
 using namespace PimCommon::ConfigureImmutableWidgetUtils;

@@ -8,9 +8,9 @@
 #include "../src/widgets/gravatardownloadpixmapdialog.h"
 #include <QTest>
 
+#include "../src/widgets/gravatardownloadpixmapwidget.h"
 #include <QDialogButtonBox>
 #include <QStandardPaths>
-#include "../src/widgets/gravatardownloadpixmapwidget.h"
 
 GravatarDownloadPixmapDialogTest::GravatarDownloadPixmapDialogTest(QObject *parent)
     : QObject(parent)

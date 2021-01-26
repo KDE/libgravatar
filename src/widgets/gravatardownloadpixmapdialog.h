@@ -7,10 +7,11 @@
 #ifndef GRAVATARDOWNLOADPIXMAPDIALOG_H
 #define GRAVATARDOWNLOADPIXMAPDIALOG_H
 
-#include <QDialog>
 #include "gravatar_export.h"
+#include <QDialog>
 
-namespace Gravatar {
+namespace Gravatar
+{
 class GravatarDownloadPixmapWidget;
 
 /** Avatar download dialog. */
