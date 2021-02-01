@@ -1,7 +1,7 @@
 macro(add_gravatar_unittest _source)
     ecm_add_test(${_source}
         NAME_PREFIX "gravatar-"
-        LINK_LIBRARIES KF5::PimCommon Qt::Test KF5::Gravatar KF5::TextWidgets 
+        LINK_LIBRARIES KF5::PimCommon Qt5::Test KF5::Gravatar KF5::TextWidgets 
     )
 endmacro ()
 
