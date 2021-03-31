@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GRAVATARCACHE_H
-#define GRAVATARCACHE_H
+#pragma once
 
 #include "gravatar_export.h"
 
@@ -42,4 +41,3 @@ private:
 };
 }
 
-#endif // GRAVATARCACHE_H

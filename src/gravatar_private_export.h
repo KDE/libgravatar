@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GRAVATARPRIVATE_EXPORT_H
-#define GRAVATARPRIVATE_EXPORT_H
+#pragma once
 
 #include "gravatar_export.h"
 
@@ -18,4 +17,3 @@
 #define GRAVATAR_TESTS_EXPORT
 #endif
 
-#endif

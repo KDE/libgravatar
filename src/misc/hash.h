@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GRAVATAR_HASH_H
-#define GRAVATAR_HASH_H
+#pragma once
 
 #include "gravatar_private_export.h"
 
@@ -66,4 +65,3 @@ private:
 };
 }
 
-#endif // GRAVATAR_HASH_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GRAVATARDOWNLOADPIXMAPWIDGET_H
-#define GRAVATARDOWNLOADPIXMAPWIDGET_H
+#pragma once
 
 #include "gravatar_export.h"
 #include <QWidget>
@@ -41,4 +40,3 @@ private:
 };
 }
 
-#endif // GRAVATARDOWNLOADPIXMAPWIDGET_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GRAVATARCONFIGURESETTINGSDIALOG_H
-#define GRAVATARCONFIGURESETTINGSDIALOG_H
+#pragma once
 
 #include "gravatar_export.h"
 #include <QDialog>
@@ -29,4 +28,3 @@ private:
 };
 }
 
-#endif // GRAVATARCONFIGURESETTINGSDIALOG_H

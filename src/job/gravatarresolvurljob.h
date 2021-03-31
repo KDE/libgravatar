@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GRAVATARRESOLVURLJOB_H
-#define GRAVATARRESOLVURLJOB_H
+#pragma once
 
 #include "gravatar_export.h"
 #include <QNetworkReply>
@@ -68,4 +67,3 @@ private:
 };
 }
 
-#endif // GRAVATARRESOLVURLJOB_H
