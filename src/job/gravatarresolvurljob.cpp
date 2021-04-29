@@ -12,6 +12,7 @@
 
 #include <QCryptographicHash>
 #include <QNetworkConfigurationManager>
+#include <QNetworkReply>
 #include <QUrlQuery>
 
 using namespace Gravatar;

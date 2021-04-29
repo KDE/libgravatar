@@ -7,11 +7,10 @@
 #pragma once
 
 #include "gravatar_export.h"
-#include <QNetworkReply>
 #include <QObject>
 #include <QPixmap>
 #include <QUrl>
-
+class QNetworkReply;
 class GravatarResolvUrlJobTest;
 namespace Gravatar
 {
