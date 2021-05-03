@@ -42,7 +42,7 @@ target_include_directories(KF5Gravatar PUBLIC "$<BUILD_INTERFACE:${gravatar_SOUR
 
 
 set_target_properties(KF5Gravatar PROPERTIES
-    VERSION ${GRAVATAR_VERSION_STRING}
+    VERSION ${GRAVATAR_VERSION}
     SOVERSION ${GRAVATAR_SOVERSION}
     EXPORT_NAME Gravatar
 )
