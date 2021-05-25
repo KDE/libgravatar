@@ -1,8 +1,9 @@
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libgravatar\")
+add_library(KF5Gravatar)
+add_library(KF5::Gravatar ALIAS KF5Gravatar)
 
-
-set(gravatarlib_SRCS
+target_sources(KF5Gravatar PRIVATE
     misc/gravatarcache.cpp
     misc/hash.cpp
     widgets/gravatardownloadpixmapwidget.cpp
@@ -13,20 +14,19 @@ set(gravatarlib_SRCS
     job/gravatarresolvurljob.cpp
 )
 
-ecm_qt_declare_logging_category(gravatarlib_SRCS HEADER gravatar_debug.h IDENTIFIER GRAVATAR_LOG CATEGORY_NAME org.kde.pim.gravatar
+ecm_qt_declare_logging_category(KF5Gravatar HEADER gravatar_debug.h IDENTIFIER GRAVATAR_LOG CATEGORY_NAME org.kde.pim.gravatar
         OLD_CATEGORY_NAMES log_gravatar
         DESCRIPTION "libgravatar (libgravatar)" EXPORT GRAVATAR)
 
-kconfig_add_kcfg_files(gravatarlib_SRCS
+kconfig_add_kcfg_files(KF5Gravatar
     settings/gravatarsettings.kcfgc
 )
 
-add_library( KF5Gravatar ${gravatarlib_SRCS} )
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5Gravatar PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(KF5Gravatar BASE_NAME gravatar)
-add_library(KF5::Gravatar ALIAS KF5Gravatar)
+
 target_link_libraries(KF5Gravatar
   PRIVATE
     KF5::ConfigCore
