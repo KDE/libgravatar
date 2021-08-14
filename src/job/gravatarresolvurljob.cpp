@@ -170,10 +170,11 @@ bool GravatarResolvUrlJob::fallbackGravatar() const
 
 void GravatarResolvUrlJob::setFallbackGravatar(bool fallbackGravatar)
 {
-    if (fallbackGravatar)
+    if (fallbackGravatar) {
         d->mBackends |= GravatarResolvUrlJobPrivate::Gravatar;
-    else
+    } else {
         d->mBackends &= ~GravatarResolvUrlJobPrivate::Gravatar;
+    }
 }
 
 bool GravatarResolvUrlJob::useLibravatar() const
@@ -183,10 +184,11 @@ bool GravatarResolvUrlJob::useLibravatar() const
 
 void GravatarResolvUrlJob::setUseLibravatar(bool useLibravatar)
 {
-    if (useLibravatar)
+    if (useLibravatar) {
         d->mBackends |= GravatarResolvUrlJobPrivate::Libravatar;
-    else
+    } else {
         d->mBackends &= ~GravatarResolvUrlJobPrivate::Libravatar;
+    }
 }
 
 bool GravatarResolvUrlJob::useDefaultPixmap() const
