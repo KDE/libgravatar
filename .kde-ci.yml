@@ -4,4 +4,4 @@
 Dependencies:
 - 'on': ['@all']
   'require':
-    'kde/pim/pimcommon' : '@latest'
+    'kde/pim/pimcommon' : '@same'
