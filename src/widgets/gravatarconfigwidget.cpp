@@ -18,7 +18,7 @@
 using namespace Gravatar;
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
-class Q_DECL_HIDDEN Gravatar::GravatarConfigWidgetPrivate
+class Gravatar::GravatarConfigWidgetPrivate
 {
 public:
     GravatarConfigWidgetPrivate()

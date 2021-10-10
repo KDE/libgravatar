@@ -22,7 +22,7 @@ using namespace Gravatar;
 
 Q_GLOBAL_STATIC(GravatarCache, s_gravatarCache)
 
-class Q_DECL_HIDDEN Gravatar::GravatarCachePrivate
+class Gravatar::GravatarCachePrivate
 {
 public:
     template<typename T> inline void insertMissingHash(std::vector<T> &vec, const T &hash)
