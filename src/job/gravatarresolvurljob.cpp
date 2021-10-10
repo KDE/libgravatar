@@ -43,10 +43,7 @@ GravatarResolvUrlJob::GravatarResolvUrlJob(QObject *parent)
 {
 }
 
-GravatarResolvUrlJob::~GravatarResolvUrlJob()
-{
-    delete d;
-}
+GravatarResolvUrlJob::~GravatarResolvUrlJob() = default;
 
 bool GravatarResolvUrlJob::canStart() const
 {

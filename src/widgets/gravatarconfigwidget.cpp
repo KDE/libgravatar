@@ -51,10 +51,7 @@ GravatarConfigWidget::GravatarConfigWidget(QWidget *parent)
     updateWidgetState(false);
 }
 
-GravatarConfigWidget::~GravatarConfigWidget()
-{
-    delete d;
-}
+GravatarConfigWidget::~GravatarConfigWidget() = default;
 
 void GravatarConfigWidget::slotConfigureSettings()
 {

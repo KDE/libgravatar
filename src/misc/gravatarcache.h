@@ -10,6 +10,8 @@
 
 #include <QPixmap>
 
+#include <memory>
+
 namespace Gravatar
 {
 class GravatarCachePrivate;
@@ -37,7 +39,7 @@ public:
 
 private:
     Q_DISABLE_COPY(GravatarCache)
-    GravatarCachePrivate *const d;
+    std::unique_ptr<GravatarCachePrivate> const d;
 };
 }
 

@@ -80,10 +80,7 @@ GravatarCache::GravatarCache()
     QDir().mkpath(d->mGravatarPath);
 }
 
-GravatarCache::~GravatarCache()
-{
-    delete d;
-}
+GravatarCache::~GravatarCache() = default;
 
 GravatarCache *GravatarCache::self()
 {

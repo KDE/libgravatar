@@ -8,6 +8,9 @@
 
 #include "gravatar_export.h"
 #include <QWidget>
+
+#include <memory>
+
 namespace Gravatar
 {
 class GravatarConfigWidgetPrivate;
@@ -31,7 +34,8 @@ private:
     void slotGravatarEnableChanged(bool state);
     void slotConfigureSettings();
     void updateWidgetState(bool state);
-    GravatarConfigWidgetPrivate *const d;
+
+    std::unique_ptr<GravatarConfigWidgetPrivate> const d;
 };
 }
 

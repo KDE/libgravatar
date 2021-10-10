@@ -10,6 +10,9 @@
 #include <QObject>
 #include <QPixmap>
 #include <QUrl>
+
+#include <memory>
+
 class QNetworkReply;
 class GravatarResolvUrlJobTest;
 namespace Gravatar
@@ -62,7 +65,8 @@ private:
     Q_REQUIRED_RESULT QUrl createUrl(bool useLibravatar);
     Q_REQUIRED_RESULT Hash calculateHash();
     Q_REQUIRED_RESULT bool cacheLookup(const Hash &hash);
-    GravatarResolvUrlJobPrivate *const d;
+
+    std::unique_ptr<GravatarResolvUrlJobPrivate> const d;
 };
 }
 
