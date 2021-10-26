@@ -21,7 +21,7 @@ class GRAVATAR_EXPORT GravatarConfigWidget : public QWidget
     Q_OBJECT
 public:
     explicit GravatarConfigWidget(QWidget *parent = nullptr);
-    ~GravatarConfigWidget();
+    ~GravatarConfigWidget() override;
 
     void save();
     void doLoadFromGlobalSettings();

@@ -13,7 +13,7 @@ class GravatarResolvUrlJobTest : public QObject
     Q_OBJECT
 public:
     explicit GravatarResolvUrlJobTest(QObject *parent = nullptr);
-    ~GravatarResolvUrlJobTest();
+    ~GravatarResolvUrlJobTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

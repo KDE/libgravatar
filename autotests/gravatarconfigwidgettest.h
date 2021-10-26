@@ -13,7 +13,7 @@ class GravatarConfigWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit GravatarConfigWidgetTest(QObject *parent = nullptr);
-    ~GravatarConfigWidgetTest();
+    ~GravatarConfigWidgetTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

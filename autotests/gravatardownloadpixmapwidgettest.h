@@ -13,7 +13,7 @@ class GravatarDownloadPixmapWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit GravatarDownloadPixmapWidgetTest(QObject *parent = nullptr);
-    ~GravatarDownloadPixmapWidgetTest();
+    ~GravatarDownloadPixmapWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldChangeButtonEnableState();

@@ -13,7 +13,7 @@ class GravatarConfigureSettingsDialogTest : public QObject
     Q_OBJECT
 public:
     explicit GravatarConfigureSettingsDialogTest(QObject *parent = nullptr);
-    ~GravatarConfigureSettingsDialogTest();
+    ~GravatarConfigureSettingsDialogTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

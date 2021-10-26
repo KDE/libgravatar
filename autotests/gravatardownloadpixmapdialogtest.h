@@ -13,7 +13,7 @@ class GravatarDownloadPixmapDialogTest : public QObject
     Q_OBJECT
 public:
     explicit GravatarDownloadPixmapDialogTest(QObject *parent = nullptr);
-    ~GravatarDownloadPixmapDialogTest();
+    ~GravatarDownloadPixmapDialogTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

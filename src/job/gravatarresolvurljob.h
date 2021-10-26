@@ -26,7 +26,7 @@ class GRAVATAR_EXPORT GravatarResolvUrlJob : public QObject
     Q_OBJECT
 public:
     explicit GravatarResolvUrlJob(QObject *parent = nullptr);
-    ~GravatarResolvUrlJob();
+    ~GravatarResolvUrlJob() override;
 
     Q_REQUIRED_RESULT bool canStart() const;
     void start();

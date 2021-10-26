@@ -13,7 +13,7 @@ class GravatarCacheTest : public QObject
     Q_OBJECT
 public:
     explicit GravatarCacheTest(QObject *parent = nullptr);
-    ~GravatarCacheTest();
+    ~GravatarCacheTest() override;
 private Q_SLOTS:
     void initTestCase();
     void shouldHaveDefaultValue();

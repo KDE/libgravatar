@@ -19,7 +19,7 @@ class GRAVATAR_EXPORT GravatarConfigureSettingsWidget : public QWidget
     Q_OBJECT
 public:
     explicit GravatarConfigureSettingsWidget(QWidget *parent = nullptr);
-    ~GravatarConfigureSettingsWidget();
+    ~GravatarConfigureSettingsWidget() override;
     void slotRestoreDefault();
     void save();
     void load();
