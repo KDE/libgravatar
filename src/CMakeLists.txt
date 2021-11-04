@@ -12,6 +12,16 @@ target_sources(KF5Gravatar PRIVATE
     widgets/gravatarconfiguresettingswidget.cpp
     widgets/gravatarconfiguresettingsdialog.cpp
     job/gravatarresolvurljob.cpp
+    job/gravatarresolvurljob.h
+    misc/hash.h
+    misc/gravatarcache.h
+    gravatar_private_export.h
+    widgets/gravatarconfiguresettingswidget.h
+    widgets/gravatarconfigwidget.h
+    widgets/gravatardownloadpixmapdialog.h
+    widgets/gravatardownloadpixmapwidget.h
+    widgets/gravatarconfiguresettingsdialog.h
+
 )
 
 ecm_qt_declare_logging_category(KF5Gravatar HEADER gravatar_debug.h IDENTIFIER GRAVATAR_LOG CATEGORY_NAME org.kde.pim.gravatar
