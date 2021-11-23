@@ -21,9 +21,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 class Gravatar::GravatarConfigWidgetPrivate
 {
 public:
-    GravatarConfigWidgetPrivate()
-    {
-    }
+    GravatarConfigWidgetPrivate() = default;
 
     QCheckBox *mEnableGravatarSupport = nullptr;
     QPushButton *mConfigureGravatarSetting = nullptr;

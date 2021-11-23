@@ -41,7 +41,7 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
 
     auto cacheSizeLayout = new QHBoxLayout;
     topLayout->addLayout(cacheSizeLayout);
-    QLabel *lab = new QLabel(i18n("Gravatar Cache Size:"), this);
+    auto lab = new QLabel(i18n("Gravatar Cache Size:"), this);
     lab->setObjectName(QStringLiteral("gravatarcachesizelabel"));
     cacheSizeLayout->addWidget(lab);
 
@@ -53,7 +53,7 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     cacheSizeLayout->addWidget(mGravatarCacheSize);
     cacheSizeLayout->addStretch();
 
-    KSeparator *separator = new KSeparator(this);
+    auto separator = new KSeparator(this);
     separator->setObjectName(QStringLiteral("separator"));
     topLayout->addWidget(separator);
 
@@ -71,9 +71,7 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     connect(mClearGravatarCache, &QAbstractButton::clicked, this, &GravatarConfigureSettingsWidget::slotClearGravatarCache);
 }
 
-GravatarConfigureSettingsWidget::~GravatarConfigureSettingsWidget()
-{
-}
+GravatarConfigureSettingsWidget::~GravatarConfigureSettingsWidget() = default;
 
 void GravatarConfigureSettingsWidget::slotClearGravatarCache()
 {

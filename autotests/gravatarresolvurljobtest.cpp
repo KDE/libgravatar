@@ -14,9 +14,7 @@ GravatarResolvUrlJobTest::GravatarResolvUrlJobTest(QObject *parent)
 {
 }
 
-GravatarResolvUrlJobTest::~GravatarResolvUrlJobTest()
-{
-}
+GravatarResolvUrlJobTest::~GravatarResolvUrlJobTest() = default;
 
 void GravatarResolvUrlJobTest::shouldHaveDefaultValue()
 {

@@ -29,7 +29,7 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
     mGravatarConfigureSettings->setObjectName(QStringLiteral("gravatarconfiguresettings"));
     topLayout->addWidget(mGravatarConfigureSettings);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -42,9 +42,7 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
     load();
 }
 
-GravatarConfigureSettingsDialog::~GravatarConfigureSettingsDialog()
-{
-}
+GravatarConfigureSettingsDialog::~GravatarConfigureSettingsDialog() = default;
 
 void GravatarConfigureSettingsDialog::slotRestoreDefault()
 {

@@ -122,7 +122,7 @@ QPixmap GravatarCache::loadGravatarPixmap(const Hash &hash, bool &gravatarStored
     gravatarStored = false;
     // qCDebug(GRAVATAR_LOG) << " hashStr" << hash.hexString();
     if (!hash.isValid()) {
-        return QPixmap();
+        return {};
     }
 
     // in-memory cache
@@ -158,7 +158,7 @@ QPixmap GravatarCache::loadGravatarPixmap(const Hash &hash, bool &gravatarStored
         break;
     }
 
-    return QPixmap();
+    return {};
 }
 
 int GravatarCache::maximumSize() const

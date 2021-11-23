@@ -73,7 +73,7 @@ QString Hash::hexString() const
 {
     switch (m_type) {
     case Invalid:
-        return QString();
+        return {};
     case Md5:
         return QString::fromLatin1(QByteArray::fromRawData(reinterpret_cast<const char *>(&m_hash.md5), sizeof(Hash128)).toHex());
     case Sha256:

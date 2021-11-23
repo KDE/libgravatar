@@ -17,9 +17,7 @@ GravatarDownloadPixmapDialogTest::GravatarDownloadPixmapDialogTest(QObject *pare
 {
 }
 
-GravatarDownloadPixmapDialogTest::~GravatarDownloadPixmapDialogTest()
-{
-}
+GravatarDownloadPixmapDialogTest::~GravatarDownloadPixmapDialogTest() = default;
 
 void GravatarDownloadPixmapDialogTest::initTestCase()
 {
@@ -29,10 +27,10 @@ void GravatarDownloadPixmapDialogTest::initTestCase()
 void GravatarDownloadPixmapDialogTest::shouldHaveDefaultValue()
 {
     Gravatar::GravatarDownloadPixmapDialog dlg;
-    auto *widget = dlg.findChild<Gravatar::GravatarDownloadPixmapWidget *>(QStringLiteral("gravatarwidget"));
+    auto widget = dlg.findChild<Gravatar::GravatarDownloadPixmapWidget *>(QStringLiteral("gravatarwidget"));
     QVERIFY(widget);
 
-    auto *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 }
 

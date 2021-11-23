@@ -20,9 +20,7 @@ using namespace Gravatar;
 class Gravatar::GravatarResolvUrlJobPrivate
 {
 public:
-    GravatarResolvUrlJobPrivate()
-    {
-    }
+    GravatarResolvUrlJobPrivate() = default;
 
     QPixmap mPixmap;
     QString mEmail;

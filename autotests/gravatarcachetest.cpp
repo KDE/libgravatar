@@ -22,9 +22,7 @@ GravatarCacheTest::GravatarCacheTest(QObject *parent)
 {
 }
 
-GravatarCacheTest::~GravatarCacheTest()
-{
-}
+GravatarCacheTest::~GravatarCacheTest() = default;
 
 void GravatarCacheTest::initTestCase()
 {
