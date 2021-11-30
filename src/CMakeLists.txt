@@ -1,4 +1,5 @@
-
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"libgravatar\")
 add_library(KF5Gravatar)
 add_library(KF5::Gravatar ALIAS KF5Gravatar)
