@@ -3,11 +3,11 @@
 add_executable(gravatarwidget_gui gravatarwidget_gui.cpp)
 ecm_mark_as_test(gravatarwidget_gui)
 target_link_libraries(gravatarwidget_gui
-  Qt::Core
-  Qt::Gui
+  Qt${QT_MAJOR_VERSION}::Core
+  Qt${QT_MAJOR_VERSION}::Gui
   KF5::Gravatar
   KF5::I18n
-  Qt::Widgets
+  Qt${QT_MAJOR_VERSION}::Widgets
   KF5::CoreAddons
 )
 

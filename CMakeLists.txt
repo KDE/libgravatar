@@ -36,7 +36,7 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 set(QT_REQUIRED_VERSION "5.15.2")
 set(LIBGRAVATAR_LIB_VERSION ${PIM_VERSION})
 set(PIMCOMMON_LIB_VERSION "5.19.40")
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
+find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
 find_package(KF5I18n ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Config ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5WidgetsAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
@@ -83,7 +83,7 @@ install(EXPORT KF5GravatarTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE 
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/gravatar_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
     )
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
@@ -91,7 +91,7 @@ endif()
 
 add_subdirectory(src)
 if (BUILD_TESTING)
-    find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
+    find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
     add_subdirectory(autotests)
     add_subdirectory(tests)
 endif()
