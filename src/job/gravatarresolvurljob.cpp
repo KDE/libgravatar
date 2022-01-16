@@ -11,7 +11,6 @@
 #include <PimCommon/NetworkManager>
 
 #include <QCryptographicHash>
-#include <QNetworkConfigurationManager>
 #include <QNetworkReply>
 #include <QUrlQuery>
 
@@ -21,7 +20,6 @@ class Gravatar::GravatarResolvUrlJobPrivate
 {
 public:
     GravatarResolvUrlJobPrivate() = default;
-
     QPixmap mPixmap;
     QString mEmail;
     Hash mCalculatedHash;
@@ -45,7 +43,7 @@ GravatarResolvUrlJob::~GravatarResolvUrlJob() = default;
 
 bool GravatarResolvUrlJob::canStart() const
 {
-    if (PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
+    if (PimCommon::NetworkManager::self()->isOnline()) {
         // qCDebug(GRAVATAR_LOG) << "email " << d->mEmail;
         return !d->mEmail.trimmed().isEmpty() && (d->mEmail.contains(QLatin1Char('@')));
     } else {
