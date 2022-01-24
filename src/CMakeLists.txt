@@ -47,7 +47,7 @@ target_link_libraries(KF5Gravatar
     KF5::PimCommon
     KF5::TextWidgets
 )
-target_include_directories(KF5Gravatar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/;${KDE_INSTALL_INCLUDEDIR_KF}/gravatar>")
+target_include_directories(KF5Gravatar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/>")
 
 target_include_directories(KF5Gravatar PUBLIC "$<BUILD_INTERFACE:${gravatar_SOURCE_DIR}/src;${gravatar_BINARY_DIR}/src>")
 
@@ -93,14 +93,14 @@ ecm_generate_headers(Gravatar_Camelcase_widgets_HEADERS
 
 ecm_generate_pri_file(BASE_NAME Gravatar
     LIB_NAME KF5Gravatar
-    DEPS "" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar
+    DEPS "" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/Gravatar
 )
 
 install(FILES
     ${Gravatar_Camelcase_widgets_HEADERS}
     ${Gravatar_Camelcase_job_HEADERS}
     ${Gravatar_Camelcase_misc_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/Gravatar
     COMPONENT Devel
 )
 
@@ -110,9 +110,15 @@ install(FILES
     ${Gravatar_misc_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/gravatar_export.h
     ${CMAKE_CURRENT_BINARY_DIR}/gravatarsettings.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/gravatar
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/gravatar
     COMPONENT Devel
 )
+install(FILES
+    ${CMAKE_CURRENT_BINARY_DIR}/gravatar_export.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/
+    COMPONENT Devel
+)
+
 install(FILES
     ${PRI_FILENAME}
     DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
