@@ -113,11 +113,6 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/gravatar
     COMPONENT Devel
 )
-install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/gravatar_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/
-    COMPONENT Devel
-)
 
 install(FILES
     ${PRI_FILENAME}
