@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define GRAVATAR_TESTS_EXPORT
 #endif
-

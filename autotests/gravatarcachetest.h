@@ -22,4 +22,3 @@ private Q_SLOTS:
     void testMissing();
     void testMissing_data();
 };
-

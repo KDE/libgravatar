@@ -28,4 +28,3 @@ private:
     Gravatar::GravatarDownloadPixmapWidget *mGravatarDownloadPixmapWidget = nullptr;
 };
 }
-

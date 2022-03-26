@@ -25,7 +25,8 @@ Q_GLOBAL_STATIC(GravatarCache, s_gravatarCache)
 class Gravatar::GravatarCachePrivate
 {
 public:
-    template<typename T> inline void insertMissingHash(std::vector<T> &vec, const T &hash)
+    template<typename T>
+    inline void insertMissingHash(std::vector<T> &vec, const T &hash)
     {
         auto it = std::lower_bound(vec.begin(), vec.end(), hash);
         if (it != vec.end() && *it == hash) {
@@ -34,7 +35,8 @@ public:
         vec.insert(it, hash);
     }
 
-    template<typename T> inline void saveVector(const std::vector<T> &vec, const QString &fileName)
+    template<typename T>
+    inline void saveVector(const std::vector<T> &vec, const QString &fileName)
     {
         QSaveFile f(mGravatarPath + fileName);
         if (!f.open(QFile::WriteOnly)) {
@@ -47,7 +49,8 @@ public:
         f.commit();
     }
 
-    template<typename T> inline void loadVector(std::vector<T> &vec, const QString &fileName)
+    template<typename T>
+    inline void loadVector(std::vector<T> &vec, const QString &fileName)
     {
         if (!vec.empty()) { // already loaded
             return;

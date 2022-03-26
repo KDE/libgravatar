@@ -42,4 +42,3 @@ private:
     std::unique_ptr<GravatarCachePrivate> const d;
 };
 }
-

@@ -33,4 +33,3 @@ private:
     QCheckBox *mFallbackGravatar = nullptr;
 };
 }
-

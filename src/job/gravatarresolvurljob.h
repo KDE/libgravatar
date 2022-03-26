@@ -69,4 +69,3 @@ private:
     std::unique_ptr<GravatarResolvUrlJobPrivate> const d;
 };
 }
-

@@ -16,7 +16,8 @@ class QString;
 
 namespace Gravatar
 {
-template<int Size> struct UnsignedInt {
+template<int Size>
+struct UnsignedInt {
     bool operator<(const UnsignedInt<Size> &other) const
     {
         return memcmp(data, other.data, Size) < 0;
@@ -64,4 +65,3 @@ private:
     Type m_type;
 };
 }
-

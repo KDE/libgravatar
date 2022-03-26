@@ -38,4 +38,3 @@ private:
     std::unique_ptr<GravatarConfigWidgetPrivate> const d;
 };
 }
-
