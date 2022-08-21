@@ -60,7 +60,7 @@ set_target_properties(KF5Gravatar PROPERTIES
 
 install(TARGETS
     KF5Gravatar
-    EXPORT KF5GravatarTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
+    EXPORT KF5GravatarTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 ecm_generate_headers(Gravatar_Camelcase_job_HEADERS
