@@ -1,0 +1,84 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the libgravatar package.
+#
+# Stelios <sstavra@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: libgravatar\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-11-24 00:29+0000\n"
+"PO-Revision-Date: 2020-10-21 15:30+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: widgets/gravatarconfiguresettingsdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Gravatar"
+msgstr "Διαμόρφωση του Gravatar"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:28
+#, kde-format
+msgid "Use Default Image"
+msgstr "Χρήση προκαθορισμένης εικόνας"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:32
+#: widgets/gravatardownloadpixmapwidget.cpp:32
+#, kde-format
+msgid "Use Libravatar"
+msgstr "Χρήση Libravatar"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:36
+#: widgets/gravatardownloadpixmapwidget.cpp:36
+#, kde-format
+msgid "Fallback to Gravatar"
+msgstr "Μετάπτωση στο Gravatar"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:44
+#, kde-format
+msgid "Gravatar Cache Size:"
+msgstr "Μέγεθος προσωρινής μνήμης του Gravatar:"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:51
+#, kde-format
+msgctxt "add space before image"
+msgid " image"
+msgid_plural " images"
+msgstr[0] " εικόνα"
+msgstr[1] " εικόνες"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:62
+#, kde-format
+msgid "Clear Gravatar Cache"
+msgstr "Καθαρισμός της προσωρινής μνήμης του Gravatar"
+
+#: widgets/gravatarconfigwidget.cpp:37
+#, kde-format
+msgid "Enable Gravatar Support"
+msgstr "Ενεργοποίηση υποστήριξης του Gravatar"
+
+#: widgets/gravatarconfigwidget.cpp:42
+#, kde-format
+msgid "Configure..."
+msgstr "Διαμόρφωση..."
+
+#: widgets/gravatardownloadpixmapwidget.cpp:24
+#, kde-format
+msgid "Email:"
+msgstr "Email:"
+
+#: widgets/gravatardownloadpixmapwidget.cpp:40
+#, kde-format
+msgid "&Search"
+msgstr "Αναζήτη&ση"
+
+#: widgets/gravatardownloadpixmapwidget.cpp:69
+#, kde-format
+msgid "No Gravatar found."
+msgstr "Δεν βρέθηκε Gravatar."

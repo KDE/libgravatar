@@ -1,0 +1,90 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-11-24 00:29+0000\n"
+"PO-Revision-Date: 2021-07-26 23:52+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: widgets/gravatarconfiguresettingsdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Gravatar"
+msgstr "اضبط «غراڤاتار»"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:28
+#, kde-format
+msgid "Use Default Image"
+msgstr "استخدم الصّورة المبدئيّة"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:32
+#: widgets/gravatardownloadpixmapwidget.cpp:32
+#, kde-format
+msgid "Use Libravatar"
+msgstr "استخدم Libravatar"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:36
+#: widgets/gravatardownloadpixmapwidget.cpp:36
+#, kde-format
+msgid "Fallback to Gravatar"
+msgstr "استخدم «غراڤاتار» كاحتياط"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:44
+#, kde-format
+msgid "Gravatar Cache Size:"
+msgstr "حجم خبيئة «غراڤاتار»:"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:51
+#, kde-format
+msgctxt "add space before image"
+msgid " image"
+msgid_plural " images"
+msgstr[0] " (لا صور)"
+msgstr[1] " (صورة واحدة)"
+msgstr[2] " (صورتان)"
+msgstr[3] " صور"
+msgstr[4] " صورة"
+msgstr[5] " صورة"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:62
+#, kde-format
+msgid "Clear Gravatar Cache"
+msgstr "امسح خبيئة «غراڤاتار»"
+
+#: widgets/gravatarconfigwidget.cpp:37
+#, kde-format
+msgid "Enable Gravatar Support"
+msgstr "فعّل دعم «غراڤاتار»"
+
+#: widgets/gravatarconfigwidget.cpp:42
+#, kde-format
+msgid "Configure..."
+msgstr "اضبط..."
+
+#: widgets/gravatardownloadpixmapwidget.cpp:24
+#, kde-format
+msgid "Email:"
+msgstr "البريد الإلكترونيّ:"
+
+#: widgets/gravatardownloadpixmapwidget.cpp:40
+#, kde-format
+msgid "&Search"
+msgstr "اب&حث"
+
+#: widgets/gravatardownloadpixmapwidget.cpp:69
+#, kde-format
+msgid "No Gravatar found."
+msgstr "لم يُعثر على «غراڤاتار»."

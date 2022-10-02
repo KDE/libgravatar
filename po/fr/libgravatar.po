@@ -1,0 +1,99 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Johan Claude-Breuninger <johan.claudebreuninger@gmail.com>, 2016.
+# Vincent Pinon <vpinon@kde.org>, 2017.
+# Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-11-24 00:29+0000\n"
+"PO-Revision-Date: 2021-01-13 16:09+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 20.12.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: widgets/gravatarconfiguresettingsdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Gravatar"
+msgstr "Configurer Gravatar"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:28
+#, kde-format
+msgid "Use Default Image"
+msgstr "Utiliser l'image par défaut"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:32
+#: widgets/gravatardownloadpixmapwidget.cpp:32
+#, kde-format
+msgid "Use Libravatar"
+msgstr "Utiliser « libgravatar »"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:36
+#: widgets/gravatardownloadpixmapwidget.cpp:36
+#, kde-format
+msgid "Fallback to Gravatar"
+msgstr "Gravatar en solution de secours"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:44
+#, kde-format
+msgid "Gravatar Cache Size:"
+msgstr "Taille du cache de Gravatar : "
+
+#: widgets/gravatarconfiguresettingswidget.cpp:51
+#, kde-format
+msgctxt "add space before image"
+msgid " image"
+msgid_plural " images"
+msgstr[0] " image"
+msgstr[1] " images"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:62
+#, kde-format
+msgid "Clear Gravatar Cache"
+msgstr "Vider le cache Gravatar"
+
+#: widgets/gravatarconfigwidget.cpp:37
+#, kde-format
+msgid "Enable Gravatar Support"
+msgstr "Activer la prise en charge de Gravatar"
+
+#: widgets/gravatarconfigwidget.cpp:42
+#, kde-format
+msgid "Configure..."
+msgstr "Configurer..."
+
+#: widgets/gravatardownloadpixmapwidget.cpp:24
+#, kde-format
+msgid "Email:"
+msgstr "Courriel : "
+
+#: widgets/gravatardownloadpixmapwidget.cpp:40
+#, kde-format
+msgid "&Search"
+msgstr "&Rechercher"
+
+#: widgets/gravatardownloadpixmapwidget.cpp:69
+#, kde-format
+msgid "No Gravatar found."
+msgstr "Aucun Gravatar trouvé."
+
+#~ msgid "Libravatar will be shutdown the 1st september 2018"
+#~ msgstr "Libravatar sera fermé définitivement le 1er septembre 2018"
+
+#~ msgid "Use HTTPS Protocol"
+#~ msgstr "Utiliser le protocol HTTPS"
+
+#~ msgid "Use HTTPS"
+#~ msgstr "Utiliser HTTPS"
