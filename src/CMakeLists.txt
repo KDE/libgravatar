@@ -40,12 +40,12 @@ generate_export_header(KF5Gravatar BASE_NAME gravatar)
 
 target_link_libraries(KF5Gravatar
   PRIVATE
-    KF5::ConfigCore
-    KF5::I18n
-    KF5::WidgetsAddons
-    KF5::ConfigGui
+    KF${KF_MAJOR_VERSION}::ConfigCore
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::WidgetsAddons
+    KF${KF_MAJOR_VERSION}::ConfigGui
     KF5::PimCommon
-    KF5::TextWidgets
+    KF${KF_MAJOR_VERSION}::TextWidgets
 )
 target_include_directories(KF5Gravatar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/>")
 
