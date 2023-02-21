@@ -1,10 +1,12 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"libgravatar\")
-add_library(KF5Gravatar)
-add_library(KF5::Gravatar ALIAS KF5Gravatar)
+add_library(KPim${KF_MAJOR_VERSION}Gravatar)
+add_library(KPim${KF_MAJOR_VERSION}::Gravatar ALIAS KPim${KF_MAJOR_VERSION}Gravatar)
+add_library(KF5::Gravatar ALIAS KPim${KF_MAJOR_VERSION}Gravatar)
 
-target_sources(KF5Gravatar PRIVATE
+
+target_sources(KPim${KF_MAJOR_VERSION}Gravatar PRIVATE
     misc/gravatarcache.cpp
     misc/hash.cpp
     widgets/gravatardownloadpixmapwidget.cpp
@@ -25,20 +27,20 @@ target_sources(KF5Gravatar PRIVATE
 
 )
 
-ecm_qt_declare_logging_category(KF5Gravatar HEADER gravatar_debug.h IDENTIFIER GRAVATAR_LOG CATEGORY_NAME org.kde.pim.gravatar
+ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}Gravatar HEADER gravatar_debug.h IDENTIFIER GRAVATAR_LOG CATEGORY_NAME org.kde.pim.gravatar
         OLD_CATEGORY_NAMES log_gravatar
         DESCRIPTION "libgravatar (libgravatar)" EXPORT GRAVATAR)
 
-kconfig_add_kcfg_files(KF5Gravatar
+kconfig_add_kcfg_files(KPim${KF_MAJOR_VERSION}Gravatar
     settings/gravatarsettings.kcfgc
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KF5Gravatar PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim${KF_MAJOR_VERSION}Gravatar PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KF5Gravatar BASE_NAME gravatar)
+generate_export_header(KPim${KF_MAJOR_VERSION}Gravatar BASE_NAME gravatar)
 
-target_link_libraries(KF5Gravatar
+target_link_libraries(KPim${KF_MAJOR_VERSION}Gravatar
   PRIVATE
     KF${KF_MAJOR_VERSION}::ConfigCore
     KF${KF_MAJOR_VERSION}::I18n
@@ -47,20 +49,20 @@ target_link_libraries(KF5Gravatar
     KF5::PimCommon
     KF${KF_MAJOR_VERSION}::TextWidgets
 )
-target_include_directories(KF5Gravatar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/>")
+target_include_directories(KPim${KF_MAJOR_VERSION}Gravatar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/Gravatar/>")
 
-target_include_directories(KF5Gravatar PUBLIC "$<BUILD_INTERFACE:${gravatar_SOURCE_DIR}/src;${gravatar_BINARY_DIR}/src>")
+target_include_directories(KPim${KF_MAJOR_VERSION}Gravatar PUBLIC "$<BUILD_INTERFACE:${gravatar_SOURCE_DIR}/src;${gravatar_BINARY_DIR}/src>")
 
 
-set_target_properties(KF5Gravatar PROPERTIES
+set_target_properties(KPim${KF_MAJOR_VERSION}Gravatar PROPERTIES
     VERSION ${GRAVATAR_VERSION}
     SOVERSION ${GRAVATAR_SOVERSION}
     EXPORT_NAME Gravatar
 )
 
 install(TARGETS
-    KF5Gravatar
-    EXPORT KF5GravatarTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
+    KPim${KF_MAJOR_VERSION}Gravatar
+    EXPORT KPim${KF_MAJOR_VERSION}GravatarTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 ecm_generate_headers(Gravatar_Camelcase_job_HEADERS
@@ -92,15 +94,15 @@ ecm_generate_headers(Gravatar_Camelcase_widgets_HEADERS
 
 
 ecm_generate_pri_file(BASE_NAME Gravatar
-    LIB_NAME KF5Gravatar
-    DEPS "" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/Gravatar
+    LIB_NAME KPim${KF_MAJOR_VERSION}Gravatar
+    DEPS "" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/Gravatar/Gravatar
 )
 
 install(FILES
     ${Gravatar_Camelcase_widgets_HEADERS}
     ${Gravatar_Camelcase_job_HEADERS}
     ${Gravatar_Camelcase_misc_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/Gravatar
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/Gravatar/Gravatar
     COMPONENT Devel
 )
 
@@ -110,7 +112,7 @@ install(FILES
     ${Gravatar_misc_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/gravatar_export.h
     ${CMAKE_CURRENT_BINARY_DIR}/gravatarsettings.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/Gravatar/gravatar
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/Gravatar/gravatar
     COMPONENT Devel
 )
 
@@ -123,9 +125,9 @@ ecm_qt_install_logging_categories(EXPORT GRAVATAR FILE libgravatar.categories DE
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KF5Gravatar_QCH
-        NAME KF5Gravatar
-        BASE_NAME KF5Gravatar
+        KPim${KF_MAJOR_VERSION}Gravatar_QCH
+        NAME KPim${KF_MAJOR_VERSION}Gravatar
+        BASE_NAME KPim${KF_MAJOR_VERSION}Gravatar
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
