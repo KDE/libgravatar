@@ -99,7 +99,7 @@ if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif()
 
-
+if (QT_MAJOR_VERSION STREQUAL "5")
 ##
 # TODO: Backwards compatiblity. Remove in next major version
 ##
@@ -127,7 +127,7 @@ install(EXPORT KPim${KF_MAJOR_VERSION}GravatarTargets
     FILE KPim${KF_MAJOR_VERSION}GravatarTargets.cmake
     NAMESPACE KF5::
 )
-
+endif()
 add_subdirectory(src)
 if (BUILD_TESTING)
     find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
