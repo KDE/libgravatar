@@ -12,3 +12,4 @@ if (@GRAVATAR_KF5_COMPAT@)
 endif()
 
 include("${CMAKE_CURRENT_LIST_DIR}/KPim@KF_MAJOR_VERSION@GravatarTargets.cmake")
+@PACKAGE_INCLUDE_QCHTARGETS@
