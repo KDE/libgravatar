@@ -30,6 +30,7 @@ include(ECMDeprecationSettings)
 include(ECMAddTests)
 include(ECMAddQch)
 
+option(BUILD_WITH_COMPAT_LIBS "Generate compat cmake file (Set at false will allow to co-install lib)" ON)
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
@@ -99,6 +100,7 @@ if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif()
 
+if (BUILD_WITH_COMPAT_LIBS)
 if (QT_MAJOR_VERSION STREQUAL "5")
 ##
 # TODO: Backwards compatiblity. Remove in next major version
@@ -127,6 +129,7 @@ install(EXPORT KPim${KF_MAJOR_VERSION}GravatarTargets
     FILE KPim${KF_MAJOR_VERSION}GravatarTargets.cmake
     NAMESPACE KF5::
 )
+endif()
 endif()
 add_subdirectory(src)
 if (BUILD_TESTING)
