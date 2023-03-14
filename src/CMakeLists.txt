@@ -3,7 +3,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"libgravatar\")
 add_library(KPim${KF_MAJOR_VERSION}Gravatar)
 add_library(KPim${KF_MAJOR_VERSION}::Gravatar ALIAS KPim${KF_MAJOR_VERSION}Gravatar)
-add_library(KF5::Gravatar ALIAS KPim${KF_MAJOR_VERSION}Gravatar)
 
 
 target_sources(KPim${KF_MAJOR_VERSION}Gravatar PRIVATE
