@@ -45,7 +45,7 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}Gravatar
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KF${KF_MAJOR_VERSION}::ConfigGui
-    KF5::PimCommon
+    KPim${KF_MAJOR_VERSION}::PimCommon
     KF${KF_MAJOR_VERSION}::TextWidgets
 )
 target_include_directories(KPim${KF_MAJOR_VERSION}Gravatar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/Gravatar/>")

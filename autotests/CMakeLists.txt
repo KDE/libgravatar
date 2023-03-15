@@ -6,7 +6,7 @@ macro(add_gravatar_unittest _source)
     add_executable( ${_name} ${_test} ${_name}.h)
     add_test(NAME ${_name} COMMAND ${_name} )
     ecm_mark_as_test(${_name})
-    target_link_libraries( ${_name} KF5::PimCommon Qt::Test KPim${KF_MAJOR_VERSION}::Gravatar KF${KF_MAJOR_VERSION}::TextWidgets)
+    target_link_libraries( ${_name} KPim${KF_MAJOR_VERSION}::PimCommon Qt::Test KPim${KF_MAJOR_VERSION}::Gravatar KF${KF_MAJOR_VERSION}::TextWidgets)
 endmacro ()
 
 add_gravatar_unittest( gravatarcachetest.cpp )
