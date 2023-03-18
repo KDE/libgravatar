@@ -30,7 +30,6 @@ include(ECMDeprecationSettings)
 include(ECMAddTests)
 include(ECMAddQch)
 
-option(BUILD_WITH_COMPAT_LIBS "Generate compat cmake file (Set at false will allow to co-install lib)" ON)
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
@@ -74,7 +73,6 @@ if (USE_UNITY_CMAKE_SUPPORT)
 endif()
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}Gravatar")
-set(GRAVATAR_KF5_COMPAT FALSE)
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimGravatarConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}GravatarConfig.cmake"
@@ -99,37 +97,6 @@ if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif()
 
-if (BUILD_WITH_COMPAT_LIBS)
-if (QT_MAJOR_VERSION STREQUAL "5")
-##
-# TODO: Backwards compatiblity. Remove in next major version
-##
-set(CMAKECONFIG_INSTALL_DIR_KF5 "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5Gravatar")
-set(GRAVATAR_KF5_COMPAT TRUE)
-configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KPimGravatarConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5GravatarConfig.cmake"
-    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR_KF5}
-)
-
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5GravatarConfig.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
-    COMPONENT Devel
-)
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}GravatarConfigVersion.cmake"
-    RENAME "KF5GravatarConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
-    COMPONENT Devel
-)
-install(EXPORT KPim${KF_MAJOR_VERSION}GravatarTargets
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
-    FILE KPim${KF_MAJOR_VERSION}GravatarTargets.cmake
-    NAMESPACE KF5::
-)
-endif()
-endif()
 add_subdirectory(src)
 if (BUILD_TESTING)
     find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
