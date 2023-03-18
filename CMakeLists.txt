@@ -71,8 +71,25 @@ set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
 if (USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
 endif()
+if(BUILD_TESTING)
+   add_definitions(-DBUILD_TESTING)
+endif()
+
+
+add_subdirectory(src)
+
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}Gravatar")
+if (BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KPim${KF_MAJOR_VERSION}Gravatar_QCH
+        FILE KPim${KF_MAJOR_VERSION}GravatarQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}GravatarQchTargets.cmake\")")
+endif()
+
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimGravatarConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}GravatarConfig.cmake"
@@ -93,25 +110,11 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/gravatar_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/Gravatar COMPONENT Devel
     )
-if(BUILD_TESTING)
-   add_definitions(-DBUILD_TESTING)
-endif()
 
-add_subdirectory(src)
 if (BUILD_TESTING)
     find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
     add_subdirectory(autotests)
     add_subdirectory(tests)
-endif()
-
-if (BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KPim${KF_MAJOR_VERSION}Gravatar_QCH
-        FILE KPim${KF_MAJOR_VERSION}GravatarQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}GravatarQchTargets.cmake\")")
 endif()
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
