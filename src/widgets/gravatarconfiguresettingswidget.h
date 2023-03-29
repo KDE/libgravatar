@@ -25,7 +25,7 @@ public:
     void load();
 
 private:
-    void slotClearGravatarCache();
+    GRAVATAR_NO_EXPORT void slotClearGravatarCache();
     QCheckBox *mUseDefaultPixmap = nullptr;
     QPushButton *mClearGravatarCache = nullptr;
     KPluralHandlingSpinBox *mGravatarCacheSize = nullptr;

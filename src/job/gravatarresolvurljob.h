@@ -60,11 +60,11 @@ private:
     void slotFinishLoadPixmap(QNetworkReply *reply);
     Q_REQUIRED_RESULT QUrl generateGravatarUrl(bool useLibravatar);
     Q_REQUIRED_RESULT Hash calculatedHash() const;
-    void processNextBackend();
-    void startNetworkManager(const QUrl &url);
-    Q_REQUIRED_RESULT QUrl createUrl(bool useLibravatar);
-    Q_REQUIRED_RESULT Hash calculateHash();
-    Q_REQUIRED_RESULT bool cacheLookup(const Hash &hash);
+    GRAVATAR_NO_EXPORT void processNextBackend();
+    GRAVATAR_NO_EXPORT void startNetworkManager(const QUrl &url);
+    Q_REQUIRED_RESULT GRAVATAR_NO_EXPORT QUrl createUrl(bool useLibravatar);
+    Q_REQUIRED_RESULT GRAVATAR_NO_EXPORT Hash calculateHash();
+    Q_REQUIRED_RESULT GRAVATAR_NO_EXPORT bool cacheLookup(const Hash &hash);
 
     std::unique_ptr<GravatarResolvUrlJobPrivate> const d;
 };

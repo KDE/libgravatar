@@ -31,9 +31,9 @@ Q_SIGNALS:
     void configChanged(bool);
 
 private:
-    void slotGravatarEnableChanged(bool state);
-    void slotConfigureSettings();
-    void updateWidgetState(bool state);
+    GRAVATAR_NO_EXPORT void slotGravatarEnableChanged(bool state);
+    GRAVATAR_NO_EXPORT void slotConfigureSettings();
+    GRAVATAR_NO_EXPORT void updateWidgetState(bool state);
 
     std::unique_ptr<GravatarConfigWidgetPrivate> const d;
 };

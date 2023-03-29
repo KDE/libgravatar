@@ -21,9 +21,9 @@ public:
     ~GravatarConfigureSettingsDialog() override;
 
 private:
-    void slotRestoreDefault();
-    void save();
-    void load();
-    GravatarConfigureSettingsWidget *mGravatarConfigureSettings;
+    GRAVATAR_NO_EXPORT void slotRestoreDefault();
+    GRAVATAR_NO_EXPORT void save();
+    GRAVATAR_NO_EXPORT void load();
+    GravatarConfigureSettingsWidget *mGravatarConfigureSettings = nullptr;
 };
 }

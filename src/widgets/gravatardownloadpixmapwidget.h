@@ -27,10 +27,10 @@ public:
     Q_REQUIRED_RESULT QPixmap gravatarPixmap() const;
 
 private:
-    void slotSearchButton();
+    GRAVATAR_NO_EXPORT void slotSearchButton();
 
-    void slotTextChanged(const QString &text);
-    void slotResolvUrlFinish(Gravatar::GravatarResolvUrlJob *job);
+    GRAVATAR_NO_EXPORT void slotTextChanged(const QString &text);
+    GRAVATAR_NO_EXPORT void slotResolvUrlFinish(Gravatar::GravatarResolvUrlJob *job);
     QPixmap mGravatarPixmap;
     QLabel *mResultLabel = nullptr;
     QLineEdit *mLineEdit = nullptr;
