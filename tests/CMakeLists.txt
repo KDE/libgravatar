@@ -5,9 +5,9 @@ ecm_mark_as_test(gravatarwidget_gui)
 target_link_libraries(gravatarwidget_gui
   Qt::Core
   Qt::Gui
-  KPim${KF_MAJOR_VERSION}::Gravatar
-  KF${KF_MAJOR_VERSION}::I18n
+  KPim6::Gravatar
+  KF6::I18n
   Qt::Widgets
-  KF${KF_MAJOR_VERSION}::CoreAddons
+  KF6::CoreAddons
 )
 
