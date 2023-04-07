@@ -37,8 +37,12 @@ kconfig_add_kcfg_files(KPim6Gravatar
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6Gravatar PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KPim6Gravatar BASE_NAME gravatar)
-
+ecm_generate_export_header(KPim6Gravatar
+    BASE_NAME gravatar
+    VERSION ${GRAVATAR_VERSION}
+    DEPRECATED_BASE_VERSION 0
+    USE_VERSION_HEADER
+)
 target_link_libraries(KPim6Gravatar
   PRIVATE
     KF6::ConfigCore

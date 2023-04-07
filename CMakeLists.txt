@@ -14,7 +14,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 
-include(GenerateExportHeader)
+include(ECMGenerateExportHeader)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(ECMGeneratePriFile)
@@ -45,7 +45,7 @@ find_package(KF6KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KPim6PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX GRAVATAR
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/gravatar_version.h"
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/gravatar_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6GravatarConfigVersion.cmake"
     SOVERSION 6
     )
@@ -99,7 +99,7 @@ install(EXPORT KPim6GravatarTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     FILE KPim6GravatarTargets.cmake NAMESPACE KPim6::)
 
 install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/gravatar_version.h
+    ${CMAKE_CURRENT_BINARY_DIR}/src/gravatar_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/Gravatar COMPONENT Devel
     )
 
