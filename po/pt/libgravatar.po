@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-24 00:29+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2020-04-27 16:04+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: Libravatar Gravatar\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:24
+#: widgets/gravatarconfiguresettingsdialog.cpp:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
@@ -54,16 +54,6 @@ msgstr[1] " imagens"
 msgid "Clear Gravatar Cache"
 msgstr "Limpar a 'Cache' do Gravatar"
 
-#: widgets/gravatarconfigwidget.cpp:37
-#, kde-format
-msgid "Enable Gravatar Support"
-msgstr "Activar o Suporte para o Gravatar"
-
-#: widgets/gravatarconfigwidget.cpp:42
-#, kde-format
-msgid "Configure..."
-msgstr "Configurar..."
-
 #: widgets/gravatardownloadpixmapwidget.cpp:24
 #, kde-format
 msgid "Email:"
@@ -78,3 +68,9 @@ msgstr "&Procurar"
 #, kde-format
 msgid "No Gravatar found."
 msgstr "O Gravatar não foi encontrado."
+
+#~ msgid "Enable Gravatar Support"
+#~ msgstr "Activar o Suporte para o Gravatar"
+
+#~ msgid "Configure..."
+#~ msgstr "Configurar..."
