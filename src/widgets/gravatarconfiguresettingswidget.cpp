@@ -7,10 +7,10 @@
 #include "gravatarconfiguresettingswidget.h"
 #include "gravatarsettings.h"
 #include <Gravatar/GravatarCache>
+#include <KConfigDialogManager>
 #include <KLocalizedString>
 #include <KPluralHandlingSpinBox>
 #include <KSeparator>
-#include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <QCheckBox>
 #include <QHBoxLayout>
 #include <QLabel>
@@ -18,7 +18,7 @@
 #include <QVBoxLayout>
 
 using namespace Gravatar;
-using namespace PimCommon::ConfigureImmutableWidgetUtils;
+
 GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent)
     : QWidget(parent)
 {
@@ -26,15 +26,15 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     topLayout->setObjectName(QStringLiteral("mainlayout"));
     topLayout->setContentsMargins(0, 0, 0, 0);
     mUseDefaultPixmap = new QCheckBox(i18n("Use Default Image"), this);
-    mUseDefaultPixmap->setObjectName(QStringLiteral("usedefaultimage"));
+    mUseDefaultPixmap->setObjectName(QStringLiteral("kcfg_GravatarUseDefaultImage"));
     topLayout->addWidget(mUseDefaultPixmap);
 
     mUseLibravatar = new QCheckBox(i18n("Use Libravatar"), this);
-    mUseLibravatar->setObjectName(QStringLiteral("uselibravatarcheckbox"));
+    mUseLibravatar->setObjectName(QStringLiteral("kcfg_LibravatarSupportEnabled"));
     topLayout->addWidget(mUseLibravatar);
 
     mFallbackGravatar = new QCheckBox(i18n("Fallback to Gravatar"), this);
-    mFallbackGravatar->setObjectName(QStringLiteral("fallbackgravatar"));
+    mFallbackGravatar->setObjectName(QStringLiteral("kcfg_FallbackToGravatar"));
     topLayout->addWidget(mFallbackGravatar);
     connect(mUseLibravatar, &QCheckBox::toggled, mFallbackGravatar, &QCheckBox::setEnabled);
     mFallbackGravatar->setEnabled(false);
@@ -49,7 +49,7 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     mGravatarCacheSize->setMinimum(1);
     mGravatarCacheSize->setMaximum(9999);
     mGravatarCacheSize->setSuffix(ki18ncp("add space before image", " image", " images"));
-    mGravatarCacheSize->setObjectName(QStringLiteral("gravatarcachesize"));
+    mGravatarCacheSize->setObjectName(QStringLiteral("kcfg_GravatarCacheSize"));
     cacheSizeLayout->addWidget(mGravatarCacheSize);
     cacheSizeLayout->addStretch();
 
@@ -69,6 +69,8 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     topLayout->addWidget(separator);
 
     connect(mClearGravatarCache, &QAbstractButton::clicked, this, &GravatarConfigureSettingsWidget::slotClearGravatarCache);
+
+    m_configDialogManager = new KConfigDialogManager(this, GravatarSettings::self());
 }
 
 GravatarConfigureSettingsWidget::~GravatarConfigureSettingsWidget() = default;
@@ -80,23 +82,15 @@ void GravatarConfigureSettingsWidget::slotClearGravatarCache()
 
 void GravatarConfigureSettingsWidget::slotRestoreDefault()
 {
-    const bool bUseDefaults = Gravatar::GravatarSettings::self()->useDefaults(true);
-    load();
-    Gravatar::GravatarSettings::self()->useDefaults(bUseDefaults);
+    m_configDialogManager->updateWidgetsDefault();
 }
 
 void GravatarConfigureSettingsWidget::save()
 {
-    saveCheckBox(mUseDefaultPixmap, Gravatar::GravatarSettings::self()->gravatarUseDefaultImageItem());
-    saveCheckBox(mUseLibravatar, Gravatar::GravatarSettings::self()->libravatarSupportEnabledItem());
-    saveCheckBox(mFallbackGravatar, Gravatar::GravatarSettings::self()->fallbackToGravatarItem());
-    saveSpinBox(mGravatarCacheSize, Gravatar::GravatarSettings::self()->gravatarCacheSizeItem());
+    m_configDialogManager->updateSettings();
 }
 
 void GravatarConfigureSettingsWidget::load()
 {
-    loadWidget(mUseDefaultPixmap, Gravatar::GravatarSettings::self()->gravatarUseDefaultImageItem());
-    loadWidget(mGravatarCacheSize, Gravatar::GravatarSettings::self()->gravatarCacheSizeItem());
-    loadWidget(mUseLibravatar, Gravatar::GravatarSettings::self()->libravatarSupportEnabledItem());
-    loadWidget(mFallbackGravatar, Gravatar::GravatarSettings::self()->fallbackToGravatarItem());
+    m_configDialogManager->updateWidgets();
 }
