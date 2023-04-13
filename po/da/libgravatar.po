@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-24 00:29+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2020-08-02 17:02+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:24
+#: widgets/gravatarconfiguresettingsdialog.cpp:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
@@ -58,16 +58,6 @@ msgstr[1] " billeder"
 msgid "Clear Gravatar Cache"
 msgstr "Ryd Gravatar-cache"
 
-#: widgets/gravatarconfigwidget.cpp:37
-#, kde-format
-msgid "Enable Gravatar Support"
-msgstr "Aktivér Gravatar-understøttelse"
-
-#: widgets/gravatarconfigwidget.cpp:42
-#, kde-format
-msgid "Configure..."
-msgstr "Indstil..."
-
 #: widgets/gravatardownloadpixmapwidget.cpp:24
 #, kde-format
 msgid "Email:"
@@ -82,3 +72,9 @@ msgstr "&Søg"
 #, kde-format
 msgid "No Gravatar found."
 msgstr "Ingen Gravatar fundet."
+
+#~ msgid "Enable Gravatar Support"
+#~ msgstr "Aktivér Gravatar-understøttelse"
+
+#~ msgid "Configure..."
+#~ msgstr "Indstil..."

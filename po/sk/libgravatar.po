@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-24 00:29+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2020-08-11 08:33+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: Lokalize 20.07.90\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:24
+#: widgets/gravatarconfiguresettingsdialog.cpp:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
@@ -58,16 +58,6 @@ msgstr[2] " obrázkov"
 msgid "Clear Gravatar Cache"
 msgstr "Vymazať Gravatar cache"
 
-#: widgets/gravatarconfigwidget.cpp:37
-#, kde-format
-msgid "Enable Gravatar Support"
-msgstr "Povoliť podporu Gravatar"
-
-#: widgets/gravatarconfigwidget.cpp:42
-#, kde-format
-msgid "Configure..."
-msgstr "Nastaviť..."
-
 #: widgets/gravatardownloadpixmapwidget.cpp:24
 #, kde-format
 msgid "Email:"
@@ -82,6 +72,12 @@ msgstr "&Hľadať"
 #, kde-format
 msgid "No Gravatar found."
 msgstr "Nenašiel sa gravatar."
+
+#~ msgid "Enable Gravatar Support"
+#~ msgstr "Povoliť podporu Gravatar"
+
+#~ msgid "Configure..."
+#~ msgstr "Nastaviť..."
 
 #~ msgid "Use HTTPS Protocol"
 #~ msgstr "Použiť protokol HTTPS"

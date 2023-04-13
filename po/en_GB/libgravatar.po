@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-24 00:29+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2019-12-29 15:33+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.07.70\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:24
+#: widgets/gravatarconfiguresettingsdialog.cpp:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
@@ -58,16 +58,6 @@ msgstr[1] " images"
 msgid "Clear Gravatar Cache"
 msgstr "Clear Gravatar Cache"
 
-#: widgets/gravatarconfigwidget.cpp:37
-#, kde-format
-msgid "Enable Gravatar Support"
-msgstr "Enable Gravatar Support"
-
-#: widgets/gravatarconfigwidget.cpp:42
-#, kde-format
-msgid "Configure..."
-msgstr "Configure..."
-
 #: widgets/gravatardownloadpixmapwidget.cpp:24
 #, kde-format
 msgid "Email:"
@@ -82,6 +72,12 @@ msgstr "&Search"
 #, kde-format
 msgid "No Gravatar found."
 msgstr "No Gravatar found."
+
+#~ msgid "Enable Gravatar Support"
+#~ msgstr "Enable Gravatar Support"
+
+#~ msgid "Configure..."
+#~ msgstr "Configure..."
 
 #~ msgid "Libravatar will be shutdown the 1st september 2018"
 #~ msgstr "Libravatar will be shutdown the 1st September 2018"

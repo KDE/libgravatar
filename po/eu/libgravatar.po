@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-24 00:29+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2020-08-04 08:57+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 20.04.3\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:24
+#: widgets/gravatarconfiguresettingsdialog.cpp:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
@@ -61,16 +61,6 @@ msgstr[1] " irudiak"
 msgid "Clear Gravatar Cache"
 msgstr "Hustu Gravatar-ren cachea"
 
-#: widgets/gravatarconfigwidget.cpp:37
-#, kde-format
-msgid "Enable Gravatar Support"
-msgstr "Gaitu Gravatar-en euskarria"
-
-#: widgets/gravatarconfigwidget.cpp:42
-#, kde-format
-msgid "Configure..."
-msgstr "Konfiguratu..."
-
 #: widgets/gravatardownloadpixmapwidget.cpp:24
 #, kde-format
 msgid "Email:"
@@ -85,3 +75,9 @@ msgstr "&Bilatu"
 #, kde-format
 msgid "No Gravatar found."
 msgstr "Ez da Gravatar aurkitu."
+
+#~ msgid "Enable Gravatar Support"
+#~ msgstr "Gaitu Gravatar-en euskarria"
+
+#~ msgid "Configure..."
+#~ msgstr "Konfiguratu..."

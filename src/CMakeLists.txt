@@ -10,7 +10,6 @@ target_sources(KPim6Gravatar PRIVATE
     misc/hash.cpp
     widgets/gravatardownloadpixmapwidget.cpp
     widgets/gravatardownloadpixmapdialog.cpp
-    widgets/gravatarconfigwidget.cpp
     widgets/gravatarconfiguresettingswidget.cpp
     widgets/gravatarconfiguresettingsdialog.cpp
     job/gravatarresolvurljob.cpp
@@ -19,7 +18,6 @@ target_sources(KPim6Gravatar PRIVATE
     misc/gravatarcache.h
     gravatar_private_export.h
     widgets/gravatarconfiguresettingswidget.h
-    widgets/gravatarconfigwidget.h
     widgets/gravatardownloadpixmapdialog.h
     widgets/gravatardownloadpixmapwidget.h
     widgets/gravatarconfiguresettingsdialog.h
@@ -87,7 +85,6 @@ ecm_generate_headers(Gravatar_Camelcase_misc_HEADERS
 ecm_generate_headers(Gravatar_Camelcase_widgets_HEADERS
   HEADER_NAMES
   GravatarConfigureSettingsDialog
-  GravatarConfigWidget
   GravatarDownloadPixmapWidget
   GravatarConfigureSettingsWidget
   REQUIRED_HEADERS Gravatar_widgets_HEADERS

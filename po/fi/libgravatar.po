@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-24 00:29+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2020-01-01 13:14+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 18.12.3\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:24
+#: widgets/gravatarconfiguresettingsdialog.cpp:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
@@ -58,16 +58,6 @@ msgstr[1] " kuvaa"
 msgid "Clear Gravatar Cache"
 msgstr "Tyhjennä Gravatarin välimuisti"
 
-#: widgets/gravatarconfigwidget.cpp:37
-#, kde-format
-msgid "Enable Gravatar Support"
-msgstr "Käytä Gravatar-tukea"
-
-#: widgets/gravatarconfigwidget.cpp:42
-#, kde-format
-msgid "Configure..."
-msgstr "Asetukset…"
-
 #: widgets/gravatardownloadpixmapwidget.cpp:24
 #, kde-format
 msgid "Email:"
@@ -82,6 +72,12 @@ msgstr "&Etsi"
 #, kde-format
 msgid "No Gravatar found."
 msgstr "Gravataria ei löytynyt."
+
+#~ msgid "Enable Gravatar Support"
+#~ msgstr "Käytä Gravatar-tukea"
+
+#~ msgid "Configure..."
+#~ msgstr "Asetukset…"
 
 #~ msgid "Libravatar will be shutdown the 1st september 2018"
 #~ msgstr "Libravatar suljetaan 1. syyskuuta 2018"

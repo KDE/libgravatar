@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-24 00:29+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2019-12-18 19:40+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:24
+#: widgets/gravatarconfiguresettingsdialog.cpp:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
@@ -58,16 +58,6 @@ msgstr[1] " pilti"
 msgid "Clear Gravatar Cache"
 msgstr "Puhasta gravatari puhver"
 
-#: widgets/gravatarconfigwidget.cpp:37
-#, kde-format
-msgid "Enable Gravatar Support"
-msgstr "Gravatari toetuse lubamine"
-
-#: widgets/gravatarconfigwidget.cpp:42
-#, kde-format
-msgid "Configure..."
-msgstr "Seadista..."
-
 #: widgets/gravatardownloadpixmapwidget.cpp:24
 #, kde-format
 msgid "Email:"
@@ -82,6 +72,12 @@ msgstr "Ot&si"
 #, kde-format
 msgid "No Gravatar found."
 msgstr "Ühtegi gravatari ei leitud."
+
+#~ msgid "Enable Gravatar Support"
+#~ msgstr "Gravatari toetuse lubamine"
+
+#~ msgid "Configure..."
+#~ msgstr "Seadista..."
 
 #~ msgid "Use HTTPS Protocol"
 #~ msgstr "HTTPS protokolli kasutamine"

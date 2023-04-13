@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-24 00:29+0000\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2020-10-21 15:30+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:24
+#: widgets/gravatarconfiguresettingsdialog.cpp:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
@@ -58,16 +58,6 @@ msgstr[1] " εικόνες"
 msgid "Clear Gravatar Cache"
 msgstr "Καθαρισμός της προσωρινής μνήμης του Gravatar"
 
-#: widgets/gravatarconfigwidget.cpp:37
-#, kde-format
-msgid "Enable Gravatar Support"
-msgstr "Ενεργοποίηση υποστήριξης του Gravatar"
-
-#: widgets/gravatarconfigwidget.cpp:42
-#, kde-format
-msgid "Configure..."
-msgstr "Διαμόρφωση..."
-
 #: widgets/gravatardownloadpixmapwidget.cpp:24
 #, kde-format
 msgid "Email:"
@@ -82,3 +72,9 @@ msgstr "Αναζήτη&ση"
 #, kde-format
 msgid "No Gravatar found."
 msgstr "Δεν βρέθηκε Gravatar."
+
+#~ msgid "Enable Gravatar Support"
+#~ msgstr "Ενεργοποίηση υποστήριξης του Gravatar"
+
+#~ msgid "Configure..."
+#~ msgstr "Διαμόρφωση..."

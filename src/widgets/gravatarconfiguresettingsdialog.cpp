@@ -7,16 +7,13 @@
 #include "gravatarconfiguresettingsdialog.h"
 #include "gravatarconfiguresettingswidget.h"
 #include "misc/gravatarcache.h"
-#include <PimCommon/ConfigureImmutableWidgetUtils>
 
 #include "gravatarsettings.h"
 #include <KLocalizedString>
-#include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
 using namespace Gravatar;
-using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent)
     : QDialog(parent)
