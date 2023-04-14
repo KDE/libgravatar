@@ -11,6 +11,7 @@
 class QCheckBox;
 class QPushButton;
 class KPluralHandlingSpinBox;
+class KConfigDialogManager;
 namespace Gravatar
 {
 /** Gravatar settings widget. */
@@ -31,5 +32,6 @@ private:
     KPluralHandlingSpinBox *mGravatarCacheSize = nullptr;
     QCheckBox *mUseLibravatar = nullptr;
     QCheckBox *mFallbackGravatar = nullptr;
+    KConfigDialogManager *m_configDialogManager = nullptr;
 };
 }

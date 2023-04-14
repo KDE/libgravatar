@@ -29,7 +29,7 @@ void GravatarConfigureSettingsWidgetTest::shouldHaveDefaultValues()
     QVERIFY(topLayout);
     QCOMPARE(topLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto useDefaultImage = w.findChild<QCheckBox *>(QStringLiteral("usedefaultimage"));
+    auto useDefaultImage = w.findChild<QCheckBox *>(QStringLiteral("kcfg_GravatarUseDefaultImage"));
     QVERIFY(useDefaultImage);
 
     auto clearGravatarCache = w.findChild<QPushButton *>(QStringLiteral("cleargravatarcachebutton"));
@@ -38,7 +38,7 @@ void GravatarConfigureSettingsWidgetTest::shouldHaveDefaultValues()
     auto lab = w.findChild<QLabel *>(QStringLiteral("gravatarcachesizelabel"));
     QVERIFY(lab);
 
-    auto gravatarCacheSize = w.findChild<KPluralHandlingSpinBox *>(QStringLiteral("gravatarcachesize"));
+    auto gravatarCacheSize = w.findChild<KPluralHandlingSpinBox *>(QStringLiteral("kcfg_GravatarCacheSize"));
     QVERIFY(gravatarCacheSize);
 
     auto separator = w.findChild<KSeparator *>(QStringLiteral("separator"));
