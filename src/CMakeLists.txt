@@ -62,7 +62,7 @@ set_target_properties(KPim${KF_MAJOR_VERSION}Gravatar PROPERTIES
 
 install(TARGETS
     KPim${KF_MAJOR_VERSION}Gravatar
-    EXPORT KPim${KF_MAJOR_VERSION}GravatarTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
+    EXPORT KPim${KF_MAJOR_VERSION}GravatarTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 ecm_generate_headers(Gravatar_Camelcase_job_HEADERS
