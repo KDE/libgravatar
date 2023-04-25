@@ -35,7 +35,7 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 
 
 set(LIBGRAVATAR_LIB_VERSION ${PIM_VERSION})
-set(PIMCOMMON_LIB_VERSION "5.23.40")
+set(PIMCOMMON_LIB_VERSION "5.240.40")
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Config ${KF_MIN_VERSION} CONFIG REQUIRED)
