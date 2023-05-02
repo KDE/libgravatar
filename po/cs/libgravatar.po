@@ -74,9 +74,3 @@ msgstr "&Hledat"
 #, kde-format
 msgid "No Gravatar found."
 msgstr "Gravatar nebyl nalezen."
-
-#~ msgid "Enable Gravatar Support"
-#~ msgstr "Povolit podporu Gravatara"
-
-#~ msgid "Configure..."
-#~ msgstr "Nastavit..."
