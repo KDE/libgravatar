@@ -94,3 +94,5 @@ void GravatarConfigureSettingsWidget::load()
 {
     m_configDialogManager->updateWidgets();
 }
+
+#include "moc_gravatarconfiguresettingswidget.cpp"

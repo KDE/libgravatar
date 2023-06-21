@@ -56,3 +56,5 @@ void GravatarConfigureSettingsDialog::load()
 {
     mGravatarConfigureSettings->load();
 }
+
+#include "moc_gravatarconfiguresettingsdialog.cpp"

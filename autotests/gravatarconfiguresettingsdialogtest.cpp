@@ -28,3 +28,5 @@ void GravatarConfigureSettingsDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(GravatarConfigureSettingsDialogTest)
+
+#include "moc_gravatarconfiguresettingsdialogtest.cpp"

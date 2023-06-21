@@ -47,3 +47,5 @@ void GravatarConfigureSettingsWidgetTest::shouldHaveDefaultValues()
     auto separator2 = w.findChild<KSeparator *>(QStringLiteral("separator2"));
     QVERIFY(separator2);
 }
+
+#include "moc_gravatarconfiguresettingswidgettest.cpp"

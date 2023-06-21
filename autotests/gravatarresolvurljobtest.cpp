@@ -158,3 +158,5 @@ void GravatarResolvUrlJobTest::shouldGenerateGravatarUrl()
 }
 
 QTEST_MAIN(GravatarResolvUrlJobTest)
+
+#include "moc_gravatarresolvurljobtest.cpp"

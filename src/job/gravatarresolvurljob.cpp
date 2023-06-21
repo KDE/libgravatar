@@ -259,3 +259,5 @@ bool GravatarResolvUrlJob::cacheLookup(const Hash &hash)
     }
     return haveStoredPixmap;
 }
+
+#include "moc_gravatarresolvurljob.cpp"

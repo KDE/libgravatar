@@ -126,3 +126,5 @@ void GravatarCacheTest::testMissing()
 }
 
 QTEST_MAIN(GravatarCacheTest)
+
+#include "moc_gravatarcachetest.cpp"

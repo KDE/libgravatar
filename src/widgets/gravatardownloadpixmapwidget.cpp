@@ -93,3 +93,5 @@ void GravatarDownloadPixmapWidget::slotTextChanged(const QString &text)
 {
     mGetPixmapButton->setEnabled(!text.trimmed().isEmpty());
 }
+
+#include "moc_gravatardownloadpixmapwidget.cpp"

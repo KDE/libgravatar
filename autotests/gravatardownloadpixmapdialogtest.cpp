@@ -35,3 +35,5 @@ void GravatarDownloadPixmapDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(GravatarDownloadPixmapDialogTest)
+
+#include "moc_gravatardownloadpixmapdialogtest.cpp"

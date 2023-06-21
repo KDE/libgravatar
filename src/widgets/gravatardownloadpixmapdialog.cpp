@@ -36,3 +36,5 @@ QPixmap GravatarDownloadPixmapDialog::gravatarPixmap() const
 {
     return mGravatarDownloadPixmapWidget->gravatarPixmap();
 }
+
+#include "moc_gravatardownloadpixmapdialog.cpp"

@@ -60,3 +60,5 @@ void GravatarDownloadPixmapWidgetTest::shouldChangeButtonEnableState()
 }
 
 QTEST_MAIN(GravatarDownloadPixmapWidgetTest)
+
+#include "moc_gravatardownloadpixmapwidgettest.cpp"
