@@ -5,7 +5,7 @@ Dependencies:
 - 'on': ['Linux', 'FreeBSD', 'Windows', 'macOS']
   'require':
     'frameworks/extra-cmake-modules': '@latest-kf6'
-    'pim/pimcommon' : '@latest-kf6'
+    'pim/pimcommon' : '@same'
 
 Options:
   require-passing-tests-on: [ 'Linux/Qt5', 'FreeBSD/Qt5', 'Windows/Qt5' ]
