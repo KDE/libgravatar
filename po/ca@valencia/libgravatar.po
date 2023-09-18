@@ -76,9 +76,3 @@ msgstr "Bu&sca"
 #, kde-format
 msgid "No Gravatar found."
 msgstr "No s'ha trobat «Gravatar»."
-
-#~ msgid "Enable Gravatar Support"
-#~ msgstr "Activa el funcionament amb Gravatar"
-
-#~ msgid "Configure..."
-#~ msgstr "Configura..."
