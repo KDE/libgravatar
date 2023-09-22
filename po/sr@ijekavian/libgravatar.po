@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-04-27 03:33+0200\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
 "PO-Revision-Date: 2015-10-16 19:04+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,36 +19,36 @@ msgstr ""
 "X-Environment: kde\n"
 
 # >> @title:window
-#: widgets/gravatarconfiguresettingsdialog.cpp:39
+#: widgets/gravatarconfiguresettingsdialog.cpp:21
 #, fuzzy, kde-format
 #| msgid "Configure Gravatar"
 msgctxt "@title:window"
 msgid "Configure Gravatar"
 msgstr "Подешавање граватара"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:42
+#: widgets/gravatarconfiguresettingswidget.cpp:28
 #, kde-format
 msgid "Use Default Image"
 msgstr "Користи подразумевану слику"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:46
-#: widgets/gravatardownloadpixmapwidget.cpp:45
+#: widgets/gravatarconfiguresettingswidget.cpp:32
+#: widgets/gravatardownloadpixmapwidget.cpp:32
 #, kde-format
 msgid "Use Libravatar"
 msgstr ""
 
-#: widgets/gravatarconfiguresettingswidget.cpp:50
-#: widgets/gravatardownloadpixmapwidget.cpp:49
+#: widgets/gravatarconfiguresettingswidget.cpp:36
+#: widgets/gravatardownloadpixmapwidget.cpp:36
 #, kde-format
 msgid "Fallback to Gravatar"
 msgstr ""
 
-#: widgets/gravatarconfiguresettingswidget.cpp:59
+#: widgets/gravatarconfiguresettingswidget.cpp:44
 #, kde-format
 msgid "Gravatar Cache Size:"
 msgstr "Величина кеша граватара:"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:66
+#: widgets/gravatarconfiguresettingswidget.cpp:51
 #, kde-format
 msgctxt "add space before image"
 msgid " image"
@@ -58,33 +58,29 @@ msgstr[1] " слике"
 msgstr[2] " слика"
 msgstr[3] " слика"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:77
+#: widgets/gravatarconfiguresettingswidget.cpp:62
 #, kde-format
 msgid "Clear Gravatar Cache"
 msgstr "Очисти кеш граватара"
 
-# >> @option:check
-#: widgets/gravatarconfigwidget.cpp:52
-#, kde-format
-msgid "Enable Gravatar Support"
-msgstr "Подршка за граватаре"
-
-#: widgets/gravatarconfigwidget.cpp:57
-#, kde-format
-msgid "Configure..."
-msgstr "Подеси..."
-
-#: widgets/gravatardownloadpixmapwidget.cpp:37
+#: widgets/gravatardownloadpixmapwidget.cpp:24
 #, kde-format
 msgid "Email:"
 msgstr "Е‑пошта:"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:53
+#: widgets/gravatardownloadpixmapwidget.cpp:40
 #, kde-format
 msgid "&Search"
 msgstr "&Тражи"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:84
+#: widgets/gravatardownloadpixmapwidget.cpp:69
 #, kde-format
 msgid "No Gravatar found."
 msgstr "Није нађен ниједан граватар."
+
+# >> @option:check
+#~ msgid "Enable Gravatar Support"
+#~ msgstr "Подршка за граватаре"
+
+#~ msgid "Configure..."
+#~ msgstr "Подеси..."
