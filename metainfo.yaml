@@ -11,8 +11,7 @@ portingAid: false
 deprecated: false
 release: false
 libraries:
- - qmake: Gravatar 
-   cmake: "KPim6::Gravatar"
+ - cmake: "KPim6::Gravatar"
 cmakename: KPim6Gravatar
 group: kdepim
 public_lib: true
