@@ -28,20 +28,20 @@ public:
     explicit GravatarResolvUrlJob(QObject *parent = nullptr);
     ~GravatarResolvUrlJob() override;
 
-    Q_REQUIRED_RESULT bool canStart() const;
+    [[nodiscard]] bool canStart() const;
     void start();
 
-    Q_REQUIRED_RESULT QString email() const;
+    [[nodiscard]] QString email() const;
     void setEmail(const QString &email);
 
-    Q_REQUIRED_RESULT bool hasGravatar() const;
+    [[nodiscard]] bool hasGravatar() const;
 
     void setSize(int size);
-    Q_REQUIRED_RESULT int size() const;
+    [[nodiscard]] int size() const;
 
-    Q_REQUIRED_RESULT QPixmap pixmap() const;
+    [[nodiscard]] QPixmap pixmap() const;
 
-    Q_REQUIRED_RESULT bool useDefaultPixmap() const;
+    [[nodiscard]] bool useDefaultPixmap() const;
     void setUseDefaultPixmap(bool useDefaultPixmap);
 
     bool useLibravatar() const;
@@ -58,13 +58,13 @@ private:
     friend class ::GravatarResolvUrlJobTest;
 
     void slotFinishLoadPixmap(QNetworkReply *reply);
-    Q_REQUIRED_RESULT QUrl generateGravatarUrl(bool useLibravatar);
-    Q_REQUIRED_RESULT Hash calculatedHash() const;
+    [[nodiscard]] QUrl generateGravatarUrl(bool useLibravatar);
+    [[nodiscard]] Hash calculatedHash() const;
     GRAVATAR_NO_EXPORT void processNextBackend();
     GRAVATAR_NO_EXPORT void startNetworkManager(const QUrl &url);
-    Q_REQUIRED_RESULT GRAVATAR_NO_EXPORT QUrl createUrl(bool useLibravatar);
-    Q_REQUIRED_RESULT GRAVATAR_NO_EXPORT Hash calculateHash();
-    Q_REQUIRED_RESULT GRAVATAR_NO_EXPORT bool cacheLookup(const Hash &hash);
+    [[nodiscard]] GRAVATAR_NO_EXPORT QUrl createUrl(bool useLibravatar);
+    [[nodiscard]] GRAVATAR_NO_EXPORT Hash calculateHash();
+    [[nodiscard]] GRAVATAR_NO_EXPORT bool cacheLookup(const Hash &hash);
 
     std::unique_ptr<GravatarResolvUrlJobPrivate> const d;
 };

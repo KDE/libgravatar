@@ -21,7 +21,7 @@ public:
     explicit GravatarDownloadPixmapDialog(QWidget *parent = nullptr);
     ~GravatarDownloadPixmapDialog() override;
 
-    Q_REQUIRED_RESULT QPixmap gravatarPixmap() const;
+    [[nodiscard]] QPixmap gravatarPixmap() const;
 
 private:
     GRAVATAR_NO_EXPORT void slotAccepted();
