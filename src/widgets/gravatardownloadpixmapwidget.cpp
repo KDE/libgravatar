@@ -22,23 +22,23 @@ GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
     auto hbox = new QHBoxLayout;
     mainLayout->addLayout(hbox);
     auto lab = new QLabel(i18n("Email:"));
-    lab->setObjectName(QStringLiteral("labemail"));
+    lab->setObjectName(QLatin1StringView("labemail"));
     hbox->addWidget(lab);
     mLineEdit = new QLineEdit;
-    mLineEdit->setObjectName(QStringLiteral("email"));
+    mLineEdit->setObjectName(QLatin1StringView("email"));
     connect(mLineEdit, &QLineEdit::textChanged, this, &GravatarDownloadPixmapWidget::slotTextChanged);
     hbox->addWidget(mLineEdit);
 
     mUseLibravatar = new QCheckBox(i18n("Use Libravatar"));
-    mUseLibravatar->setObjectName(QStringLiteral("uselibravatar"));
+    mUseLibravatar->setObjectName(QLatin1StringView("uselibravatar"));
     mainLayout->addWidget(mUseLibravatar);
 
     mFallbackGravatar = new QCheckBox(i18n("Fallback to Gravatar"));
-    mFallbackGravatar->setObjectName(QStringLiteral("fallbackgravatar"));
+    mFallbackGravatar->setObjectName(QLatin1StringView("fallbackgravatar"));
     mainLayout->addWidget(mFallbackGravatar);
 
     mGetPixmapButton = new QPushButton(i18n("&Search"));
-    mGetPixmapButton->setObjectName(QStringLiteral("searchbutton"));
+    mGetPixmapButton->setObjectName(QLatin1StringView("searchbutton"));
     connect(mGetPixmapButton, &QAbstractButton::clicked, this, &GravatarDownloadPixmapWidget::slotSearchButton);
     hbox->addWidget(mGetPixmapButton);
     mGetPixmapButton->setEnabled(false);
@@ -47,7 +47,7 @@ GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
     QFont font = mResultLabel->font();
     font.setBold(true);
     mResultLabel->setFont(font);
-    mResultLabel->setObjectName(QStringLiteral("resultlabel"));
+    mResultLabel->setObjectName(QLatin1StringView("resultlabel"));
     mainLayout->addWidget(mResultLabel);
 }
 

@@ -20,14 +20,14 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
 {
     setWindowTitle(i18nc("@title:window", "Configure Gravatar"));
     auto topLayout = new QVBoxLayout(this);
-    topLayout->setObjectName(QStringLiteral("toplayout"));
+    topLayout->setObjectName(QLatin1StringView("toplayout"));
 
     mGravatarConfigureSettings = new GravatarConfigureSettingsWidget(this);
-    mGravatarConfigureSettings->setObjectName(QStringLiteral("gravatarconfiguresettings"));
+    mGravatarConfigureSettings->setObjectName(QLatin1StringView("gravatarconfiguresettings"));
     topLayout->addWidget(mGravatarConfigureSettings);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &GravatarConfigureSettingsDialog::save);
