@@ -36,7 +36,7 @@ struct Hash256 : public UnsignedInt<32> {
 };
 
 class Hash;
-unsigned int qHash(const Hash &h, unsigned int seed = 0);
+size_t qHash(const Hash &h, size_t seed = 0) noexcept;
 
 // exported for unit tests only
 class GRAVATAR_TESTS_EXPORT Hash
@@ -57,7 +57,7 @@ public:
     QString hexString() const;
 
 private:
-    friend unsigned int qHash(const Hash &h, unsigned int seed);
+    friend size_t qHash(const Hash &h, size_t seed) noexcept;
     union {
         Hash128 md5;
         Hash256 sha256;

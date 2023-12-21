@@ -82,7 +82,7 @@ QString Hash::hexString() const
     Q_UNREACHABLE();
 }
 
-uint Gravatar::qHash(const Hash &h, uint seed)
+size_t Gravatar::qHash(const Hash &h, size_t seed) noexcept
 {
     switch (h.type()) {
     case Hash::Invalid:
