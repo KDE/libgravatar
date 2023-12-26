@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
-add_definitions(-DTRANSLATION_DOMAIN=\"libgravatar\")
+add_definitions(-DTRANSLATION_DOMAIN=\"libgravatar6\")
 add_library(KPim6Gravatar)
 add_library(KPim6::Gravatar ALIAS KPim6Gravatar)
 
