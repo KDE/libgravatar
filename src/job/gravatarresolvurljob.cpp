@@ -241,7 +241,7 @@ QUrl GravatarResolvUrlJob::createUrl(bool useLibravatar)
         url.setHost(QStringLiteral("secure.gravatar.com"));
     }
     d->mCalculatedHash = calculateHash();
-    url.setPath(QLatin1String("/avatar/") + d->mCalculatedHash.hexString());
+    url.setPath(QLatin1StringView("/avatar/") + d->mCalculatedHash.hexString());
     url.setQuery(query);
     return url;
 }
