@@ -1,0 +1,76 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the libgravatar package.
+#
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: libgravatar\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-04-12 00:50+0000\n"
+"PO-Revision-Date: 2024-03-01 19:10+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: widgets/gravatarconfiguresettingsdialog.cpp:21
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Gravatar"
+msgstr "Konfigurēt „Gravatar“"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:28
+#, kde-format
+msgid "Use Default Image"
+msgstr "Izmantot noklusējuma attēlu"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:32
+#: widgets/gravatardownloadpixmapwidget.cpp:32
+#, kde-format
+msgid "Use Libravatar"
+msgstr "Izmantot „Libravatar“"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:36
+#: widgets/gravatardownloadpixmapwidget.cpp:36
+#, kde-format
+msgid "Fallback to Gravatar"
+msgstr "Atkāpties uz „Gravatar“"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:44
+#, kde-format
+msgid "Gravatar Cache Size:"
+msgstr "„Gravatar“ kešatmiņas izmērs:"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:51
+#, kde-format
+msgctxt "add space before image"
+msgid " image"
+msgid_plural " images"
+msgstr[0] " attēls"
+msgstr[1] " attēli"
+msgstr[2] " attēlu"
+
+#: widgets/gravatarconfiguresettingswidget.cpp:62
+#, kde-format
+msgid "Clear Gravatar Cache"
+msgstr "Notīrīt „Gravatar“ kešatmiņu"
+
+#: widgets/gravatardownloadpixmapwidget.cpp:24
+#, kde-format
+msgid "Email:"
+msgstr "E-pasts:"
+
+#: widgets/gravatardownloadpixmapwidget.cpp:40
+#, kde-format
+msgid "&Search"
+msgstr "&Meklēt"
+
+#: widgets/gravatardownloadpixmapwidget.cpp:69
+#, kde-format
+msgid "No Gravatar found."
+msgstr "Nav atrasts neviens „Gravatar“."
