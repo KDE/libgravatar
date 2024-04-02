@@ -5,6 +5,8 @@
 */
 
 #include "gravatarconfiguresettingswidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "gravatarsettings.h"
 #include <Gravatar/GravatarCache>
 #include <KConfigDialogManager>
@@ -23,18 +25,18 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     : QWidget(parent)
 {
     auto topLayout = new QVBoxLayout(this);
-    topLayout->setObjectName(QLatin1StringView("mainlayout"));
+    topLayout->setObjectName("mainlayout"_L1);
     topLayout->setContentsMargins(0, 0, 0, 0);
     mUseDefaultPixmap = new QCheckBox(i18n("Use Default Image"), this);
-    mUseDefaultPixmap->setObjectName(QLatin1StringView("kcfg_GravatarUseDefaultImage"));
+    mUseDefaultPixmap->setObjectName("kcfg_GravatarUseDefaultImage"_L1);
     topLayout->addWidget(mUseDefaultPixmap);
 
     mUseLibravatar = new QCheckBox(i18n("Use Libravatar"), this);
-    mUseLibravatar->setObjectName(QLatin1StringView("kcfg_LibravatarSupportEnabled"));
+    mUseLibravatar->setObjectName("kcfg_LibravatarSupportEnabled"_L1);
     topLayout->addWidget(mUseLibravatar);
 
     mFallbackGravatar = new QCheckBox(i18n("Fallback to Gravatar"), this);
-    mFallbackGravatar->setObjectName(QLatin1StringView("kcfg_FallbackToGravatar"));
+    mFallbackGravatar->setObjectName("kcfg_FallbackToGravatar"_L1);
     topLayout->addWidget(mFallbackGravatar);
     connect(mUseLibravatar, &QCheckBox::toggled, mFallbackGravatar, &QCheckBox::setEnabled);
     mFallbackGravatar->setEnabled(false);
@@ -42,30 +44,30 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     auto cacheSizeLayout = new QHBoxLayout;
     topLayout->addLayout(cacheSizeLayout);
     auto lab = new QLabel(i18n("Gravatar Cache Size:"), this);
-    lab->setObjectName(QLatin1StringView("gravatarcachesizelabel"));
+    lab->setObjectName("gravatarcachesizelabel"_L1);
     cacheSizeLayout->addWidget(lab);
 
     mGravatarCacheSize = new KPluralHandlingSpinBox(this);
     mGravatarCacheSize->setMinimum(1);
     mGravatarCacheSize->setMaximum(9999);
     mGravatarCacheSize->setSuffix(ki18ncp("add space before image", " image", " images"));
-    mGravatarCacheSize->setObjectName(QLatin1StringView("kcfg_GravatarCacheSize"));
+    mGravatarCacheSize->setObjectName("kcfg_GravatarCacheSize"_L1);
     cacheSizeLayout->addWidget(mGravatarCacheSize);
     cacheSizeLayout->addStretch();
 
     auto separator = new KSeparator(this);
-    separator->setObjectName(QLatin1StringView("separator"));
+    separator->setObjectName("separator"_L1);
     topLayout->addWidget(separator);
 
     auto buttonLayout = new QHBoxLayout;
     topLayout->addLayout(buttonLayout);
     mClearGravatarCache = new QPushButton(i18n("Clear Gravatar Cache"), this);
-    mClearGravatarCache->setObjectName(QLatin1StringView("cleargravatarcachebutton"));
+    mClearGravatarCache->setObjectName("cleargravatarcachebutton"_L1);
     buttonLayout->addWidget(mClearGravatarCache);
     buttonLayout->addStretch();
 
     separator = new KSeparator(this);
-    separator->setObjectName(QLatin1StringView("separator2"));
+    separator->setObjectName("separator2"_L1);
     topLayout->addWidget(separator);
 
     connect(mClearGravatarCache, &QAbstractButton::clicked, this, &GravatarConfigureSettingsWidget::slotClearGravatarCache);

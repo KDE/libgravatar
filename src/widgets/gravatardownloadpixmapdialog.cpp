@@ -5,6 +5,8 @@
 */
 
 #include "gravatardownloadpixmapdialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "gravatardownloadpixmapwidget.h"
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
@@ -16,10 +18,10 @@ GravatarDownloadPixmapDialog::GravatarDownloadPixmapDialog(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mGravatarDownloadPixmapWidget = new Gravatar::GravatarDownloadPixmapWidget(this);
-    mGravatarDownloadPixmapWidget->setObjectName(QLatin1StringView("gravatarwidget"));
+    mGravatarDownloadPixmapWidget->setObjectName("gravatarwidget"_L1);
     mainLayout->addWidget(mGravatarDownloadPixmapWidget);
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &GravatarDownloadPixmapDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     mainLayout->addWidget(buttonBox);

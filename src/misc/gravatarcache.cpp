@@ -5,6 +5,8 @@
 */
 
 #include "gravatarcache.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "gravatar_debug.h"
 #include "hash.h"
 
@@ -79,7 +81,7 @@ GravatarCache::GravatarCache()
 {
     d->mCachePixmap.setMaxCost(20);
     // Make sure that this folder is created. Otherwise we can't store gravatar
-    d->mGravatarPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1StringView("/gravatar/");
+    d->mGravatarPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/gravatar/"_L1;
     QDir().mkpath(d->mGravatarPath);
 }
 
@@ -96,7 +98,7 @@ void GravatarCache::saveGravatarPixmap(const Hash &hash, const QPixmap &pixmap)
         return;
     }
 
-    const QString path = d->mGravatarPath + hash.hexString() + QLatin1StringView(".png");
+    const QString path = d->mGravatarPath + hash.hexString() + ".png"_L1;
     qCDebug(GRAVATAR_LOG) << " path " << path;
     if (pixmap.save(path)) {
         qCDebug(GRAVATAR_LOG) << " saved in cache " << path;
@@ -136,7 +138,7 @@ QPixmap GravatarCache::loadGravatarPixmap(const Hash &hash, bool &gravatarStored
     }
 
     // file-system cache
-    const QString path = d->mGravatarPath + hash.hexString() + QLatin1StringView(".png");
+    const QString path = d->mGravatarPath + hash.hexString() + ".png"_L1;
     if (QFileInfo::exists(path)) {
         QPixmap pix;
         if (pix.load(path)) {

@@ -5,6 +5,8 @@
 */
 
 #include "gravatarresolvurljob.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "gravatar_debug.h"
 #include "misc/gravatarcache.h"
 #include "misc/hash.h"
@@ -241,7 +243,7 @@ QUrl GravatarResolvUrlJob::createUrl(bool useLibravatar)
         url.setHost(QStringLiteral("secure.gravatar.com"));
     }
     d->mCalculatedHash = calculateHash();
-    url.setPath(QLatin1StringView("/avatar/") + d->mCalculatedHash.hexString());
+    url.setPath("/avatar/"_L1 + d->mCalculatedHash.hexString());
     url.setQuery(query);
     return url;
 }

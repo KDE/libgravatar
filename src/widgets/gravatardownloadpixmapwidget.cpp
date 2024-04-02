@@ -5,6 +5,8 @@
 */
 
 #include "gravatardownloadpixmapwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "gravatar/gravatarresolvurljob.h"
 #include "gravatar_debug.h"
 #include <KLocalizedString>
@@ -22,23 +24,23 @@ GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
     auto hbox = new QHBoxLayout;
     mainLayout->addLayout(hbox);
     auto lab = new QLabel(i18n("Email:"));
-    lab->setObjectName(QLatin1StringView("labemail"));
+    lab->setObjectName("labemail"_L1);
     hbox->addWidget(lab);
     mLineEdit = new QLineEdit;
-    mLineEdit->setObjectName(QLatin1StringView("email"));
+    mLineEdit->setObjectName("email"_L1);
     connect(mLineEdit, &QLineEdit::textChanged, this, &GravatarDownloadPixmapWidget::slotTextChanged);
     hbox->addWidget(mLineEdit);
 
     mUseLibravatar = new QCheckBox(i18n("Use Libravatar"));
-    mUseLibravatar->setObjectName(QLatin1StringView("uselibravatar"));
+    mUseLibravatar->setObjectName("uselibravatar"_L1);
     mainLayout->addWidget(mUseLibravatar);
 
     mFallbackGravatar = new QCheckBox(i18n("Fallback to Gravatar"));
-    mFallbackGravatar->setObjectName(QLatin1StringView("fallbackgravatar"));
+    mFallbackGravatar->setObjectName("fallbackgravatar"_L1);
     mainLayout->addWidget(mFallbackGravatar);
 
     mGetPixmapButton = new QPushButton(i18n("&Search"));
-    mGetPixmapButton->setObjectName(QLatin1StringView("searchbutton"));
+    mGetPixmapButton->setObjectName("searchbutton"_L1);
     connect(mGetPixmapButton, &QAbstractButton::clicked, this, &GravatarDownloadPixmapWidget::slotSearchButton);
     hbox->addWidget(mGetPixmapButton);
     mGetPixmapButton->setEnabled(false);
@@ -47,7 +49,7 @@ GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
     QFont font = mResultLabel->font();
     font.setBold(true);
     mResultLabel->setFont(font);
-    mResultLabel->setObjectName(QLatin1StringView("resultlabel"));
+    mResultLabel->setObjectName("resultlabel"_L1);
     mainLayout->addWidget(mResultLabel);
 }
 

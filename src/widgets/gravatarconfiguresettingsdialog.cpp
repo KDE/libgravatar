@@ -5,6 +5,8 @@
 */
 
 #include "gravatarconfiguresettingsdialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "gravatarconfiguresettingswidget.h"
 #include "misc/gravatarcache.h"
 
@@ -20,14 +22,14 @@ GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent
 {
     setWindowTitle(i18nc("@title:window", "Configure Gravatar"));
     auto topLayout = new QVBoxLayout(this);
-    topLayout->setObjectName(QLatin1StringView("toplayout"));
+    topLayout->setObjectName("toplayout"_L1);
 
     mGravatarConfigureSettings = new GravatarConfigureSettingsWidget(this);
-    mGravatarConfigureSettings->setObjectName(QLatin1StringView("gravatarconfiguresettings"));
+    mGravatarConfigureSettings->setObjectName("gravatarconfiguresettings"_L1);
     topLayout->addWidget(mGravatarConfigureSettings);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &GravatarConfigureSettingsDialog::save);
