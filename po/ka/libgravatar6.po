@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 00:50+0000\n"
+"POT-Creation-Date: 2024-04-03 00:38+0000\n"
 "PO-Revision-Date: 2022-09-12 20:30+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,35 +18,35 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:21
+#: widgets/gravatarconfiguresettingsdialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
 msgstr "Gravatar-ის მორგება"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:28
+#: widgets/gravatarconfiguresettingswidget.cpp:30
 #, kde-format
 msgid "Use Default Image"
 msgstr "ნაგულისხმები გამოსახულების გამოყენება"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:32
-#: widgets/gravatardownloadpixmapwidget.cpp:32
+#: widgets/gravatarconfiguresettingswidget.cpp:34
+#: widgets/gravatardownloadpixmapwidget.cpp:34
 #, kde-format
 msgid "Use Libravatar"
 msgstr "Libravatar-ის გამოყენება"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:36
-#: widgets/gravatardownloadpixmapwidget.cpp:36
+#: widgets/gravatarconfiguresettingswidget.cpp:38
+#: widgets/gravatardownloadpixmapwidget.cpp:38
 #, kde-format
 msgid "Fallback to Gravatar"
 msgstr "Gravatar-ზე დაბრუნება"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:44
+#: widgets/gravatarconfiguresettingswidget.cpp:46
 #, kde-format
 msgid "Gravatar Cache Size:"
 msgstr "Gravatar-ის ქეშის ზომა:"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:51
+#: widgets/gravatarconfiguresettingswidget.cpp:53
 #, kde-format
 msgctxt "add space before image"
 msgid " image"
@@ -54,22 +54,22 @@ msgid_plural " images"
 msgstr[0] " გამოსახულება"
 msgstr[1] " გამოსახულება"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:62
+#: widgets/gravatarconfiguresettingswidget.cpp:64
 #, kde-format
 msgid "Clear Gravatar Cache"
 msgstr "Gravatar-ის ქეშის გასუფთავება"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:24
+#: widgets/gravatardownloadpixmapwidget.cpp:26
 #, kde-format
 msgid "Email:"
 msgstr "ელ-ფოსტა:"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:40
+#: widgets/gravatardownloadpixmapwidget.cpp:42
 #, kde-format
 msgid "&Search"
 msgstr "&ძებნა"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:69
+#: widgets/gravatardownloadpixmapwidget.cpp:71
 #, kde-format
 msgid "No Gravatar found."
 msgstr "Gravatar-ის გარეშე."

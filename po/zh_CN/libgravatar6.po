@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 00:50+0000\n"
+"POT-Creation-Date: 2024-04-03 00:38+0000\n"
 "PO-Revision-Date: 2024-03-30 19:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,57 +17,57 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/libgravatar/libgravatar6.pot\n"
 "X-Crowdin-File-ID: 49086\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:21
+#: widgets/gravatarconfiguresettingsdialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
 msgstr "配置 Gravator"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:28
+#: widgets/gravatarconfiguresettingswidget.cpp:30
 #, kde-format
 msgid "Use Default Image"
 msgstr "使用默认图像"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:32
-#: widgets/gravatardownloadpixmapwidget.cpp:32
+#: widgets/gravatarconfiguresettingswidget.cpp:34
+#: widgets/gravatardownloadpixmapwidget.cpp:34
 #, kde-format
 msgid "Use Libravatar"
 msgstr "使用 Libravatar"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:36
-#: widgets/gravatardownloadpixmapwidget.cpp:36
+#: widgets/gravatarconfiguresettingswidget.cpp:38
+#: widgets/gravatardownloadpixmapwidget.cpp:38
 #, kde-format
 msgid "Fallback to Gravatar"
 msgstr "将 Gravatar 作为备用源"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:44
+#: widgets/gravatarconfiguresettingswidget.cpp:46
 #, kde-format
 msgid "Gravatar Cache Size:"
 msgstr "Gravatar 缓存大小："
 
-#: widgets/gravatarconfiguresettingswidget.cpp:51
+#: widgets/gravatarconfiguresettingswidget.cpp:53
 #, kde-format
 msgctxt "add space before image"
 msgid " image"
 msgid_plural " images"
 msgstr[0] " 个图像"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:62
+#: widgets/gravatarconfiguresettingswidget.cpp:64
 #, kde-format
 msgid "Clear Gravatar Cache"
 msgstr "清空 Gravatar 缓存"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:24
+#: widgets/gravatardownloadpixmapwidget.cpp:26
 #, kde-format
 msgid "Email:"
 msgstr "电子邮件："
 
-#: widgets/gravatardownloadpixmapwidget.cpp:40
+#: widgets/gravatardownloadpixmapwidget.cpp:42
 #, kde-format
 msgid "&Search"
 msgstr "搜索(&S)"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:69
+#: widgets/gravatardownloadpixmapwidget.cpp:71
 #, kde-format
 msgid "No Gravatar found."
 msgstr "未找到 Gravatar。"
