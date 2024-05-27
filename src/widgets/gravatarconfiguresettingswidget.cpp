@@ -43,7 +43,7 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
 
     auto cacheSizeLayout = new QHBoxLayout;
     topLayout->addLayout(cacheSizeLayout);
-    auto lab = new QLabel(i18n("Gravatar Cache Size:"), this);
+    auto lab = new QLabel(i18nc("@label:textbox", "Gravatar Cache Size:"), this);
     lab->setObjectName("gravatarcachesizelabel"_L1);
     cacheSizeLayout->addWidget(lab);
 

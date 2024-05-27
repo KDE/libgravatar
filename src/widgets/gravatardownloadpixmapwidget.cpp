@@ -23,7 +23,7 @@ GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     auto hbox = new QHBoxLayout;
     mainLayout->addLayout(hbox);
-    auto lab = new QLabel(i18n("Email:"));
+    auto lab = new QLabel(i18nc("@label:textbox", "Email:"));
     lab->setObjectName("labemail"_L1);
     hbox->addWidget(lab);
     mLineEdit = new QLineEdit;
