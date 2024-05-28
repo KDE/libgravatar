@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2023-09-27 00:03+0530\n"
 "Last-Translator: \n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,9 @@ msgid "Fallback to Gravatar"
 msgstr "ग्रावतारं प्रति पतनम्"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gravatar Cache Size:"
+msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Gravatar Cache आकारः :"
 
@@ -61,7 +63,9 @@ msgid "Clear Gravatar Cache"
 msgstr "Gravatar Cache स्वच्छं कुर्वन्तु"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "ईमेलः :"
 

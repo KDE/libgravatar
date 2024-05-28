@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2021-01-13 16:09+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -47,7 +47,9 @@ msgid "Fallback to Gravatar"
 msgstr "Gravatar en solution de secours"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gravatar Cache Size:"
+msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Taille du cache de Gravatar : "
 
@@ -65,7 +67,9 @@ msgid "Clear Gravatar Cache"
 msgstr "Vider le cache Gravatar"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "Courriel : "
 

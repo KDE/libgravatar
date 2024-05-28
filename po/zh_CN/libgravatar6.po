@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -41,7 +41,9 @@ msgid "Fallback to Gravatar"
 msgstr "将 Gravatar 作为备用源"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gravatar Cache Size:"
+msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Gravatar 缓存大小："
 
@@ -58,7 +60,9 @@ msgid "Clear Gravatar Cache"
 msgstr "清空 Gravatar 缓存"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "电子邮件："
 

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2020-06-14 13:56+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -43,7 +43,9 @@ msgid "Fallback to Gravatar"
 msgstr "Fall tilbake til Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gravatar Cache Size:"
+msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Storleik på Gravatar-mellomlager:"
 
@@ -61,7 +63,9 @@ msgid "Clear Gravatar Cache"
 msgstr "Tøm Gravatar-mellomlager"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-postadresse:"
 

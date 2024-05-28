@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2022-04-15 14:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -43,7 +43,9 @@ msgid "Fallback to Gravatar"
 msgstr "Gravatar Yedeği"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Gravatar Cache Size:"
+msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Gravatar Önbellek Boyutu:"
 
@@ -61,7 +63,9 @@ msgid "Clear Gravatar Cache"
 msgstr "Gravatar Önbelleğini Temizle"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-posta:"
 
