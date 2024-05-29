@@ -41,11 +41,10 @@ msgid "Fallback to Gravatar"
 msgstr "将 Gravatar 作为备用源"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Gravatar Cache Size:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
-msgstr "Gravatar 缓存大小："
+msgstr ""
 
 #: widgets/gravatarconfiguresettingswidget.cpp:53
 #, kde-format
@@ -60,11 +59,10 @@ msgid "Clear Gravatar Cache"
 msgstr "清空 Gravatar 缓存"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
-msgstr "电子邮件："
+msgstr ""
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
 #, kde-format
