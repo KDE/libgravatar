@@ -43,7 +43,7 @@ msgstr "将 Gravatar 作为备用源"
 #: widgets/gravatarconfiguresettingswidget.cpp:46
 #, kde-format
 msgid "Gravatar Cache Size:"
-msgstr "Gravatar 缓存大小："
+msgstr ""
 
 #: widgets/gravatarconfiguresettingswidget.cpp:53
 #, kde-format
@@ -60,7 +60,7 @@ msgstr "清空 Gravatar 缓存"
 #: widgets/gravatardownloadpixmapwidget.cpp:26
 #, kde-format
 msgid "Email:"
-msgstr "电子邮件："
+msgstr ""
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
 #, kde-format
