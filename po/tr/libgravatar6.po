@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2022-04-15 14:45+0300\n"
+"PO-Revision-Date: 2024-05-29 13:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.07.70\n"
 "X-POOTLE-MTIME: 1502202876.000000\n"
 
 #: widgets/gravatarconfiguresettingsdialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
-msgstr "Gravatar'ı Yapılandır"
+msgstr "Gravatar’ı Yapılandır"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:30
 #, kde-format
 msgid "Use Default Image"
-msgstr "Varsayılan Görseli Kullan"
+msgstr "Öntanımlı Görseli Kullan"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:34
 #: widgets/gravatardownloadpixmapwidget.cpp:34
@@ -43,11 +43,10 @@ msgid "Fallback to Gravatar"
 msgstr "Gravatar Yedeği"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Gravatar Cache Size:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
-msgstr "Gravatar Önbellek Boyutu:"
+msgstr "Gravatar önbelleği boyutu:"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:53
 #, kde-format
@@ -63,8 +62,7 @@ msgid "Clear Gravatar Cache"
 msgstr "Gravatar Önbelleğini Temizle"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-posta:"
