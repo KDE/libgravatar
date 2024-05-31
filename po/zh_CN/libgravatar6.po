@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
-msgstr "配置 Gravator"
+msgstr "配置 Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:30
 #, kde-format
@@ -38,29 +38,29 @@ msgstr "使用 Libravatar"
 #: widgets/gravatardownloadpixmapwidget.cpp:38
 #, kde-format
 msgid "Fallback to Gravatar"
-msgstr "将 Gravatar 作为备用源"
+msgstr "退而使用 Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:46
 #, kde-format
 msgid "Gravatar Cache Size:"
-msgstr ""
+msgstr "Gravatar 缓存大小："
 
 #: widgets/gravatarconfiguresettingswidget.cpp:53
 #, kde-format
 msgctxt "add space before image"
 msgid " image"
 msgid_plural " images"
-msgstr[0] " 个图像"
+msgstr[0] " 张图像"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:64
 #, kde-format
 msgid "Clear Gravatar Cache"
-msgstr "清空 Gravatar 缓存"
+msgstr "清除 Gravatar 缓存"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
 #, kde-format
 msgid "Email:"
-msgstr ""
+msgstr "电子邮件："
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
 #, kde-format
@@ -70,4 +70,4 @@ msgstr "搜索(&S)"
 #: widgets/gravatardownloadpixmapwidget.cpp:71
 #, kde-format
 msgid "No Gravatar found."
-msgstr "未找到 Gravatar。"
+msgstr "没有找到 Gravatar。"
