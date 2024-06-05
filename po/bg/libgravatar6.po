@@ -1,87 +1,76 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the libgravatar package.
 #
-# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
-# SPDX-FileCopyrightText: 2021, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2024-05-30 07:16+0400\n"
-"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
-"Language: ar\n"
+"PO-Revision-Date: 2024-06-04 13:52+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: widgets/gravatarconfiguresettingsdialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
-msgstr "اضبط «غرافاتار»"
+msgstr "Конфигуриране на Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:30
 #, kde-format
 msgid "Use Default Image"
-msgstr "استخدم الصّورة المبدئيّة"
+msgstr "Използване на изображение по подразбиране"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:34
 #: widgets/gravatardownloadpixmapwidget.cpp:34
 #, kde-format
 msgid "Use Libravatar"
-msgstr "استخدم Libravatar"
+msgstr "Използване на Libravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:38
 #: widgets/gravatardownloadpixmapwidget.cpp:38
 #, kde-format
 msgid "Fallback to Gravatar"
-msgstr "استخدم «غرافاتار» كاحتياط"
+msgstr "Връщане към Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:46
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
-msgstr "حجم خبيئة «غرافاتار»:"
+msgstr "Размер на кеша на Gravatar:"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:53
 #, kde-format
 msgctxt "add space before image"
 msgid " image"
 msgid_plural " images"
-msgstr[0] " (لا صور)"
-msgstr[1] " (صورة واحدة)"
-msgstr[2] " (صورتان)"
-msgstr[3] " صور"
-msgstr[4] " صورة"
-msgstr[5] " صورة"
+msgstr[0] " изображение"
+msgstr[1] " изображения"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:64
 #, kde-format
 msgid "Clear Gravatar Cache"
-msgstr "امسح خبيئة «غرافاتار»"
+msgstr "Изчистване на кеша на Gravatar"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
-msgstr "البريد الإلكترونيّ:"
+msgstr "Е-поща:"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
 #, kde-format
 msgid "&Search"
-msgstr "اب&حث"
+msgstr "Т&ърсене"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:71
 #, kde-format
 msgid "No Gravatar found."
-msgstr "لم يُعثر على «غرافاتار»."
-
-#~ msgid "Enable Gravatar Support"
-#~ msgstr "فعّل دعم «غرافاتار»"
-
-#~ msgid "Configure..."
-#~ msgstr "اضبط..."
+msgstr "Не е намерен Gravatar."
