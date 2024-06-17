@@ -39,7 +39,7 @@ GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
     mFallbackGravatar->setObjectName("fallbackgravatar"_L1);
     mainLayout->addWidget(mFallbackGravatar);
 
-    mGetPixmapButton = new QPushButton(i18n("&Search"));
+    mGetPixmapButton = new QPushButton(i18nc("@action:button", "&Search"));
     mGetPixmapButton->setObjectName("searchbutton"_L1);
     connect(mGetPixmapButton, &QAbstractButton::clicked, this, &GravatarDownloadPixmapWidget::slotSearchButton);
     hbox->addWidget(mGetPixmapButton);
