@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-05-28 16:24+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -56,7 +56,9 @@ msgstr[0] " imagen"
 msgstr[1] " imágenes"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Gravatar Cache"
+msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "Borrar caché de Gravatar"
 
@@ -67,7 +69,9 @@ msgid "Email:"
 msgstr "Correo:"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Search"
+msgctxt "@action:button"
 msgid "&Search"
 msgstr "&Buscar"
 

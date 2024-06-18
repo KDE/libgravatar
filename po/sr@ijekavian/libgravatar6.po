@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2015-10-16 19:04+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -61,7 +61,9 @@ msgstr[2] " слика"
 msgstr[3] " слика"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Gravatar Cache"
+msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "Очисти кеш граватара"
 
@@ -73,7 +75,9 @@ msgid "Email:"
 msgstr "Е‑пошта:"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Search"
+msgctxt "@action:button"
 msgid "&Search"
 msgstr "&Тражи"
 

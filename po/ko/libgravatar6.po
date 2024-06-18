@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2020-01-29 00:42+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -55,7 +55,9 @@ msgid_plural " images"
 msgstr[0] "개"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Gravatar Cache"
+msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "Gravatar 캐시 삭제"
 
@@ -67,7 +69,9 @@ msgid "Email:"
 msgstr "이메일:"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Search"
+msgctxt "@action:button"
 msgid "&Search"
 msgstr "검색(&S)"
 
