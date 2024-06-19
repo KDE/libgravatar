@@ -54,11 +54,10 @@ msgid_plural " images"
 msgstr[0] " 张图像"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:64
-#, fuzzy, kde-format
-#| msgid "Clear Gravatar Cache"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
-msgstr "清除 Gravatar 缓存"
+msgstr ""
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
 #, kde-format
@@ -67,11 +66,10 @@ msgid "Email:"
 msgstr "电子邮件："
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "&Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Search"
-msgstr "搜索(&S)"
+msgstr ""
 
 #: widgets/gravatardownloadpixmapwidget.cpp:71
 #, kde-format
