@@ -48,7 +48,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX GRAVATAR
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/gravatar_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6GravatarConfigVersion.cmake"
     SOVERSION 6
-    )
+)
 
 
 ########### Targets ###########
@@ -61,7 +61,7 @@ ecm_set_disabled_deprecation_versions(QT 6.7.0 KF 6.4.0)
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
-if (USE_UNITY_CMAKE_SUPPORT)
+if(USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
 endif()
 if(BUILD_TESTING)
@@ -73,13 +73,13 @@ add_subdirectory(src)
 
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6Gravatar")
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KPim6Gravatar_QCH
         FILE KPim6GravatarQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
-    )
+)
     set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6GravatarQchTargets.cmake\")")
 endif()
 
@@ -87,14 +87,14 @@ configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimGravatarConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6GravatarConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    )
+)
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6GravatarConfig.cmake"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6GravatarConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
-    )
+)
 
 install(EXPORT KPim6GravatarTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     FILE KPim6GravatarTargets.cmake NAMESPACE KPim6::)
@@ -102,9 +102,9 @@ install(EXPORT KPim6GravatarTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/src/gravatar_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/Gravatar COMPONENT Devel
-    )
+)
 
-if (BUILD_TESTING)
+if(BUILD_TESTING)
     find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
     add_subdirectory(autotests)
     add_subdirectory(tests)

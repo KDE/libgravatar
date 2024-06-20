@@ -32,7 +32,7 @@ kconfig_add_kcfg_files(KPim6Gravatar
     settings/gravatarsettings.kcfgc
 )
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6Gravatar PROPERTIES UNITY_BUILD ON)
 endif()
 ecm_generate_export_header(KPim6Gravatar
@@ -114,7 +114,7 @@ install(FILES
 ecm_qt_install_logging_categories(EXPORT GRAVATAR FILE libgravatar.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_add_qch(
         KPim6Gravatar_QCH
         NAME KPim6Gravatar
@@ -139,5 +139,5 @@ if (BUILD_QCH)
         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
-    )
+)
 endif()
