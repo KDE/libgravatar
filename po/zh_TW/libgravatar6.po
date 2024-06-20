@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-30 02:34+0900\n"
+"PO-Revision-Date: 2024-06-20 02:43+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
@@ -54,8 +54,7 @@ msgid_plural " images"
 msgstr[0] " 個影像"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:64
-#, fuzzy, kde-format
-#| msgid "Clear Gravatar Cache"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "清空 Gravatar 快取"
@@ -67,8 +66,7 @@ msgid "Email:"
 msgstr "電子郵件："
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "&Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Search"
 msgstr "搜尋(&S)"
