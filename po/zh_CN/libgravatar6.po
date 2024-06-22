@@ -55,7 +55,7 @@ msgstr[0] " 张图像"
 #: widgets/gravatarconfiguresettingswidget.cpp:64
 #, kde-format
 msgid "Clear Gravatar Cache"
-msgstr ""
+msgstr "清除 Gravatar 缓存"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
 #, kde-format
@@ -65,7 +65,7 @@ msgstr "电子邮件："
 #: widgets/gravatardownloadpixmapwidget.cpp:42
 #, kde-format
 msgid "&Search"
-msgstr ""
+msgstr "搜索(&S)"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:71
 #, kde-format
