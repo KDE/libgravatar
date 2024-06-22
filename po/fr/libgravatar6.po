@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-29 08:46+0200\n"
+"PO-Revision-Date: 2024-06-20 18:34+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -61,11 +61,10 @@ msgstr[0] " image"
 msgstr[1] " images"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:64
-#, fuzzy, kde-format
-#| msgid "Clear Gravatar Cache"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
-msgstr "Vider le cache Gravatar"
+msgstr "Vider le cache de Gravatar"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
 #, kde-format
@@ -74,8 +73,7 @@ msgid "Email:"
 msgstr "Courriel :"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "&Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Search"
 msgstr "&Rechercher"
