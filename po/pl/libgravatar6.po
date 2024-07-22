@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-06-01 08:57+0200\n"
+"PO-Revision-Date: 2024-07-21 07:17+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -52,13 +52,12 @@ msgstr "Rozmiar pamięci na Gravatary:"
 msgctxt "add space before image"
 msgid " image"
 msgid_plural " images"
-msgstr[0] "obraz"
+msgstr[0] " obraz"
 msgstr[1] " obrazy"
 msgstr[2] " obrazów"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:64
-#, fuzzy, kde-format
-#| msgid "Clear Gravatar Cache"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "Wyczyść pamięć Gravatarów"
@@ -70,8 +69,7 @@ msgid "Email:"
 msgstr "E-mail:"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "&Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Search"
 msgstr "Po&szukaj"
