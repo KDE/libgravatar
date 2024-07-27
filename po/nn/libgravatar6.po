@@ -1,12 +1,11 @@
 # Translation of libgravatar6 to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2020-06-14 13:56+0200\n"
+"PO-Revision-Date: 2024-07-26 15:09+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -43,8 +42,7 @@ msgid "Fallback to Gravatar"
 msgstr "Fall tilbake til Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Gravatar Cache Size:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Storleik på Gravatar-mellomlager:"
@@ -58,22 +56,19 @@ msgstr[0] " bilete"
 msgstr[1] " bilete"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:64
-#, fuzzy, kde-format
-#| msgid "Clear Gravatar Cache"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "Tøm Gravatar-mellomlager"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-postadresse:"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "&Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Search"
 msgstr "&Søk"
