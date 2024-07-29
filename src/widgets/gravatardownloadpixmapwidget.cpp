@@ -31,11 +31,11 @@ GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
     connect(mLineEdit, &QLineEdit::textChanged, this, &GravatarDownloadPixmapWidget::slotTextChanged);
     hbox->addWidget(mLineEdit);
 
-    mUseLibravatar = new QCheckBox(i18n("Use Libravatar"), this);
+    mUseLibravatar = new QCheckBox(i18nc("@option:check", "Use Libravatar"), this);
     mUseLibravatar->setObjectName("uselibravatar"_L1);
     mainLayout->addWidget(mUseLibravatar);
 
-    mFallbackGravatar = new QCheckBox(i18n("Fallback to Gravatar"), this);
+    mFallbackGravatar = new QCheckBox(i18nc("@option:check", "Fallback to Gravatar"), this);
     mFallbackGravatar->setObjectName("fallbackgravatar"_L1);
     mainLayout->addWidget(mFallbackGravatar);
 

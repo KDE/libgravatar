@@ -27,15 +27,15 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     auto topLayout = new QVBoxLayout(this);
     topLayout->setObjectName("mainlayout"_L1);
     topLayout->setContentsMargins(0, 0, 0, 0);
-    mUseDefaultPixmap = new QCheckBox(i18n("Use Default Image"), this);
+    mUseDefaultPixmap = new QCheckBox(i18nc("@option:check", "Use Default Image"), this);
     mUseDefaultPixmap->setObjectName("kcfg_GravatarUseDefaultImage"_L1);
     topLayout->addWidget(mUseDefaultPixmap);
 
-    mUseLibravatar = new QCheckBox(i18n("Use Libravatar"), this);
+    mUseLibravatar = new QCheckBox(i18nc("@option:check", "Use Libravatar"), this);
     mUseLibravatar->setObjectName("kcfg_LibravatarSupportEnabled"_L1);
     topLayout->addWidget(mUseLibravatar);
 
-    mFallbackGravatar = new QCheckBox(i18n("Fallback to Gravatar"), this);
+    mFallbackGravatar = new QCheckBox(i18nc("@option:check", "Fallback to Gravatar"), this);
     mFallbackGravatar->setObjectName("kcfg_FallbackToGravatar"_L1);
     topLayout->addWidget(mFallbackGravatar);
     connect(mUseLibravatar, &QCheckBox::toggled, mFallbackGravatar, &QCheckBox::setEnabled);
