@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2024-06-18 09:23+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -27,19 +27,25 @@ msgid "Configure Gravatar"
 msgstr "Nastavi Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use Default Image"
+msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "Uporabi privzeto sliko"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:34
 #: widgets/gravatardownloadpixmapwidget.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use Libravatar"
+msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Uporabi Libravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:38
 #: widgets/gravatardownloadpixmapwidget.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Fallback to Gravatar"
+msgctxt "@option:check"
 msgid "Fallback to Gravatar"
 msgstr "Zasilno uporabi Gravatar"
 

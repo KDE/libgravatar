@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2023-09-27 00:03+0530\n"
 "Last-Translator: \n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -26,19 +26,25 @@ msgid "Configure Gravatar"
 msgstr "ग्रावतारं विन्यस्यताम्"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use Default Image"
+msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "पूर्वनिर्धारितप्रतिमायाः उपयोगं कुर्वन्तु"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:34
 #: widgets/gravatardownloadpixmapwidget.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use Libravatar"
+msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Libravatar प्रयोगः"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:38
 #: widgets/gravatardownloadpixmapwidget.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Fallback to Gravatar"
+msgctxt "@option:check"
 msgid "Fallback to Gravatar"
 msgstr "ग्रावतारं प्रति पतनम्"
 

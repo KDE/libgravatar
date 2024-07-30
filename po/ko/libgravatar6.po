@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2020-01-29 00:42+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -24,19 +24,25 @@ msgid "Configure Gravatar"
 msgstr "Gravatar 설정"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use Default Image"
+msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "기본 그림 사용"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:34
 #: widgets/gravatardownloadpixmapwidget.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use Libravatar"
+msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Libravatar 사용"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:38
 #: widgets/gravatardownloadpixmapwidget.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Fallback to Gravatar"
+msgctxt "@option:check"
 msgid "Fallback to Gravatar"
 msgstr "Gravatar로 폴백"
 
