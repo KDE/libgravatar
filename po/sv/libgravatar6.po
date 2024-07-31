@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-06-19 20:53+0200\n"
+"PO-Revision-Date: 2024-07-30 07:03+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: widgets/gravatarconfiguresettingsdialog.cpp:23
 #, kde-format
@@ -24,27 +24,24 @@ msgid "Configure Gravatar"
 msgstr "Anpassa Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Use Default Image"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "Använd standardbild"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:34
 #: widgets/gravatardownloadpixmapwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Use Libravatar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Använd Libravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:38
 #: widgets/gravatardownloadpixmapwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "Fallback to Gravatar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
-msgstr "Återgå till Gravatar"
+msgstr "Använd Gravatar som reservalternativ"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:46
 #, kde-format

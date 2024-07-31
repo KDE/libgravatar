@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-06-18 06:03+0200\n"
+"PO-Revision-Date: 2024-07-30 06:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -25,24 +25,21 @@ msgid "Configure Gravatar"
 msgstr "Gravatar-ის მორგება"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Use Default Image"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "ნაგულისხმები გამოსახულების გამოყენება"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:34
 #: widgets/gravatardownloadpixmapwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Use Libravatar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Libravatar-ის გამოყენება"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:38
 #: widgets/gravatardownloadpixmapwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "Fallback to Gravatar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
 msgstr "Gravatar-ზე დაბრუნება"

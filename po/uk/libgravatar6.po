@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-06-18 08:43+0300\n"
+"PO-Revision-Date: 2024-07-30 09:57+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,24 +27,21 @@ msgid "Configure Gravatar"
 msgstr "Налаштовування Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Use Default Image"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "Використовувати типове зображення"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:34
 #: widgets/gravatardownloadpixmapwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Use Libravatar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Використовувати Libravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:38
 #: widgets/gravatardownloadpixmapwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "Fallback to Gravatar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
 msgstr "Резервний Gravatar"
