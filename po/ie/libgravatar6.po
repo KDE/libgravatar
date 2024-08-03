@@ -1,97 +1,81 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the libgravatar package,
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2018, 2019, 2024.
-# or according LGPL version 2.1 or later.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the libgravatar package.
 #
+# SPDX-FileCopyrightText: 2024 OIS <mistresssilvara@hotmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-07-31 22:29+0200\n"
-"Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
-"Language-Team: Italian <kde-i18n-it@kde.org>\n"
-"Language: it\n"
+"PO-Revision-Date: 2024-08-02 14:16+0700\n"
+"Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
+"Language-Team: Interlingue <>\n"
+"Language: ie\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: widgets/gravatarconfiguresettingsdialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
-msgstr "Configura Gravatar"
+msgstr "Configurar Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:30
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
-msgstr "Usa l'immagine predefinita"
+msgstr "Usar li image predefinit"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:34
 #: widgets/gravatardownloadpixmapwidget.cpp:34
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
-msgstr "Usa Libravatar"
+msgstr "Usar Libgravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:38
 #: widgets/gravatardownloadpixmapwidget.cpp:38
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
-msgstr "Ripiega su Gravatar"
+msgstr "A"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:46
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
-msgstr "Dimensione cache di Gravatar:"
+msgstr "Grandore del cache de Gravatar:"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:53
 #, kde-format
 msgctxt "add space before image"
 msgid " image"
 msgid_plural " images"
-msgstr[0] " immagine"
-msgstr[1] " immagini"
+msgstr[0] " image"
+msgstr[1] " images"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
-msgstr "Pulisci la cache di Gravatar"
+msgstr "Vacuar li cache de Gravatar"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
-msgstr "Posta elettronica:"
+msgstr "E-post:"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
 #, kde-format
 msgctxt "@action:button"
 msgid "&Search"
-msgstr "&Cerca"
+msgstr "&Serchar"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:71
 #, kde-format
 msgid "No Gravatar found."
-msgstr "Nessun Gravatar trovato."
-
-#~ msgid "Enable Gravatar Support"
-#~ msgstr "Abilita il supporto per Gravatar"
-
-#~ msgid "Configure..."
-#~ msgstr "Configura..."
-
-#~ msgid "Libravatar will be shutdown the 1st september 2018"
-#~ msgstr "Libravatar chiuderà il 1 settembre 2018"
-
-#~ msgid "Use HTTPS Protocol"
-#~ msgstr "Usa il protocollo HTTPS"
-
-#~ msgid "Use HTTPS"
-#~ msgstr "Usa HTTPS"
+msgstr "Null Gravatar esset trovat."
