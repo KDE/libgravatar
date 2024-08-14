@@ -6,11 +6,11 @@
 
 #include "gravatarconfiguresettingswidgettest.h"
 #include "../src/widgets/gravatarconfiguresettingswidget.h"
-#include <KPluralHandlingSpinBox>
 #include <KSeparator>
 #include <QCheckBox>
 #include <QLabel>
 #include <QPushButton>
+#include <QSpinBox>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -38,7 +38,7 @@ void GravatarConfigureSettingsWidgetTest::shouldHaveDefaultValues()
     auto lab = w.findChild<QLabel *>(QStringLiteral("gravatarcachesizelabel"));
     QVERIFY(lab);
 
-    auto gravatarCacheSize = w.findChild<KPluralHandlingSpinBox *>(QStringLiteral("kcfg_GravatarCacheSize"));
+    auto gravatarCacheSize = w.findChild<QSpinBox *>(QStringLiteral("kcfg_GravatarCacheSize"));
     QVERIFY(gravatarCacheSize);
 
     auto separator = w.findChild<KSeparator *>(QStringLiteral("separator"));

@@ -10,14 +10,16 @@ using namespace Qt::Literals::StringLiterals;
 #include "gravatarsettings.h"
 #include <Gravatar/GravatarCache>
 #include <KConfigDialogManager>
+#include <KLocalization>
 #include <KLocalizedString>
-#include <KPluralHandlingSpinBox>
 #include <KSeparator>
 #include <QCheckBox>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
+#include <QSpinBox>
 #include <QVBoxLayout>
+#include <ki18n_version.h>
 
 using namespace Gravatar;
 
@@ -47,10 +49,12 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     lab->setObjectName("gravatarcachesizelabel"_L1);
     cacheSizeLayout->addWidget(lab);
 
-    mGravatarCacheSize = new KPluralHandlingSpinBox(this);
+    mGravatarCacheSize = new QSpinBox(this);
     mGravatarCacheSize->setMinimum(1);
     mGravatarCacheSize->setMaximum(9999);
-    mGravatarCacheSize->setSuffix(ki18ncp("add space before image", " image", " images"));
+#if KI18N_VERSION > QT_VERSION_CHECK(6, 5, 0)
+    KLocalization::setupSpinBoxFormatString(mGravatarCacheSize, ki18ncp("add space before image", " image", " images"));
+#endif
     mGravatarCacheSize->setObjectName("kcfg_GravatarCacheSize"_L1);
     cacheSizeLayout->addWidget(mGravatarCacheSize);
     cacheSizeLayout->addStretch();

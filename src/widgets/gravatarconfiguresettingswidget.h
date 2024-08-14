@@ -10,7 +10,7 @@
 #include <QWidget>
 class QCheckBox;
 class QPushButton;
-class KPluralHandlingSpinBox;
+class QSpinBox;
 class KConfigDialogManager;
 namespace Gravatar
 {
@@ -29,7 +29,7 @@ private:
     GRAVATAR_NO_EXPORT void slotClearGravatarCache();
     QCheckBox *mUseDefaultPixmap = nullptr;
     QPushButton *mClearGravatarCache = nullptr;
-    KPluralHandlingSpinBox *mGravatarCacheSize = nullptr;
+    QSpinBox *mGravatarCacheSize = nullptr;
     QCheckBox *mUseLibravatar = nullptr;
     QCheckBox *mFallbackGravatar = nullptr;
     KConfigDialogManager *m_configDialogManager = nullptr;
