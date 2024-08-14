@@ -48,7 +48,6 @@ target_link_libraries(KPim6Gravatar
     KF6::WidgetsAddons
     KF6::ConfigGui
     KPim6::PimCommon
-    KF6::TextWidgets
 )
 target_include_directories(KPim6Gravatar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/Gravatar/>")
 
