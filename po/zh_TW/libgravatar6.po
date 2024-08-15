@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:42+0000\n"
+"POT-Creation-Date: 2024-08-15 00:40+0000\n"
 "PO-Revision-Date: 2024-08-03 14:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -23,40 +23,40 @@ msgctxt "@title:window"
 msgid "Configure Gravatar"
 msgstr "設定 Gravatar"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:30
+#: widgets/gravatarconfiguresettingswidget.cpp:32
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "使用預設影像"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:34
+#: widgets/gravatarconfiguresettingswidget.cpp:36
 #: widgets/gravatardownloadpixmapwidget.cpp:34
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "使用 Libravatar"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:38
+#: widgets/gravatarconfiguresettingswidget.cpp:40
 #: widgets/gravatardownloadpixmapwidget.cpp:38
 #, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
 msgstr "退回到 Gravatar"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:46
+#: widgets/gravatarconfiguresettingswidget.cpp:48
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Gravatar 快取大小："
 
-#: widgets/gravatarconfiguresettingswidget.cpp:53
+#: widgets/gravatarconfiguresettingswidget.cpp:56
 #, kde-format
 msgctxt "add space before image"
 msgid " image"
 msgid_plural " images"
 msgstr[0] " 個影像"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:64
+#: widgets/gravatarconfiguresettingswidget.cpp:68
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"

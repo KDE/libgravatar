@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:42+0000\n"
+"POT-Creation-Date: 2024-08-15 00:40+0000\n"
 "PO-Revision-Date: 2024-07-30 09:57+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -26,33 +26,33 @@ msgctxt "@title:window"
 msgid "Configure Gravatar"
 msgstr "Налаштовування Gravatar"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:30
+#: widgets/gravatarconfiguresettingswidget.cpp:32
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "Використовувати типове зображення"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:34
+#: widgets/gravatarconfiguresettingswidget.cpp:36
 #: widgets/gravatardownloadpixmapwidget.cpp:34
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Використовувати Libravatar"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:38
+#: widgets/gravatarconfiguresettingswidget.cpp:40
 #: widgets/gravatardownloadpixmapwidget.cpp:38
 #, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
 msgstr "Резервний Gravatar"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:46
+#: widgets/gravatarconfiguresettingswidget.cpp:48
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Розмір кешу Gravatar:"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:53
+#: widgets/gravatarconfiguresettingswidget.cpp:56
 #, kde-format
 msgctxt "add space before image"
 msgid " image"
@@ -62,7 +62,7 @@ msgstr[1] " зображення"
 msgstr[2] " зображень"
 msgstr[3] " зображення"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:64
+#: widgets/gravatarconfiguresettingswidget.cpp:68
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"

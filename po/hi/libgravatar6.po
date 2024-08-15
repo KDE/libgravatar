@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:42+0000\n"
+"POT-Creation-Date: 2024-08-15 00:40+0000\n"
 "PO-Revision-Date: 2021-06-29 15:14+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -24,14 +24,14 @@ msgctxt "@title:window"
 msgid "Configure Gravatar"
 msgstr "ग्रैवतार विन्यस्त करें"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:30
+#: widgets/gravatarconfiguresettingswidget.cpp:32
 #, fuzzy, kde-format
 #| msgid "Use Default Image"
 msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "पूर्वन्यस्त छवि का प्रयोग करें"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:34
+#: widgets/gravatarconfiguresettingswidget.cpp:36
 #: widgets/gravatardownloadpixmapwidget.cpp:34
 #, fuzzy, kde-format
 #| msgid "Use Libravatar"
@@ -39,7 +39,7 @@ msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "लिब्रावतार का उपयोग करें"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:38
+#: widgets/gravatarconfiguresettingswidget.cpp:40
 #: widgets/gravatardownloadpixmapwidget.cpp:38
 #, fuzzy, kde-format
 #| msgid "Fallback to Gravatar"
@@ -47,14 +47,14 @@ msgctxt "@option:check"
 msgid "Fallback to Gravatar"
 msgstr "ग्रैवतार पर वापस जाएँ"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:46
+#: widgets/gravatarconfiguresettingswidget.cpp:48
 #, fuzzy, kde-format
 #| msgid "Gravatar Cache Size:"
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "ग्रैवतार का कैशे आकार :"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:53
+#: widgets/gravatarconfiguresettingswidget.cpp:56
 #, kde-format
 msgctxt "add space before image"
 msgid " image"
@@ -62,7 +62,7 @@ msgid_plural " images"
 msgstr[0] "छवि"
 msgstr[1] "छवियाँ"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:64
+#: widgets/gravatarconfiguresettingswidget.cpp:68
 #, fuzzy, kde-format
 #| msgid "Clear Gravatar Cache"
 msgctxt "@action:button"
