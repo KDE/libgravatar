@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-15 00:40+0000\n"
+"POT-Creation-Date: 2024-08-17 00:40+0000\n"
 "PO-Revision-Date: 2015-10-13 08:03-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -49,8 +49,8 @@ msgstr ""
 #: widgets/gravatarconfiguresettingswidget.cpp:56
 #, kde-format
 msgctxt "add space before image"
-msgid " image"
-msgid_plural " images"
+msgid "%v image"
+msgid_plural "%v images"
 msgstr[0] ""
 
 #: widgets/gravatarconfiguresettingswidget.cpp:68
