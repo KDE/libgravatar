@@ -50,14 +50,11 @@ msgid "Gravatar Cache Size:"
 msgstr "Gravatar 缓存大小："
 
 #: widgets/gravatarconfiguresettingswidget.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "add space before image"
-#| msgid " image"
-#| msgid_plural " images"
+#, kde-format
 msgctxt "add space before image"
 msgid "%v image"
 msgid_plural "%v images"
-msgstr[0] " 张图像"
+msgstr[0] ""
 
 #: widgets/gravatarconfiguresettingswidget.cpp:68
 #, kde-format
