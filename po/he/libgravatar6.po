@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-17 00:40+0000\n"
-"PO-Revision-Date: 2024-07-30 09:59+0300\n"
+"PO-Revision-Date: 2024-08-18 08:12+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -51,17 +51,14 @@ msgid "Gravatar Cache Size:"
 msgstr "גודל מטמון Gravatar:"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "add space before image"
-#| msgid " image"
-#| msgid_plural " images"
+#, kde-format
 msgctxt "add space before image"
 msgid "%v image"
 msgid_plural "%v images"
-msgstr[0] " תמונה"
-msgstr[1] " תמונות"
-msgstr[2] " תמונות"
-msgstr[3] " תמונות"
+msgstr[0] "תמונה"
+msgstr[1] "שתי תמונות"
+msgstr[2] "%v תמונות"
+msgstr[3] "%v תמונות"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:68
 #, kde-format
