@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-17 00:40+0000\n"
-"PO-Revision-Date: 2024-07-30 17:30+0200\n"
+"PO-Revision-Date: 2024-08-19 15:16+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -51,15 +51,12 @@ msgid "Gravatar Cache Size:"
 msgstr "Tamaño da caché de Gravatar:"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "add space before image"
-#| msgid " image"
-#| msgid_plural " images"
+#, kde-format
 msgctxt "add space before image"
 msgid "%v image"
 msgid_plural "%v images"
-msgstr[0] " imaxe"
-msgstr[1] "imaxes"
+msgstr[0] "%v imaxe"
+msgstr[1] "%v imaxes"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:68
 #, kde-format
