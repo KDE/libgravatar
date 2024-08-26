@@ -52,9 +52,6 @@ msgstr "Storleik på Gravatar-mellomlager:"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:56
 #, fuzzy, kde-format
-#| msgctxt "add space before image"
-#| msgid " image"
-#| msgid_plural " images"
 msgctxt "add space before image"
 msgid "%v image"
 msgid_plural "%v images"
