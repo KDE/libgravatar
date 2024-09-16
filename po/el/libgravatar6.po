@@ -24,31 +24,27 @@ msgid "Configure Gravatar"
 msgstr "Διαμόρφωση του Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Use Default Image"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "Χρήση προκαθορισμένης εικόνας"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:36
 #: widgets/gravatardownloadpixmapwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Use Libravatar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Χρήση Libravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:40
 #: widgets/gravatardownloadpixmapwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "Fallback to Gravatar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
 msgstr "Μετάπτωση στο Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Gravatar Cache Size:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Μέγεθος προσωρινής μνήμης του Gravatar:"
@@ -65,22 +61,19 @@ msgstr[0] " εικόνα"
 msgstr[1] " εικόνες"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Clear Gravatar Cache"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "Καθαρισμός της προσωρινής μνήμης του Gravatar"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "Email:"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "&Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Search"
 msgstr "Αναζήτη&ση"
