@@ -19,7 +19,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QSpinBox>
 #include <QVBoxLayout>
-#include <ki18n_version.h>
 
 using namespace Gravatar;
 
