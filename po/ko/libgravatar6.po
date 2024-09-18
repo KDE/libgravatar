@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:40+0000\n"
+"POT-Creation-Date: 2024-09-18 00:40+0000\n"
 "PO-Revision-Date: 2024-08-21 00:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -23,40 +23,40 @@ msgctxt "@title:window"
 msgid "Configure Gravatar"
 msgstr "Gravatar 설정"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:32
+#: widgets/gravatarconfiguresettingswidget.cpp:31
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "기본 그림 사용"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:36
+#: widgets/gravatarconfiguresettingswidget.cpp:35
 #: widgets/gravatardownloadpixmapwidget.cpp:34
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Libravatar 사용"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:40
+#: widgets/gravatarconfiguresettingswidget.cpp:39
 #: widgets/gravatardownloadpixmapwidget.cpp:38
 #, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
 msgstr "Gravatar로 폴백"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:48
+#: widgets/gravatarconfiguresettingswidget.cpp:47
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Gravatar 캐시 크기:"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:56
+#: widgets/gravatarconfiguresettingswidget.cpp:55
 #, kde-format
 msgctxt "add space before image"
 msgid "%v image"
 msgid_plural "%v images"
 msgstr[0] "그림 %v개"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:68
+#: widgets/gravatarconfiguresettingswidget.cpp:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
