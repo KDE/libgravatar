@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-18 00:40+0000\n"
-"PO-Revision-Date: 2024-06-16 19:42+0530\n"
+"PO-Revision-Date: 2024-10-20 16:27+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: widgets/gravatarconfiguresettingsdialog.cpp:23
 #, kde-format
@@ -24,8 +24,7 @@ msgid "Configure Gravatar"
 msgstr ""
 
 #: widgets/gravatarconfiguresettingswidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Use Default Image"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "இயல்பிருப்பு படத்தைப் பயன்படுத்து"
@@ -51,15 +50,12 @@ msgid "Gravatar Cache Size:"
 msgstr ""
 
 #: widgets/gravatarconfiguresettingswidget.cpp:55
-#, fuzzy, kde-format
-#| msgctxt "add space before image"
-#| msgid " image"
-#| msgid_plural " images"
+#, kde-format
 msgctxt "add space before image"
 msgid "%v image"
 msgid_plural "%v images"
-msgstr[0] " படம்"
-msgstr[1] " படங்கள்"
+msgstr[0] "%v படம்"
+msgstr[1] "%v படங்கள்"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:67
 #, kde-format
@@ -74,8 +70,7 @@ msgid "Email:"
 msgstr "மின்னஞ்சல்:"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "&Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Search"
 msgstr "&தேடு"
