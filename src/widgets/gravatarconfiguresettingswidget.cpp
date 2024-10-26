@@ -51,9 +51,7 @@ GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent
     mGravatarCacheSize = new QSpinBox(this);
     mGravatarCacheSize->setMinimum(1);
     mGravatarCacheSize->setMaximum(9999);
-#if KI18N_VERSION > QT_VERSION_CHECK(6, 5, 0)
     KLocalization::setupSpinBoxFormatString(mGravatarCacheSize, ki18ncp("add space before image", "%v image", "%v images"));
-#endif
     mGravatarCacheSize->setObjectName("kcfg_GravatarCacheSize"_L1);
     cacheSizeLayout->addWidget(mGravatarCacheSize);
     cacheSizeLayout->addStretch();
