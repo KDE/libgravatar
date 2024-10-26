@@ -28,7 +28,11 @@ public:
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
     int mSize = 80;
 
-    enum Backend { None = 0x0, Libravatar = 0x1, Gravatar = 0x2 };
+    enum Backend {
+        None = 0x0,
+        Libravatar = 0x1,
+        Gravatar = 0x2
+    };
     int mBackends = Gravatar;
 
     bool mHasGravatar = false;

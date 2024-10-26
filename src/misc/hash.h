@@ -42,7 +42,11 @@ size_t qHash(const Hash &h, size_t seed = 0) noexcept;
 class GRAVATAR_TESTS_EXPORT Hash
 {
 public:
-    enum Type { Invalid, Md5, Sha256 };
+    enum Type {
+        Invalid,
+        Md5,
+        Sha256
+    };
     Hash();
     explicit Hash(const QByteArray &data, Type type);
 
