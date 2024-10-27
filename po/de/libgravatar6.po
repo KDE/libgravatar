@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-18 00:40+0000\n"
+"POT-Creation-Date: 2024-10-27 00:41+0000\n"
 "PO-Revision-Date: 2024-09-13 16:03+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -48,7 +48,7 @@ msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Gravatar-Zwischenspeicher-Größe:"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:55
+#: widgets/gravatarconfiguresettingswidget.cpp:54
 #, kde-format
 msgctxt "add space before image"
 msgid "%v image"
@@ -56,7 +56,7 @@ msgid_plural "%v images"
 msgstr[0] "%v Bild"
 msgstr[1] "%v Bilder"
 
-#: widgets/gravatarconfiguresettingswidget.cpp:67
+#: widgets/gravatarconfiguresettingswidget.cpp:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
