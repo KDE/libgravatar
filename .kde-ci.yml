@@ -5,7 +5,6 @@ Dependencies:
 - 'on': ['Linux', 'FreeBSD', 'Windows', 'macOS']
   'require':
     'frameworks/extra-cmake-modules': '@latest-kf6'
-    'frameworks/kconfigwidgets': '@latest-kf6'
     'pim/pimcommon' : '@same'
 
 Options:
