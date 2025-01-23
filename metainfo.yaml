@@ -1,5 +1,5 @@
 maintainer: mlaurent
-description: Gravatar Support Library 
+description: Gravatar Support Library
 tier: 3
 type: functional
 platforms:
@@ -11,7 +11,7 @@ portingAid: false
 deprecated: false
 release: false
 libraries:
- - cmake: "KPim6::Gravatar"
+    - cmake: "KPim6::Gravatar"
 cmakename: KPim6Gravatar
 group: kdepim
 public_lib: true
