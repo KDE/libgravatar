@@ -15,6 +15,8 @@ public:
     explicit GravatarResolvUrlJobTest(QObject *parent = nullptr);
     ~GravatarResolvUrlJobTest() override;
 
+    [[nodiscard]] bool isOnline() const;
+
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldChangeValue();
