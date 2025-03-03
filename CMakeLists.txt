@@ -38,14 +38,12 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 
 
 set(LIBGRAVATAR_LIB_VERSION ${PIM_VERSION})
-set(PIMCOMMON_LIB_VERSION "6.3.40")
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
+find_package(KF6CoreAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Config ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6WidgetsAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF6KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KPim6PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX GRAVATAR
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/gravatar_version.h"

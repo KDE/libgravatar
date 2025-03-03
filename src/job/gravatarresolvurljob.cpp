@@ -10,9 +10,9 @@ using namespace Qt::Literals::StringLiterals;
 #include "gravatar_debug.h"
 #include "misc/gravatarcache.h"
 #include "misc/hash.h"
-#include <PimCommon/NetworkManager>
 
 #include <QCryptographicHash>
+#include <QNetworkInformation>
 #include <QNetworkReply>
 #include <QUrlQuery>
 
@@ -43,18 +43,20 @@ GravatarResolvUrlJob::GravatarResolvUrlJob(QObject *parent)
     : QObject(parent)
     , d(new Gravatar::GravatarResolvUrlJobPrivate)
 {
+    QNetworkInformation::loadDefaultBackend();
 }
 
 GravatarResolvUrlJob::~GravatarResolvUrlJob() = default;
 
 bool GravatarResolvUrlJob::canStart() const
 {
-    if (PimCommon::NetworkManager::self()->isOnline()) {
-        // qCDebug(GRAVATAR_LOG) << "email " << d->mEmail;
-        return !d->mEmail.trimmed().isEmpty() && (d->mEmail.contains(QLatin1Char('@')));
-    } else {
+    if (auto info = QNetworkInformation::instance();
+        info && (info->reachability() != QNetworkInformation::Reachability::Online || info->isBehindCaptivePortal())) {
         return false;
     }
+
+    // qCDebug(GRAVATAR_LOG) << "email " << d->mEmail;
+    return !d->mEmail.trimmed().isEmpty() && (d->mEmail.contains(QLatin1Char('@')));
 }
 
 QUrl GravatarResolvUrlJob::generateGravatarUrl(bool useLibravatar)
