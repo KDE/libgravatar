@@ -113,11 +113,11 @@ void GravatarCache::saveMissingGravatar(const Hash &hash)
         break;
     case Hash::Md5:
         d->insertMissingHash(d->mMd5Misses, hash.md5());
-        d->saveVector(d->mMd5Misses, QStringLiteral("missing.md5"));
+        d->saveVector(d->mMd5Misses, u"missing.md5"_s);
         break;
     case Hash::Sha256:
         d->insertMissingHash(d->mSha256Misses, hash.sha256());
-        d->saveVector(d->mSha256Misses, QStringLiteral("missing.sha256"));
+        d->saveVector(d->mSha256Misses, u"missing.sha256"_s);
         break;
     }
 }
@@ -154,11 +154,11 @@ QPixmap GravatarCache::loadGravatarPixmap(const Hash &hash, bool &gravatarStored
     case Hash::Invalid:
         break;
     case Hash::Md5:
-        d->loadVector(d->mMd5Misses, QStringLiteral("missing.md5"));
+        d->loadVector(d->mMd5Misses, u"missing.md5"_s);
         gravatarStored = std::binary_search(d->mMd5Misses.begin(), d->mMd5Misses.end(), hash.md5());
         break;
     case Hash::Sha256:
-        d->loadVector(d->mSha256Misses, QStringLiteral("missing.sha256"));
+        d->loadVector(d->mSha256Misses, u"missing.sha256"_s);
         gravatarStored = std::binary_search(d->mSha256Misses.begin(), d->mSha256Misses.end(), hash.sha256());
         break;
     }

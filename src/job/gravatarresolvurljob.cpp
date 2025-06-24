@@ -56,7 +56,7 @@ bool GravatarResolvUrlJob::canStart() const
     }
 
     // qCDebug(GRAVATAR_LOG) << "email " << d->mEmail;
-    return !d->mEmail.trimmed().isEmpty() && (d->mEmail.contains(QLatin1Char('@')));
+    return !d->mEmail.trimmed().isEmpty() && (d->mEmail.contains(u'@'));
 }
 
 QUrl GravatarResolvUrlJob::generateGravatarUrl(bool useLibravatar)
@@ -237,16 +237,16 @@ QUrl GravatarResolvUrlJob::createUrl(bool useLibravatar)
     QUrlQuery query;
     if (!d->mUseDefaultPixmap) {
         // Add ?d=404
-        query.addQueryItem(QStringLiteral("d"), QStringLiteral("404"));
+        query.addQueryItem(u"d"_s, u"404"_s);
     }
     if (d->mSize != 80) {
-        query.addQueryItem(QStringLiteral("s"), QString::number(d->mSize));
+        query.addQueryItem(u"s"_s, QString::number(d->mSize));
     }
-    url.setScheme(QStringLiteral("https"));
+    url.setScheme(u"https"_s);
     if (useLibravatar) {
-        url.setHost(QStringLiteral("seccdn.libravatar.org"));
+        url.setHost(u"seccdn.libravatar.org"_s);
     } else {
-        url.setHost(QStringLiteral("secure.gravatar.com"));
+        url.setHost(u"secure.gravatar.com"_s);
     }
     d->mCalculatedHash = calculateHash();
     url.setPath("/avatar/"_L1 + d->mCalculatedHash.hexString());
