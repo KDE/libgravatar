@@ -28,7 +28,7 @@ msgstr "Gravatar-ის მორგება"
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
-msgstr "ნაგულისხმები გამოსახულების გამოყენება"
+msgstr "ნაგულისხმევი გამოსახულების გამოყენება"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:35
 #: widgets/gravatardownloadpixmapwidget.cpp:34
