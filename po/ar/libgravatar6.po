@@ -67,7 +67,7 @@ msgstr[5] "%v صورة"
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
-msgstr "امسح خبيئة «غرافاتار»"
+msgstr "امحُ خبيئة «غرافاتار»"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
 #, kde-format
