@@ -59,8 +59,7 @@ target_include_directories(
 
 target_include_directories(
     KPim6Gravatar
-    PUBLIC
-        "$<BUILD_INTERFACE:${gravatar_SOURCE_DIR}/src;${gravatar_BINARY_DIR}/src>"
+    PUBLIC "$<BUILD_INTERFACE:${gravatar_SOURCE_DIR}/src>"
 )
 
 set_target_properties(
