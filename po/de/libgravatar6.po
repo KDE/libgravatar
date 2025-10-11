@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
-# Frederik Schwarzer <schwarzer@kde.org>, 2015.
-# Burkhard Lück <lueck@hube-lueck.de>, 2018, 2020.
+# SPDX-FileCopyrightText: 2015 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2018, 2020 Burkhard Lück <lueck@hube-lueck.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar6\n"
