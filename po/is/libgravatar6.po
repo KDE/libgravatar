@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the libgravatar package.
 #
-# Sveinn í Felli <sv1@fellsnet.is>, 2022.
+# SPDX-FileCopyrightText: 2022, 2025 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:41+0000\n"
-"PO-Revision-Date: 2022-08-15 14:04+0000\n"
+"PO-Revision-Date: 2025-10-16 13:12+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: widgets/gravatarconfiguresettingsdialog.cpp:23
 #, kde-format
@@ -24,63 +24,53 @@ msgid "Configure Gravatar"
 msgstr "Stilla Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Use Default Image"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "Nota sjálfgefna mynd"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:35
 #: widgets/gravatardownloadpixmapwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Use Libravatar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Nota Libravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:39
 #: widgets/gravatardownloadpixmapwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "Fallback to Gravatar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
 msgstr "Varaleið fyrir Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "Gravatar Cache Size:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Stærð skyndiminnis Gravatar:"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "add space before image"
-#| msgid " image"
-#| msgid_plural " images"
+#, kde-format
 msgctxt "add space before image"
 msgid "%v image"
 msgid_plural "%v images"
-msgstr[0] "mynd"
-msgstr[1] "myndir"
+msgstr[0] "%v mynd"
+msgstr[1] "%v myndir"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:65
-#, fuzzy, kde-format
-#| msgid "Clear Gravatar Cache"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "Hreinsa skyndiminni Gravatar"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "Tölvupóstur:"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "&Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Search"
 msgstr "&Leita"
