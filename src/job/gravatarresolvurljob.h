@@ -20,7 +20,7 @@ namespace Gravatar
 class GravatarResolvUrlJobPrivate;
 class Hash;
 
-/** Avartar lookup job. */
+/*! Avartar lookup job. */
 class GRAVATAR_EXPORT GravatarResolvUrlJob : public QObject
 {
     Q_OBJECT

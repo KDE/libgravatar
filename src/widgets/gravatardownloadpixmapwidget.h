@@ -16,7 +16,7 @@ namespace Gravatar
 {
 class GravatarResolvUrlJob;
 
-/** Avatar download widget. */
+/*! Avatar download widget. */
 class GRAVATAR_EXPORT GravatarDownloadPixmapWidget : public QWidget
 {
     Q_OBJECT

@@ -14,7 +14,7 @@ class QSpinBox;
 class KConfigDialogManager;
 namespace Gravatar
 {
-/** Gravatar settings widget. */
+/*! Gravatar settings widget. */
 class GRAVATAR_EXPORT GravatarConfigureSettingsWidget : public QWidget
 {
     Q_OBJECT

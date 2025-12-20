@@ -12,7 +12,7 @@ namespace Gravatar
 {
 class GravatarConfigureSettingsWidget;
 
-/** Gravatar settings dialog. */
+/*! Gravatar settings dialog. */
 class GRAVATAR_EXPORT GravatarConfigureSettingsDialog : public QDialog
 {
     Q_OBJECT

@@ -13,7 +13,7 @@ namespace Gravatar
 {
 class GravatarDownloadPixmapWidget;
 
-/** Avatar download dialog. */
+/*! Avatar download dialog. */
 class GRAVATAR_EXPORT GravatarDownloadPixmapDialog : public QDialog
 {
     Q_OBJECT
