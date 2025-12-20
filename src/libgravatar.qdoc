@@ -1,0 +1,9 @@
+/*!
+    \module Gravatar
+    \title Gravatar C++ Classes
+    \ingroup modules
+    \cmakepackage KPim6
+    \cmakecomponent Gravatar
+
+    \brief Gravatar provides API to gravatar support.
+*/

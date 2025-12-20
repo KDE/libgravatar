@@ -1,0 +1,32 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = Gravatar
+description = Gravatar provides API to gravatar support.
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += \
+    qtcore
+
+navigation.landingpage = "Gravatar"
+
+qhp.projects            = Gravatar
+
+qhp.Gravatar.file                = gravatar.qhp
+qhp.Gravatar.namespace           = org.kde.gravatar.$QT_VERSION_TAG
+qhp.Gravatar.virtualFolder       = gravatar
+qhp.Gravatar.indexTitle          = Gravatar
+qhp.Gravatar.indexRoot           =
+
+qhp.Gravatar.subprojects         = classes
+qhp.Gravatar.subprojects.classes.title = C++ Gravatar
+qhp.Gravatar.subprojects.classes.indexTitle = Gravatar C++ Classes
+qhp.Gravatar.subprojects.classes.selectors = class fake:headerfile
+qhp.Gravatar.subprojects.classes.sortPages = true
+
+tagfile = gravatar.tags

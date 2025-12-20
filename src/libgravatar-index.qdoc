@@ -1,0 +1,20 @@
+/*!
+    \page libgravatar-index.html
+    \title Gravatar
+
+    Gravatar provides API to gravatar support.
+
+    \section1 Using the Module
+
+    \include {module-use.qdocinc} {using the c++ api}
+
+    \section2 Building with CMake
+
+    \include {module-use.qdocinc} {building with cmake} {KPim6} {Gravatar} {KPim6::Gravatar}
+
+    \section1 API Reference
+
+    \list
+        \li \l{Gravatar C++ Classes}
+    \endlist
+*/
