@@ -1,0 +1,12 @@
+version = 1
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
+SPDX-PackageName = "libgravatar"
+SPDX-PackageSupplier = "Montel Laurent <montel@kde.org>"
+SPDX-PackageDownloadLocation = "https://invent.kde.org/pim/libgravatar"
+
+[[annotations]]
+path = ["src/libgravatar-index.qdoc", "src/libgravatar.qdoc", "src/libgravatar.qdocconf"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
