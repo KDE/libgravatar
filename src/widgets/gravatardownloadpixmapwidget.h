@@ -21,9 +21,15 @@ class GRAVATAR_EXPORT GravatarDownloadPixmapWidget : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit GravatarDownloadPixmapWidget(QWidget *parent = nullptr);
+    /*!
+     */
     ~GravatarDownloadPixmapWidget() override;
 
+    /*!
+     */
     [[nodiscard]] QPixmap gravatarPixmap() const;
 
 private:

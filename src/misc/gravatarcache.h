@@ -21,20 +21,40 @@ class Hash;
 class GRAVATAR_EXPORT GravatarCache
 {
 public:
+    /*!
+     */
     static GravatarCache *self();
 
+    /*!
+     */
     GravatarCache();
+    /*!
+     */
     ~GravatarCache();
 
+    /*!
+     */
     void saveGravatarPixmap(const Hash &hash, const QPixmap &pixmap);
+    /*!
+     */
     void saveMissingGravatar(const Hash &hash);
 
+    /*!
+     */
     [[nodiscard]] QPixmap loadGravatarPixmap(const Hash &hash, bool &gravatarStored);
 
+    /*!
+     */
     [[nodiscard]] int maximumSize() const;
+    /*!
+     */
     void setMaximumSize(int maximumSize);
 
+    /*!
+     */
     void clear();
+    /*!
+     */
     void clearAllCache();
 
 private:

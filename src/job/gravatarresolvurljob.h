@@ -25,33 +25,69 @@ class GRAVATAR_EXPORT GravatarResolvUrlJob : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     * \brief GravatarResolvUrlJob
+     * \param parent
+     */
     explicit GravatarResolvUrlJob(QObject *parent = nullptr);
     ~GravatarResolvUrlJob() override;
 
+    /*!
+     */
     [[nodiscard]] bool canStart() const;
+    /*!
+     */
     void start();
 
+    /*!
+     */
     [[nodiscard]] QString email() const;
+    /*!
+     */
     void setEmail(const QString &email);
 
+    /*!
+     */
     [[nodiscard]] bool hasGravatar() const;
 
+    /*!
+     */
     void setSize(int size);
+    /*!
+     */
     [[nodiscard]] int size() const;
 
+    /*!
+     */
     [[nodiscard]] QPixmap pixmap() const;
 
+    /*!
+     */
     [[nodiscard]] bool useDefaultPixmap() const;
+    /*!
+     */
     void setUseDefaultPixmap(bool useDefaultPixmap);
 
-    bool useLibravatar() const;
+    /*!
+     */
+    [[nodiscard]] bool useLibravatar() const;
+    /*!
+     */
     void setUseLibravatar(bool useLibravatar);
 
-    bool fallbackGravatar() const;
+    /*!
+     */
+    [[nodiscard]] bool fallbackGravatar() const;
+    /*!
+     */
     void setFallbackGravatar(bool fallbackGravatar);
 
 Q_SIGNALS:
+    /*!
+     */
     void finished(Gravatar::GravatarResolvUrlJob *);
+    /*!
+     */
     void resolvUrl(const QUrl &url);
 
 private:

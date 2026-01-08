@@ -17,7 +17,11 @@ class GRAVATAR_EXPORT GravatarConfigureSettingsDialog : public QDialog
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit GravatarConfigureSettingsDialog(QWidget *parent = nullptr);
+    /*!
+     */
     ~GravatarConfigureSettingsDialog() override;
 
 private:
