@@ -34,7 +34,12 @@ kconfig_add_kcfg_files(KPim6Gravatar
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim6Gravatar PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        KPim6Gravatar
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 ecm_generate_export_header(KPim6Gravatar
     BASE_NAME gravatar
@@ -52,29 +57,22 @@ target_link_libraries(
         KF6::ConfigWidgets
         Qt::Network
 )
-target_include_directories(
-    KPim6Gravatar
-    INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/Gravatar/>"
-)
+target_include_directories(KPim6Gravatar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/Gravatar/>")
 
-target_include_directories(
-    KPim6Gravatar
-    PUBLIC "$<BUILD_INTERFACE:${gravatar_SOURCE_DIR}/src>"
-)
+target_include_directories(KPim6Gravatar PUBLIC "$<BUILD_INTERFACE:${gravatar_SOURCE_DIR}/src>")
 
 set_target_properties(
     KPim6Gravatar
     PROPERTIES
-        VERSION ${GRAVATAR_VERSION}
-        SOVERSION ${GRAVATAR_SOVERSION}
-        EXPORT_NAME Gravatar
+        VERSION
+            ${GRAVATAR_VERSION}
+        SOVERSION
+            ${GRAVATAR_SOVERSION}
+        EXPORT_NAME
+            Gravatar
 )
 
-install(
-    TARGETS KPim6Gravatar
-    EXPORT KPim6GravatarTargets
-    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-)
+install(TARGETS KPim6Gravatar EXPORT KPim6GravatarTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ecm_generate_headers(Gravatar_Camelcase_job_HEADERS
   HEADER_NAMES

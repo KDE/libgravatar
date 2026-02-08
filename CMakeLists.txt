@@ -71,7 +71,14 @@ ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
 include(ECMGenerateQDoc)
 
 set(LIBGRAVATAR_LIB_VERSION ${PIM_VERSION})
-find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
+find_package(
+    Qt6
+    ${QT_REQUIRED_VERSION}
+    CONFIG
+    REQUIRED
+        Widgets
+        Network
+)
 find_package(KF6CoreAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Config ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -94,11 +101,7 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 ecm_set_disabled_deprecation_versions(QT 6.11.0 KF 6.23.0)
 
-option(
-    USE_UNITY_CMAKE_SUPPORT
-    "Use UNITY cmake support (speedup compile time)"
-    OFF
-)
+option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
 if(USE_UNITY_CMAKE_SUPPORT)
@@ -146,7 +149,8 @@ install(
 )
 
 install(
-    FILES ${CMAKE_CURRENT_BINARY_DIR}/src/gravatar_version.h
+    FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/src/gravatar_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/Gravatar
     COMPONENT Devel
 )
