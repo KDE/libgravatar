@@ -20,7 +20,13 @@ namespace Gravatar
 class GravatarResolvUrlJobPrivate;
 class Hash;
 
-/*! Avartar lookup job. */
+/*!
+ * \class Gravatar::GravatarResolvUrlJob
+ * \inmodule Gravatar
+ * \inheaderfile Gravatar/GravatarResolvUrlJob
+ * \brief Avatar lookup job
+ * \author Laurent Montel <montel@kde.org>
+ */
 class GRAVATAR_EXPORT GravatarResolvUrlJob : public QObject
 {
     Q_OBJECT

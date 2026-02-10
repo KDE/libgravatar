@@ -14,7 +14,13 @@ class QSpinBox;
 class KConfigDialogManager;
 namespace Gravatar
 {
-/*! Gravatar settings widget. */
+/*!
+ * \class Gravatar::GravatarConfigureSettingsWidget
+ * \inmodule Gravatar
+ * \inheaderfile Gravatar/GravatarConfigureSettingsWidget
+ * \brief Gravatar settings widget
+ * \author Laurent Montel <montel@kde.org>
+ */
 class GRAVATAR_EXPORT GravatarConfigureSettingsWidget : public QWidget
 {
     Q_OBJECT

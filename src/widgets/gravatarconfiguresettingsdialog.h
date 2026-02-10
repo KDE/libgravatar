@@ -12,7 +12,13 @@ namespace Gravatar
 {
 class GravatarConfigureSettingsWidget;
 
-/*! Gravatar settings dialog. */
+/*!
+ * \class Gravatar::GravatarConfigureSettingsDialog
+ * \inmodule Gravatar
+ * \inheaderfile Gravatar/GravatarConfigureSettingsDialog
+ * \brief Gravatar settings dialog
+ * \author Laurent Montel <montel@kde.org>
+ */
 class GRAVATAR_EXPORT GravatarConfigureSettingsDialog : public QDialog
 {
     Q_OBJECT

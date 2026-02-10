@@ -16,7 +16,13 @@ namespace Gravatar
 {
 class GravatarResolvUrlJob;
 
-/*! Avatar download widget. */
+/*!
+ * \class Gravatar::GravatarDownloadPixmapWidget
+ * \inmodule Gravatar
+ * \inheaderfile Gravatar/GravatarDownloadPixmapWidget
+ * \brief Avatar download widget
+ * \author Laurent Montel <montel@kde.org>
+ */
 class GRAVATAR_EXPORT GravatarDownloadPixmapWidget : public QWidget
 {
     Q_OBJECT

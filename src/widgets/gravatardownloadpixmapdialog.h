@@ -13,7 +13,13 @@ namespace Gravatar
 {
 class GravatarDownloadPixmapWidget;
 
-/*! Avatar download dialog. */
+/*!
+ * \class Gravatar::GravatarDownloadPixmapDialog
+ * \inmodule Gravatar
+ * \inheaderfile Gravatar/GravatarDownloadPixmapDialog
+ * \brief Avatar download dialog
+ * \author Laurent Montel <montel@kde.org>
+ */
 class GRAVATAR_EXPORT GravatarDownloadPixmapDialog : public QDialog
 {
     Q_OBJECT

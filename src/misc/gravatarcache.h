@@ -17,7 +17,13 @@ namespace Gravatar
 class GravatarCachePrivate;
 class Hash;
 
-/*! Cache for both positive and negative avatar lookups. */
+/*!
+ * \class Gravatar::GravatarCache
+ * \inmodule Gravatar
+ * \inheaderfile Gravatar/GravatarCache
+ * \brief Cache for both positive and negative avatar lookups
+ * \author Laurent Montel <montel@kde.org>
+ */
 class GRAVATAR_EXPORT GravatarCache
 {
 public:
