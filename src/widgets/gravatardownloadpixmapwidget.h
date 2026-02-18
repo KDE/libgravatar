@@ -28,13 +28,18 @@ class GRAVATAR_EXPORT GravatarDownloadPixmapWidget : public QWidget
     Q_OBJECT
 public:
     /*!
+     * Constructs a Gravatar download pixmap widget.
+     * \param parent the parent widget
      */
     explicit GravatarDownloadPixmapWidget(QWidget *parent = nullptr);
     /*!
+     * Destroys the Gravatar download pixmap widget.
      */
     ~GravatarDownloadPixmapWidget() override;
 
     /*!
+     * Returns the downloaded Gravatar pixmap.
+     * \return the Gravatar pixmap
      */
     [[nodiscard]] QPixmap gravatarPixmap() const;
 

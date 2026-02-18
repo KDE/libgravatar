@@ -24,9 +24,12 @@ class GRAVATAR_EXPORT GravatarConfigureSettingsDialog : public QDialog
     Q_OBJECT
 public:
     /*!
+     * Constructs a Gravatar configure settings dialog.
+     * \param parent the parent widget
      */
     explicit GravatarConfigureSettingsDialog(QWidget *parent = nullptr);
     /*!
+     * Destroys the Gravatar configure settings dialog.
      */
     ~GravatarConfigureSettingsDialog() override;
 

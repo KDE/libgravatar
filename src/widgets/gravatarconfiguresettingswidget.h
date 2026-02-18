@@ -25,10 +25,26 @@ class GRAVATAR_EXPORT GravatarConfigureSettingsWidget : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     * Constructs a Gravatar configure settings widget.
+     * \param parent the parent widget
+     */
     explicit GravatarConfigureSettingsWidget(QWidget *parent = nullptr);
+    /*!
+     * Destroys the Gravatar configure settings widget.
+     */
     ~GravatarConfigureSettingsWidget() override;
+    /*!
+     * Restores the settings to their default values.
+     */
     void slotRestoreDefault();
+    /*!
+     * Saves the current settings.
+     */
     void save();
+    /*!
+     * Loads the settings from configuration.
+     */
     void load();
 
 private:

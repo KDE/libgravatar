@@ -25,13 +25,18 @@ class GRAVATAR_EXPORT GravatarDownloadPixmapDialog : public QDialog
     Q_OBJECT
 public:
     /*!
+     * Constructs a Gravatar download pixmap dialog.
+     * \param parent the parent widget
      */
     explicit GravatarDownloadPixmapDialog(QWidget *parent = nullptr);
     /*!
+     * Destroys the Gravatar download pixmap dialog.
      */
     ~GravatarDownloadPixmapDialog() override;
 
     /*!
+     * Returns the downloaded Gravatar pixmap.
+     * \return the Gravatar pixmap
      */
     [[nodiscard]] QPixmap gravatarPixmap() const;
 
