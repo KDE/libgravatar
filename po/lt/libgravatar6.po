@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2019-03-12 03:31+0100\n"
+"PO-Revision-Date: 2026-03-11 02:35+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
 "Language: lt\n"
@@ -17,68 +17,69 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.8\n"
 
 #: widgets/gravatarconfiguresettingsdialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
-msgstr ""
+msgstr "Konfigūruoti „Gravatar“"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:31
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
-msgstr ""
+msgstr "Naudoti numatytąją nuotrauką"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:35
 #: widgets/gravatardownloadpixmapwidget.cpp:34
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
-msgstr ""
+msgstr "Naudoti „Libravatar“"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:39
 #: widgets/gravatardownloadpixmapwidget.cpp:38
 #, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
-msgstr ""
+msgstr "Atsarginiu atveju naudoti „Gravatar“"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:47
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
-msgstr ""
+msgstr "„Gravatar“ podėlio dydis:"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:54
 #, kde-format
 msgctxt "add space before image"
 msgid "%v image"
 msgid_plural "%v images"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%v nuotrauka"
+msgstr[1] "%v nuotraukos"
+msgstr[2] "%v nuotraukų"
+msgstr[3] "%v nuotrauka"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
-msgstr ""
+msgstr "Išvalyti „Gravatar“ podėlį"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
-msgstr ""
+msgstr "El. paštas:"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
 #, kde-format
 msgctxt "@action:button"
 msgid "&Search"
-msgstr ""
+msgstr "&Ieškoti"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:71
 #, kde-format
 msgid "No Gravatar found."
-msgstr ""
+msgstr "Nerasta jokio „Gravatar“."
