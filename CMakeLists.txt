@@ -107,7 +107,6 @@ ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
 
 include(ECMGenerateQDoc)
 
-set(LIBGRAVATAR_LIB_VERSION ${PIM_VERSION})
 find_package(
     Qt6
     ${QT_REQUIRED_VERSION}
