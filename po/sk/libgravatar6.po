@@ -13,8 +13,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.07.90\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.07.90\n"
 
 #: widgets/gravatarconfiguresettingsdialog.cpp:23
 #, kde-format
@@ -23,40 +23,33 @@ msgid "Configure Gravatar"
 msgstr "Nastaviť Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Use Default Image"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
 msgstr "Použiť predvolený obraz"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:35
 #: widgets/gravatardownloadpixmapwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Use Libravatar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Použiť Libravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:39
 #: widgets/gravatardownloadpixmapwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "Fallback to Gravatar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
 msgstr "Spadnúť na Gravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "Gravatar Cache Size:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Gravatar Cache Size:"
 msgstr "Veľkosť Gravatar cache:"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "add space before image"
-#| msgid " image"
-#| msgid_plural " images"
+#, kde-format
 msgctxt "add space before image"
 msgid "%v image"
 msgid_plural "%v images"
@@ -65,22 +58,19 @@ msgstr[1] " obrázky"
 msgstr[2] " obrázkov"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:65
-#, fuzzy, kde-format
-#| msgid "Clear Gravatar Cache"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "Vymazať Gravatar cache"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-mail:"
 
 #: widgets/gravatardownloadpixmapwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "&Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Search"
 msgstr "&Hľadať"
