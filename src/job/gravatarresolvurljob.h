@@ -9,10 +9,9 @@
 #include "gravatar_export.h"
 #include <QObject>
 #include <QPixmap>
-#include <QUrl>
 
 #include <memory>
-
+class QUrl;
 class QNetworkReply;
 class GravatarResolvUrlJobTest;
 namespace Gravatar

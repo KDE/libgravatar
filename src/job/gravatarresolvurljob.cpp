@@ -5,7 +5,6 @@
 */
 
 #include "gravatarresolvurljob.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "gravatar_debug.h"
 #include "misc/gravatarcache.h"
@@ -14,9 +13,11 @@ using namespace Qt::Literals::StringLiterals;
 #include <QCryptographicHash>
 #include <QNetworkInformation>
 #include <QNetworkReply>
+#include <QUrl>
 #include <QUrlQuery>
 
 using namespace Gravatar;
+using namespace Qt::Literals::StringLiterals;
 
 class Gravatar::GravatarResolvUrlJobPrivate
 {
