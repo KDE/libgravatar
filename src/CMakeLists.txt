@@ -49,6 +49,8 @@ ecm_generate_export_header(KPim6Gravatar
 )
 target_link_libraries(
     KPim6Gravatar
+    PUBLIC
+        Qt::Widgets
     PRIVATE
         KF6::ConfigCore
         KF6::I18n
