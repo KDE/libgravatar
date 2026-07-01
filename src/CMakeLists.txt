@@ -125,3 +125,25 @@ install(
 ecm_qt_install_logging_categories(EXPORT GRAVATAR FILE libgravatar.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 ecm_generate_qdoc(KPim6Gravatar libgravatar.qdocconf)
+
+ecm_add_installed_library_check(KPim6Gravatar
+    PACKAGE_NAME "KPim6Gravatar"
+    PACKAGE_VERSION ${GRAVATAR_VERSION}
+    PACKAGE_TARGET_NAMESPACE "KPim6::"
+)
+
+ecm_installed_library_check_include_strings(KPim6Gravatar
+    HEADERS
+    ${Gravatar_widgets_HEADERS}
+    ${Gravatar_job_HEADERS}
+    ${Gravatar_misc_HEADERS}
+    PREFIX gravatar
+)
+
+ecm_installed_library_check_include_strings(KPim6Gravatar
+    HEADERS
+    ${Gravatar_Camelcase_widgets_HEADERS}
+    ${Gravatar_Camelcase_job_HEADERS}
+    ${Gravatar_Camelcase_misc_HEADERS}
+    PREFIX Gravatar
+)
