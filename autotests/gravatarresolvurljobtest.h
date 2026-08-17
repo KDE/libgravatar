@@ -18,6 +18,7 @@ public:
     [[nodiscard]] bool isOnline() const;
 
 private Q_SLOTS:
+    void initTestCase();
     void shouldHaveDefaultValue();
     void shouldChangeValue();
     void shouldNotStart();
@@ -30,4 +31,6 @@ private Q_SLOTS:
 
     void shouldUseDefaultPixmap();
     void shouldUseHttps();
+
+    void shouldUseSizeForCacheLookup();
 };

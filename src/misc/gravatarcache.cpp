@@ -27,6 +27,18 @@ Q_GLOBAL_STATIC(GravatarCache, s_gravatarCache)
 class Gravatar::GravatarCachePrivate
 {
 public:
+    // The requested size is part of the identity of a cached pixmap, so it has to be
+    // part of the key too, both in memory and on disk.
+    [[nodiscard]] inline QString cacheKey(const Hash &hash, int size) const
+    {
+        return hash.hexString() + u'_' + QString::number(size);
+    }
+
+    [[nodiscard]] inline QString cacheFilePath(const QString &cacheKey) const
+    {
+        return mGravatarPath + cacheKey + ".png"_L1;
+    }
+
     template<typename T>
     inline void insertMissingHash(std::vector<T> &vec, const T &hash)
     {
@@ -70,7 +82,7 @@ public:
         f.read(reinterpret_cast<char *>(vec.data()), f.size());
     }
 
-    QCache<Hash, QPixmap> mCachePixmap;
+    QCache<QString, QPixmap> mCachePixmap;
     QString mGravatarPath;
     std::vector<Hash128> mMd5Misses;
     std::vector<Hash256> mSha256Misses;
@@ -92,17 +104,18 @@ GravatarCache *GravatarCache::self()
     return s_gravatarCache;
 }
 
-void GravatarCache::saveGravatarPixmap(const Hash &hash, const QPixmap &pixmap)
+void GravatarCache::saveGravatarPixmap(const Hash &hash, const QPixmap &pixmap, int size)
 {
     if (!hash.isValid() || pixmap.isNull()) {
         return;
     }
 
-    const QString path = d->mGravatarPath + hash.hexString() + ".png"_L1;
+    const QString cacheKey = d->cacheKey(hash, size);
+    const QString path = d->cacheFilePath(cacheKey);
     qCDebug(GRAVATAR_LOG) << " path " << path;
     if (pixmap.save(path)) {
         qCDebug(GRAVATAR_LOG) << " saved in cache " << path;
-        d->mCachePixmap.insert(hash, new QPixmap(pixmap));
+        d->mCachePixmap.insert(cacheKey, new QPixmap(pixmap));
     }
 }
 
@@ -122,7 +135,7 @@ void GravatarCache::saveMissingGravatar(const Hash &hash)
     }
 }
 
-QPixmap GravatarCache::loadGravatarPixmap(const Hash &hash, bool &gravatarStored)
+QPixmap GravatarCache::loadGravatarPixmap(const Hash &hash, bool &gravatarStored, int size)
 {
     gravatarStored = false;
     // qCDebug(GRAVATAR_LOG) << " hashStr" << hash.hexString();
@@ -130,20 +143,22 @@ QPixmap GravatarCache::loadGravatarPixmap(const Hash &hash, bool &gravatarStored
         return {};
     }
 
+    const QString cacheKey = d->cacheKey(hash, size);
+
     // in-memory cache
-    if (d->mCachePixmap.contains(hash)) {
-        qCDebug(GRAVATAR_LOG) << " contains in cache " << hash.hexString();
+    if (const QPixmap *cached = d->mCachePixmap.object(cacheKey)) {
+        qCDebug(GRAVATAR_LOG) << " contains in cache " << cacheKey;
         gravatarStored = true;
-        return *(d->mCachePixmap.object(hash));
+        return *cached;
     }
 
     // file-system cache
-    const QString path = d->mGravatarPath + hash.hexString() + ".png"_L1;
+    const QString path = d->cacheFilePath(cacheKey);
     if (QFileInfo::exists(path)) {
         QPixmap pix;
         if (pix.load(path)) {
-            qCDebug(GRAVATAR_LOG) << " add to cache " << hash.hexString() << path;
-            d->mCachePixmap.insert(hash, new QPixmap(pix));
+            qCDebug(GRAVATAR_LOG) << " add to cache " << cacheKey << path;
+            d->mCachePixmap.insert(cacheKey, new QPixmap(pix));
             gravatarStored = true;
             return pix;
         }

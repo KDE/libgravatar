@@ -6,9 +6,14 @@
 
 #include "gravatarresolvurljobtest.h"
 #include "../src/job/gravatarresolvurljob.h"
+#include "../src/misc/gravatarcache.h"
 #include "../src/misc/hash.h"
 
+#include <QCryptographicHash>
 #include <QNetworkInformation>
+#include <QPointer>
+#include <QSignalSpy>
+#include <QStandardPaths>
 #include <QTest>
 
 GravatarResolvUrlJobTest::GravatarResolvUrlJobTest(QObject *parent)
@@ -23,6 +28,11 @@ bool GravatarResolvUrlJobTest::isOnline() const
 {
     return QNetworkInformation::instance()->reachability() == QNetworkInformation::Reachability::Online
         && !QNetworkInformation::instance()->isBehindCaptivePortal();
+}
+
+void GravatarResolvUrlJobTest::initTestCase()
+{
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void GravatarResolvUrlJobTest::shouldHaveDefaultValue()
@@ -169,6 +179,39 @@ void GravatarResolvUrlJobTest::shouldGenerateGravatarUrl()
         QCOMPARE(job.calculatedHash().hexString(), QString());
         QVERIFY(url.isEmpty());
     }
+}
+
+void GravatarResolvUrlJobTest::shouldUseSizeForCacheLookup()
+{
+    if (!isOnline()) {
+        QSKIP("The job refuses to start when offline");
+    }
+    // The cache is keyed by hash *and* size, so the cache lookup has to use the job's size.
+    // Otherwise a pixmap the job stored itself is never found again and every run refetches it.
+    const QString email = QStringLiteral("cachelookup@kde.org");
+    const Gravatar::Hash hash(QCryptographicHash::hash(email.toLower().toUtf8(), QCryptographicHash::Md5), Gravatar::Hash::Md5);
+
+    QPixmap px(256, 256);
+    px.fill(Qt::green);
+    Gravatar::GravatarCache::self()->clearAllCache();
+    Gravatar::GravatarCache::self()->saveGravatarPixmap(hash, px, 256);
+    // drop the in-memory cache, so only the on-disk lookup can answer
+    Gravatar::GravatarCache::self()->clear();
+
+    // resolved entirely from the cache, no network request is made
+    auto job = new Gravatar::GravatarResolvUrlJob;
+    QPointer<Gravatar::GravatarResolvUrlJob> guard(job);
+    job->setEmail(email);
+    job->setSize(256);
+    QSignalSpy finishedSpy(job, &Gravatar::GravatarResolvUrlJob::finished);
+    job->start();
+
+    QCOMPARE(finishedSpy.count(), 1);
+    QVERIFY(job->hasGravatar());
+    QCOMPARE(job->pixmap().size(), QSize(256, 256));
+
+    // on a cache hit the job deletes itself
+    QTRY_VERIFY(guard.isNull());
 }
 
 QTEST_MAIN(GravatarResolvUrlJobTest)

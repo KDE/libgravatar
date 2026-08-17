@@ -136,7 +136,7 @@ void GravatarResolvUrlJob::slotFinishLoadPixmap(QNetworkReply *reply)
         d->mHasGravatar = true;
         // For the moment don't use cache other we will store a lot of pixmap
         if (!d->mUseDefaultPixmap) {
-            GravatarCache::self()->saveGravatarPixmap(d->mCalculatedHash, d->mPixmap);
+            GravatarCache::self()->saveGravatarPixmap(d->mCalculatedHash, d->mPixmap, d->mSize);
         }
     } else {
         if (reply->error() == QNetworkReply::ContentNotFoundError) {
@@ -259,7 +259,7 @@ QUrl GravatarResolvUrlJob::createUrl(bool useLibravatar)
 bool GravatarResolvUrlJob::cacheLookup(const Hash &hash)
 {
     bool haveStoredPixmap = false;
-    const QPixmap pix = GravatarCache::self()->loadGravatarPixmap(hash, haveStoredPixmap);
+    const QPixmap pix = GravatarCache::self()->loadGravatarPixmap(hash, haveStoredPixmap, d->mSize);
     if (haveStoredPixmap && !pix.isNull()) { // we know a Gravatar for this hash
         d->mPixmap = pix;
         d->mHasGravatar = true;

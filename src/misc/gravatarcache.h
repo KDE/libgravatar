@@ -46,8 +46,9 @@ public:
      * Saves a Gravatar pixmap to the cache.
      * \param hash the hash associated with the pixmap
      * \param pixmap the pixmap to save
+     * \param size the requested pixmap size, part of the cache key
      */
-    void saveGravatarPixmap(const Hash &hash, const QPixmap &pixmap);
+    void saveGravatarPixmap(const Hash &hash, const QPixmap &pixmap, int size);
     /*!
      * Records a missing Gravatar for the given hash.
      * \param hash the hash for which no Gravatar was found
@@ -58,9 +59,10 @@ public:
      * Loads a Gravatar pixmap from the cache.
      * \param hash the hash to look up
      * \param gravatarStored whether the Gravatar was found in cache
+     * \param size the requested pixmap size, part of the cache key
      * \return the cached Gravatar pixmap if found, otherwise a null pixmap
      */
-    [[nodiscard]] QPixmap loadGravatarPixmap(const Hash &hash, bool &gravatarStored);
+    [[nodiscard]] QPixmap loadGravatarPixmap(const Hash &hash, bool &gravatarStored, int size);
 
     /*!
      * Returns the maximum cache size in bytes.

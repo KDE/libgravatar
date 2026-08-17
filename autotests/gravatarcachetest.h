@@ -19,6 +19,7 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldChangeCacheValue();
     void testLookup();
+    void testLookupUsesSize();
     void testMissing();
     void testMissing_data();
 };

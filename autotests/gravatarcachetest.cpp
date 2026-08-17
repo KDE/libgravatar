@@ -55,7 +55,7 @@ void GravatarCacheTest::testLookup()
         GravatarCache cache;
         cache.clearAllCache();
         bool found = false;
-        const auto result = cache.loadGravatarPixmap(hash, found);
+        const auto result = cache.loadGravatarPixmap(hash, found, 80);
         QVERIFY(!found);
         QVERIFY(result.isNull());
     }
@@ -65,11 +65,11 @@ void GravatarCacheTest::testLookup()
 
     {
         GravatarCache cache;
-        cache.saveGravatarPixmap(hash, px);
+        cache.saveGravatarPixmap(hash, px, 80);
 
         // in-memory cache lookup
         bool found = false;
-        const auto result = cache.loadGravatarPixmap(hash, found);
+        const auto result = cache.loadGravatarPixmap(hash, found, 80);
         QVERIFY(found);
         QVERIFY(!result.isNull());
         QCOMPARE(result.size(), QSize(42, 42));
@@ -79,7 +79,7 @@ void GravatarCacheTest::testLookup()
         // disk lookup
         GravatarCache cache;
         bool found = false;
-        const auto result = cache.loadGravatarPixmap(hash, found);
+        const auto result = cache.loadGravatarPixmap(hash, found, 80);
         QVERIFY(found);
         QVERIFY(!result.isNull());
         QCOMPARE(result.size(), QSize(42, 42));
@@ -100,7 +100,7 @@ void GravatarCacheTest::testMissing()
         GravatarCache cache;
         cache.clearAllCache();
         bool found = false;
-        const auto result = cache.loadGravatarPixmap(hash, found);
+        const auto result = cache.loadGravatarPixmap(hash, found, 80);
         QVERIFY(!found);
         QVERIFY(result.isNull());
     }
@@ -110,7 +110,7 @@ void GravatarCacheTest::testMissing()
         GravatarCache cache;
         cache.saveMissingGravatar(hash);
         bool found = false;
-        const auto result = cache.loadGravatarPixmap(hash, found);
+        const auto result = cache.loadGravatarPixmap(hash, found, 80);
         QVERIFY(found);
         QVERIFY(result.isNull());
     }
@@ -119,9 +119,82 @@ void GravatarCacheTest::testMissing()
         // verify miss in disk storage
         GravatarCache cache;
         bool found = false;
-        const auto result = cache.loadGravatarPixmap(hash, found);
+        const auto result = cache.loadGravatarPixmap(hash, found, 80);
         QVERIFY(found);
         QVERIFY(result.isNull());
+
+        // a miss does not depend on the requested size
+        found = false;
+        const auto otherSize = cache.loadGravatarPixmap(hash, found, 256);
+        QVERIFY(found);
+        QVERIFY(otherSize.isNull());
+    }
+}
+
+void GravatarCacheTest::testLookupUsesSize()
+{
+    const Hash hash(QCryptographicHash::hash(QByteArray("testsize@example.com"), QCryptographicHash::Md5), Hash::Md5);
+
+    QPixmap small(80, 80);
+    small.fill(Qt::blue);
+    QPixmap big(256, 256);
+    big.fill(Qt::red);
+
+    {
+        GravatarCache cache;
+        cache.clearAllCache();
+        cache.saveGravatarPixmap(hash, small, 80);
+
+        // another size must not be served from the in-memory cache
+        bool found = true;
+        const auto other = cache.loadGravatarPixmap(hash, found, 256);
+        QVERIFY(!found);
+        QVERIFY(other.isNull());
+
+        // the stored size still hits
+        found = false;
+        const auto result = cache.loadGravatarPixmap(hash, found, 80);
+        QVERIFY(found);
+        QCOMPARE(result.size(), QSize(80, 80));
+    }
+
+    {
+        // ... nor from the on-disk cache
+        GravatarCache cache;
+        bool found = true;
+        const auto other = cache.loadGravatarPixmap(hash, found, 256);
+        QVERIFY(!found);
+        QVERIFY(other.isNull());
+    }
+
+    {
+        // both sizes coexist, each lookup returns its own pixmap
+        GravatarCache cache;
+        cache.saveGravatarPixmap(hash, big, 256);
+
+        bool found = false;
+        const auto large = cache.loadGravatarPixmap(hash, found, 256);
+        QVERIFY(found);
+        QCOMPARE(large.size(), QSize(256, 256));
+
+        found = false;
+        const auto tiny = cache.loadGravatarPixmap(hash, found, 80);
+        QVERIFY(found);
+        QCOMPARE(tiny.size(), QSize(80, 80));
+    }
+
+    {
+        // same, from disk only
+        GravatarCache cache;
+        bool found = false;
+        const auto large = cache.loadGravatarPixmap(hash, found, 256);
+        QVERIFY(found);
+        QCOMPARE(large.size(), QSize(256, 256));
+
+        found = false;
+        const auto tiny = cache.loadGravatarPixmap(hash, found, 80);
+        QVERIFY(found);
+        QCOMPARE(tiny.size(), QSize(80, 80));
     }
 }
 
