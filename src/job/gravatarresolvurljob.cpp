@@ -97,6 +97,7 @@ void GravatarResolvUrlJob::start()
         processNextBackend();
     } else {
         qCDebug(GRAVATAR_LOG) << "Gravatar can not start";
+        Q_EMIT finished(this);
         deleteLater();
     }
 }
