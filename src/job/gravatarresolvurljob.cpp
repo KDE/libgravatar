@@ -122,7 +122,7 @@ void GravatarResolvUrlJob::processNextBackend()
     Q_EMIT resolvUrl(url);
     if (!cacheLookup(d->mCalculatedHash)) {
         startNetworkManager(url);
-    } else {
+    } else if (!d->mHasGravatar) {
         processNextBackend();
     }
 }
