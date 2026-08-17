@@ -189,7 +189,7 @@ void GravatarCache::clearAllCache()
     if (!path.isEmpty()) {
         QDir dir(path);
         if (dir.exists()) {
-            const QFileInfoList list = dir.entryInfoList(); // get list of matching files and delete all
+            const QFileInfoList list = dir.entryInfoList(QDir::Files); // get list of matching files and delete all
             for (const QFileInfo &it : list) {
                 dir.remove(it.fileName());
             }
