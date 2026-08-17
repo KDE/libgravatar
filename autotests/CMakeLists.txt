@@ -10,6 +10,12 @@ macro(add_gravatar_unittest _source)
     )
     add_test(NAME ${_name} COMMAND ${_name})
     ecm_mark_as_test(${_name})
+    set_tests_properties(
+        ${_name}
+        PROPERTIES
+            ENVIRONMENT
+                "LSAN_OPTIONS=suppressions=${CMAKE_SOURCE_DIR}/sanitizers.supp"
+    )
     target_link_libraries(
         ${_name}
         KF6::WidgetsAddons

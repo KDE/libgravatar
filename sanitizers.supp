@@ -1,16 +1,8 @@
-# SPDX-FileCopyrightText: 2021-2026 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2026 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: CC0-1.0
 # Suppression file for ASAN/LSAN
 
-leak:libspeechd
-leak:getdelim
-leak:g_malloc
-leak:libfontconfig
-leak:libdbus
-leak:QEasingCurve::
-leak:QtSharedPointer::ExternalRefCountData::getAndRef
-leak:QArrayData::allocate
-leak:QObject::QObject
-leak:QObjectPrivate::addConnection
-leak:QObjectPrivate::connectImpl
-leak:QPropertyAnimation::QPropertyAnimation
+# Qt's networkinformation backend caches QDBusMetaObjects that are never released,
+# reachable from any QNetworkInformation::loadDefaultBackend() call.
+leak:libqnetworkmanager
+leak:QDBusMetaObject::createMetaObject

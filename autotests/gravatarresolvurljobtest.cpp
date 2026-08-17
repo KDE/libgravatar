@@ -26,8 +26,9 @@ GravatarResolvUrlJobTest::~GravatarResolvUrlJobTest() = default;
 
 bool GravatarResolvUrlJobTest::isOnline() const
 {
-    return QNetworkInformation::instance()->reachability() == QNetworkInformation::Reachability::Online
-        && !QNetworkInformation::instance()->isBehindCaptivePortal();
+    // instance() is null when no backend could be loaded, as in a container without NetworkManager
+    auto info = QNetworkInformation::instance();
+    return info && info->reachability() == QNetworkInformation::Reachability::Online && !info->isBehindCaptivePortal();
 }
 
 void GravatarResolvUrlJobTest::initTestCase()
