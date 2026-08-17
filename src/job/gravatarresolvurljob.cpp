@@ -138,7 +138,7 @@ void GravatarResolvUrlJob::slotFinishLoadPixmap(QNetworkReply *reply)
             GravatarCache::self()->saveGravatarPixmap(d->mCalculatedHash, d->mPixmap);
         }
     } else {
-        if (reply->error() != QNetworkReply::ContentNotFoundError) {
+        if (reply->error() == QNetworkReply::ContentNotFoundError) {
             GravatarCache::self()->saveMissingGravatar(d->mCalculatedHash);
         } else {
             qCDebug(GRAVATAR_LOG) << "Network error:" << reply->request().url() << reply->errorString();
