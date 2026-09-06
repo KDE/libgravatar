@@ -1,7 +1,7 @@
 /*
-   SPDX-FileCopyrightText: 2015-2026 Laurent Montel <montel@kde.org>
+SPDX-FileCopyrightText: 2015-2026 Laurent Montel <montel@kde.org>
 
-   SPDX-License-Identifier: LGPL-2.0-or-later
+SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "gravatarresolvurljob.h"
@@ -62,6 +62,10 @@ bool GravatarResolvUrlJob::canStart() const
 
 QUrl GravatarResolvUrlJob::generateGravatarUrl(bool useLibravatar)
 {
+    if (!canStart()) {
+        return {};
+    }
+
     return createUrl(useLibravatar);
 }
 
@@ -231,11 +235,7 @@ Hash GravatarResolvUrlJob::calculatedHash() const
 
 QUrl GravatarResolvUrlJob::createUrl(bool useLibravatar)
 {
-    QUrl url;
     d->mCalculatedHash = Hash();
-    if (!canStart()) {
-        return url;
-    }
     QUrlQuery query;
     if (!d->mUseDefaultPixmap) {
         // Add ?d=404
@@ -244,6 +244,7 @@ QUrl GravatarResolvUrlJob::createUrl(bool useLibravatar)
     if (d->mSize != 80) {
         query.addQueryItem(u"s"_s, QString::number(d->mSize));
     }
+    QUrl url;
     url.setScheme(u"https"_s);
     if (useLibravatar) {
         url.setHost(u"seccdn.libravatar.org"_s);
