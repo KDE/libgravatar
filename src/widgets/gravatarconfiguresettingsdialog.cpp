@@ -42,7 +42,7 @@ GravatarConfigureSettingsDialog::~GravatarConfigureSettingsDialog() = default;
 
 void GravatarConfigureSettingsDialog::slotRestoreDefault()
 {
-    mGravatarConfigureSettings->load();
+    mGravatarConfigureSettings->slotRestoreDefault();
 }
 
 void GravatarConfigureSettingsDialog::save()
