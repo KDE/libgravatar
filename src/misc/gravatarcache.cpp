@@ -154,14 +154,12 @@ QPixmap GravatarCache::loadGravatarPixmap(const Hash &hash, bool &gravatarStored
 
     // file-system cache
     const QString path = d->cacheFilePath(cacheKey);
-    if (QFileInfo::exists(path)) {
-        QPixmap pix;
-        if (pix.load(path)) {
-            qCDebug(GRAVATAR_LOG) << " add to cache " << cacheKey << path;
-            d->mCachePixmap.insert(cacheKey, new QPixmap(pix));
-            gravatarStored = true;
-            return pix;
-        }
+    QPixmap pix;
+    if (pix.load(path)) {
+        qCDebug(GRAVATAR_LOG) << " add to cache " << cacheKey << path;
+        d->mCachePixmap.insert(cacheKey, new QPixmap(pix));
+        gravatarStored = true;
+        return pix;
     }
 
     // missing gravatar cache (ie. known to not exist one)
