@@ -27,7 +27,7 @@ GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
     auto lab = new QLabel(i18nc("@label:textbox", "Email:"), this);
     lab->setObjectName("labemail"_L1);
     hbox->addWidget(lab);
-    mLineEdit = new QLineEdit;
+    mLineEdit = new QLineEdit(this);
     mLineEdit->setObjectName("email"_L1);
     connect(mLineEdit, &QLineEdit::textChanged, this, &GravatarDownloadPixmapWidget::slotTextChanged);
     hbox->addWidget(mLineEdit);
