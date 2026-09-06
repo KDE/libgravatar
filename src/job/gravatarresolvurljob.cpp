@@ -135,8 +135,7 @@ void GravatarResolvUrlJob::processNextBackend()
 void GravatarResolvUrlJob::slotFinishLoadPixmap(QNetworkReply *reply)
 {
     if (reply->error() == QNetworkReply::NoError) {
-        const QByteArray data = reply->readAll();
-        d->mPixmap.loadFromData(data);
+        d->mPixmap.loadFromData(reply->readAll());
         d->mHasGravatar = true;
         // For the moment don't use cache other we will store a lot of pixmap
         if (!d->mUseDefaultPixmap) {
