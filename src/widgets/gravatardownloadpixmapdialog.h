@@ -8,6 +8,7 @@
 
 #include "gravatar_export.h"
 #include <QDialog>
+#include <QPixmap>
 
 namespace Gravatar
 {

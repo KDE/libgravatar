@@ -11,6 +11,7 @@ using namespace Qt::Literals::StringLiterals;
 #include "gravatar_debug.h"
 #include <KLocalizedString>
 #include <QCheckBox>
+#include <QHBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>

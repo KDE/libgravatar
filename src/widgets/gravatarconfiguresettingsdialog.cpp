@@ -8,9 +8,6 @@
 using namespace Qt::Literals::StringLiterals;
 
 #include "gravatarconfiguresettingswidget.h"
-#include "misc/gravatarcache.h"
-
-#include "gravatarsettings.h"
 #include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QPushButton>
