@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-09-07 00:46+0000\n"
 "PO-Revision-Date: 2025-11-28 13:07+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:23
+#: widgets/gravatarconfiguresettingsdialog.cpp:20
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
@@ -31,14 +31,14 @@ msgid "Use Default Image"
 msgstr "Folosește imaginea implicită"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:35
-#: widgets/gravatardownloadpixmapwidget.cpp:34
+#: widgets/gravatardownloadpixmapwidget.cpp:35
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Folosește Libravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:39
-#: widgets/gravatardownloadpixmapwidget.cpp:38
+#: widgets/gravatardownloadpixmapwidget.cpp:39
 #, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
@@ -65,19 +65,19 @@ msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "Curăță prestocarea Gravatar"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:26
+#: widgets/gravatardownloadpixmapwidget.cpp:27
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-mail:"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:42
+#: widgets/gravatardownloadpixmapwidget.cpp:43
 #, kde-format
 msgctxt "@action:button"
 msgid "&Search"
 msgstr "&Caută"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:71
+#: widgets/gravatardownloadpixmapwidget.cpp:72
 #, kde-format
 msgid "No Gravatar found."
 msgstr "Niciun Gravatar găsit."

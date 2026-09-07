@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-09-07 00:46+0000\n"
 "PO-Revision-Date: 2020-08-11 08:33+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.07.90\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:23
+#: widgets/gravatarconfiguresettingsdialog.cpp:20
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
@@ -29,14 +29,14 @@ msgid "Use Default Image"
 msgstr "Použiť predvolený obraz"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:35
-#: widgets/gravatardownloadpixmapwidget.cpp:34
+#: widgets/gravatardownloadpixmapwidget.cpp:35
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Použiť Libravatar"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:39
-#: widgets/gravatardownloadpixmapwidget.cpp:38
+#: widgets/gravatardownloadpixmapwidget.cpp:39
 #, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
@@ -63,19 +63,19 @@ msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "Vymazať Gravatar cache"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:26
+#: widgets/gravatardownloadpixmapwidget.cpp:27
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-mail:"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:42
+#: widgets/gravatardownloadpixmapwidget.cpp:43
 #, kde-format
 msgctxt "@action:button"
 msgid "&Search"
 msgstr "&Hľadať"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:71
+#: widgets/gravatardownloadpixmapwidget.cpp:72
 #, kde-format
 msgid "No Gravatar found."
 msgstr "Nenašiel sa gravatar."

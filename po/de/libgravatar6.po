@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-09-07 00:46+0000\n"
 "PO-Revision-Date: 2024-09-13 16:03+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.11.70\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:23
+#: widgets/gravatarconfiguresettingsdialog.cpp:20
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
@@ -29,14 +29,14 @@ msgid "Use Default Image"
 msgstr "Standardbild verwenden"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:35
-#: widgets/gravatardownloadpixmapwidget.cpp:34
+#: widgets/gravatardownloadpixmapwidget.cpp:35
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Libravatar"
 msgstr "Libravatar verwenden"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:39
-#: widgets/gravatardownloadpixmapwidget.cpp:38
+#: widgets/gravatardownloadpixmapwidget.cpp:39
 #, kde-format
 msgctxt "@option:check"
 msgid "Fallback to Gravatar"
@@ -62,19 +62,19 @@ msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "Gravatar-Zwischenspeicher leeren"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:26
+#: widgets/gravatardownloadpixmapwidget.cpp:27
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-Mail:"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:42
+#: widgets/gravatardownloadpixmapwidget.cpp:43
 #, kde-format
 msgctxt "@action:button"
 msgid "&Search"
 msgstr "&Suchen"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:71
+#: widgets/gravatardownloadpixmapwidget.cpp:72
 #, kde-format
 msgid "No Gravatar found."
 msgstr "Es wurde kein Gravatar gefunden."

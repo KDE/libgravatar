@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgravatar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-09-07 00:46+0000\n"
 "PO-Revision-Date: 2021-06-29 15:14+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 21.04.2\n"
 
-#: widgets/gravatarconfiguresettingsdialog.cpp:23
+#: widgets/gravatarconfiguresettingsdialog.cpp:20
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
@@ -32,7 +32,7 @@ msgid "Use Default Image"
 msgstr "पूर्वन्यस्त छवि का प्रयोग करें"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:35
-#: widgets/gravatardownloadpixmapwidget.cpp:34
+#: widgets/gravatardownloadpixmapwidget.cpp:35
 #, fuzzy, kde-format
 #| msgid "Use Libravatar"
 msgctxt "@option:check"
@@ -40,7 +40,7 @@ msgid "Use Libravatar"
 msgstr "लिब्रावतार का उपयोग करें"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:39
-#: widgets/gravatardownloadpixmapwidget.cpp:38
+#: widgets/gravatardownloadpixmapwidget.cpp:39
 #, fuzzy, kde-format
 #| msgid "Fallback to Gravatar"
 msgctxt "@option:check"
@@ -72,21 +72,21 @@ msgctxt "@action:button"
 msgid "Clear Gravatar Cache"
 msgstr "ग्रैवतार कैशे साफ करें"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:26
+#: widgets/gravatardownloadpixmapwidget.cpp:27
 #, fuzzy, kde-format
 #| msgid "Email:"
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "ईमेल :"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:42
+#: widgets/gravatardownloadpixmapwidget.cpp:43
 #, fuzzy, kde-format
 #| msgid "&Search"
 msgctxt "@action:button"
 msgid "&Search"
 msgstr "खोजें(&S)"
 
-#: widgets/gravatardownloadpixmapwidget.cpp:71
+#: widgets/gravatardownloadpixmapwidget.cpp:72
 #, kde-format
 msgid "No Gravatar found."
 msgstr "कोई ग्रैवतार नहीं मिला।"
