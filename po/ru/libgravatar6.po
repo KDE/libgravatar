@@ -30,7 +30,7 @@ msgstr "Настройка Gravatar"
 #, kde-format
 msgctxt "@option:check"
 msgid "Use Default Image"
-msgstr "Использовать основное изображение"
+msgstr "Использовать изображение по умолчанию"
 
 #: widgets/gravatarconfiguresettingswidget.cpp:35
 #: widgets/gravatardownloadpixmapwidget.cpp:35
