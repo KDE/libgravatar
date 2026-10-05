@@ -5,7 +5,6 @@
 */
 
 #include "gravatarconfiguresettingswidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "gravatarsettings.h"
 #include <Gravatar/GravatarCache>
@@ -20,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QSpinBox>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Gravatar;
 
 GravatarConfigureSettingsWidget::GravatarConfigureSettingsWidget(QWidget *parent)

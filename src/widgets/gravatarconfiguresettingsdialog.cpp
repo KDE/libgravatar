@@ -5,13 +5,13 @@
 */
 
 #include "gravatarconfiguresettingsdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "gravatarconfiguresettingswidget.h"
 #include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 using namespace Gravatar;
 
 GravatarConfigureSettingsDialog::GravatarConfigureSettingsDialog(QWidget *parent)

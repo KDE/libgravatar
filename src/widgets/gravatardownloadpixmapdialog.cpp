@@ -5,12 +5,12 @@
 */
 
 #include "gravatardownloadpixmapdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "gravatardownloadpixmapwidget.h"
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Gravatar;
 
 GravatarDownloadPixmapDialog::GravatarDownloadPixmapDialog(QWidget *parent)

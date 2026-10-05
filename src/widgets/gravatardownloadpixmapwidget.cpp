@@ -5,7 +5,6 @@
 */
 
 #include "gravatardownloadpixmapwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "gravatar/gravatarresolvurljob.h"
 #include "gravatar_debug.h"
@@ -17,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Gravatar;
 GravatarDownloadPixmapWidget::GravatarDownloadPixmapWidget(QWidget *parent)
     : QWidget(parent)

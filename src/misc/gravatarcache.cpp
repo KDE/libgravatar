@@ -5,7 +5,6 @@
 */
 
 #include "gravatarcache.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "gravatar_debug.h"
 #include "hash.h"
@@ -20,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <algorithm>
 #include <vector>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Gravatar;
 
 Q_GLOBAL_STATIC(GravatarCache, s_gravatarCache)
