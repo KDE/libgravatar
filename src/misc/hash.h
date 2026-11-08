@@ -30,10 +30,8 @@ struct UnsignedInt {
 
     uint8_t data[Size];
 };
-struct Hash128 : public UnsignedInt<16> {
-};
-struct Hash256 : public UnsignedInt<32> {
-};
+struct Hash128 : public UnsignedInt<16> { };
+struct Hash256 : public UnsignedInt<32> { };
 
 class Hash;
 size_t qHash(const Hash &h, size_t seed = 0) noexcept;
