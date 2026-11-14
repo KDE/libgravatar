@@ -1,6 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = Gravatar
+moduleheader = gravatar_qdocmoduleheader.h
 description = Gravatar provides API to gravatar support.
 
 documentationinheaders = true
