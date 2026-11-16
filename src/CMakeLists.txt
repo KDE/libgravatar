@@ -112,11 +112,15 @@ install(
     COMPONENT Devel
 )
 
+set(GRAVATAR_FILES
+    ${Gravatar_widgets_HEADERS}
+    ${Gravatar_job_HEADERS}
+    ${Gravatar_misc_HEADERS}
+)
+
 install(
     FILES
-        ${Gravatar_widgets_HEADERS}
-        ${Gravatar_job_HEADERS}
-        ${Gravatar_misc_HEADERS}
+        ${GRAVATAR_FILES}
         ${CMAKE_CURRENT_BINARY_DIR}/gravatar_export.h
         ${CMAKE_CURRENT_BINARY_DIR}/gravatarsettings.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/Gravatar/gravatar
@@ -135,9 +139,7 @@ ecm_add_installed_library_check(KPim6Gravatar
 
 ecm_installed_library_check_include_strings(KPim6Gravatar
     HEADERS
-    ${Gravatar_widgets_HEADERS}
-    ${Gravatar_job_HEADERS}
-    ${Gravatar_misc_HEADERS}
+    ${GRAVATAR_FILES}
     PREFIX gravatar
 )
 
