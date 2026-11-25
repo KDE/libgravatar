@@ -7,3 +7,9 @@
 
     \brief Gravatar provides API to gravatar support.
 */
+
+/*!
+    \namespace Gravatar
+    \inmodule Gravatar
+    \brief The Gravatar namespace contains the classes of the Gravatar module.
+*/
